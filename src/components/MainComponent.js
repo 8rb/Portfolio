@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Home from './HomeComponent';
 
 class Main extends Component {
 
     render(){
         return(
             <div>
-                <h4>Hola</h4>
+                <Home></Home>
             </div>
         );
     }
