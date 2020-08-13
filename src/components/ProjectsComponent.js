@@ -2,6 +2,7 @@ import React from 'react';
 import { Jumbotron, Media } from 'reactstrap';
 import Pokeball from '../images/pokeffective.png';
 import InterlabLogo from '../images/interlab.png';
+import { Link } from 'react-router-dom';
 
 function Pokeffective() {
     return(
@@ -60,9 +61,9 @@ function Projects() {
             <Jumbotron className="row align-items-center bg">
                 <div className="container">
                     <div className="row justify-content-center">
-                        <a className="col-auto" href="/home">
-                            <i className="fas fa-angle-up fa-2x"></i>
-                        </a>
+                        <Link className="nav-link" to="/home">
+                            <span className="fas fa-angle-up fa-2x"></span>
+                        </Link>
                     </div>
                 </div>
                 <div className="container">
