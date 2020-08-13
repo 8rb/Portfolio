@@ -77,6 +77,13 @@ function Projects() {
                     </div>
                 </div>
                 <Pokeffective></Pokeffective>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <hr></hr>
+                        </div>
+                    </div>
+                </div>
                 <Interlab></Interlab>
             </Jumbotron>
         )
