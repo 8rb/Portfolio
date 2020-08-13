@@ -3,18 +3,18 @@
     width: 100vw;
     margin:0px auto;
     border-radius: 0;
-    color: #ffffff;
+    color: #000000;
 }
 
 .projects {
     margin:0px auto;
     border-radius: 0;
-    color: #ffffff;
+    color: #000000;
 }
 
 .bg{
     background-image: url("../src/images/background.png");
-    background: #0f0f0f;
+    background: #FCFAF9;
 }
 
 h1 {
@@ -37,7 +37,28 @@ h2 {
 }
 
 .proyectCard {
-    background-color: gray;
-    outline-color: gray;
+    background-color: #48E5C2;
+    color: #000000;
     border-radius: 20px;
+}
+
+.homeIcon {
+    color: #48E5C2;
+}
+.homeIcon:hover {
+    color: #43a892;
+}
+
+.codeIcon {
+    color: #333333;
+}
+.codeIcon:hover {
+    color: #FF99C9;
+}
+
+.projectIcon {
+    color: #333333;
+}
+.projectIcon:hover {
+    color: #FA9F42;
 }
