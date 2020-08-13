@@ -58,7 +58,7 @@ function Interlab() {
 
 function Projects() {
         return(
-            <Jumbotron className="row align-items-center bg">
+            <Jumbotron className="row align-items-center projects bg">
                 <div className="container">
                     <div className="row justify-content-center">
                         <Link className="nav-link" to="/home">
