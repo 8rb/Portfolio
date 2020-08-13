@@ -10,7 +10,7 @@ function Pokeffective() {
             <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
                 <div className="col-12 col-sm-2 container mb-5 mt-4">
                     <Media left middle className="row justify-content-center">
-                        <Media object className="pokeball col-auto" src={Pokeball} alt="pokeball"></Media>
+                        <Media object className="pokeball" src={Pokeball} alt="pokeball"></Media>
                     </Media>
                 </div>
                 <div className="col-12 col-sm-6 mt-4 mb-2">
@@ -36,7 +36,7 @@ function Interlab() {
             <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
                 <div className="col-12 col-sm-2 container mb-5 mt-4">
                     <Media left middle className="row justify-content-center">
-                        <Media object className="interlabLogo rounded-circle col-auto" src={InterlabLogo} alt="InterLab"></Media>
+                        <Media object className="interlabLogo rounded-circle" src={InterlabLogo} alt="InterLab"></Media>
                     </Media>
                 </div>
                 <div className="col-12 col-sm-6 mt-4 mb-2">
@@ -58,7 +58,7 @@ function Interlab() {
 
 function Projects() {
         return(
-            <Jumbotron className="row align-items-center projects bg">
+            <Jumbotron className="jumbotron row align-items-center projects bg">
                 <div className="container">
                     <div className="row justify-content-center">
                         <Link className="nav-link" to="/home">

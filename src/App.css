@@ -7,8 +7,6 @@
 }
 
 .projects {
-    height: 100vh;
-    width: 100vw;
     margin:0px auto;
     border-radius: 0;
     color: #ffffff;
@@ -29,12 +27,12 @@ h2 {
 
 .pokeball {
     width: 150px;
-    height: auto;
+    height: 150px;
 }
 
 .interlabLogo {
     width: 150px;
-    height: auto;
+    height: 150px;
     border-radius: 20px;
 }
 
