@@ -9,7 +9,7 @@ function Pokeffective() {
         <div className="container">
             <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
                 <div className="col-12 col-sm-2 container mb-5 mt-4">
-                    <Media left middle className="row justify-content-center">
+                    <Media left middle className="iconCool row justify-content-center">
                         <Media object className="pokeball" src={Pokeball} alt="pokeball"></Media>
                     </Media>
                 </div>
@@ -35,8 +35,11 @@ function Interlab() {
         <div className="container">
             <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
                 <div className="col-12 col-sm-2 container mb-5 mt-4">
-                    <Media left middle className="row justify-content-center">
-                        <Media object className="interlabLogo rounded-circle" src={InterlabLogo} alt="InterLab"></Media>
+                    <Media left middle className="iconCool row justify-content-center"
+                        href="https://interlab.onrender.com/#/" target="_blank" rel="noopener noreferrer">
+                        <Media object className="interlabLogo rounded-circle" src={InterlabLogo} alt="InterLab"
+                            >
+                        </Media>
                     </Media>
                 </div>
                 <div className="col-12 col-sm-6 mt-4 mb-2">
