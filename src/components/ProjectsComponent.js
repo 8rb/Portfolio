@@ -18,10 +18,10 @@ function Pokeffective() {
                         <Media heading>Pokeffective</Media>
                         <p className="mb-4">Pokeffective is a Pokemon type calculator, developed in Vue.js. I was in charge of the design, and the programming of this Application, and was made using responsive design and UX techniques.</p>
                         <a href="https://github.com/8rb/Pokeffective2" target="_blank" rel="noopener noreferrer">
-                            <i className="fas fa-code fa-2x"></i>
+                            <i className="codeIcon fas fa-code fa-2x"></i>
                         </a>
                         <a href="https://pokeffective.onrender.com/" target="_blank" rel="noopener noreferrer">
-                            <i className="fas fa-external-link-alt fa-2x ml-4"></i>
+                            <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
                         </a>
                     </Media>
                 </div>
@@ -44,10 +44,10 @@ function Interlab() {
                         <Media heading>InterLab</Media>
                         <p className="mb-4">Interlab is a LinkedIn clone, developed in Vue.js in the Front-End and .Net Core in the backend. I was in charge of the Majority of the Front-End programming and the database design.</p>
                         <a href="https://github.com/8rb/interlab-webapps" target="_blank" rel="noopener noreferrer">
-                            <i className="fas fa-code fa-2x"></i>
+                            <i className="codeIcon fas fa-code fa-2x"></i>
                         </a>
                         <a href="https://interlab.onrender.com/#/" target="_blank" rel="noopener noreferrer">
-                            <i className="fas fa-external-link-alt fa-2x ml-4"></i>
+                            <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
                         </a>
                     </Media>
                 </div>
@@ -62,7 +62,7 @@ function Projects() {
                 <div className="container">
                     <div className="row justify-content-center">
                         <Link className="nav-link" to="/home">
-                            <span className="fas fa-angle-up fa-2x"></span>
+                            <span className="homeIcon fas fa-angle-up fa-2x"></span>
                         </Link>
                     </div>
                 </div>
