@@ -9,7 +9,6 @@
 .bg{
     background-image: url("../src/images/background.png");
     background: #0f0f0f;
-
 }
 
 h1 {
@@ -20,3 +19,19 @@ h2 {
     font-size: 250%;
 }
 
+.pokeball {
+    width: 150px;
+    height: auto;
+}
+
+.interlabLogo {
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.proyectCard {
+    background-color: gray;
+    outline-color: gray;
+    border-radius: 20px;
+}
