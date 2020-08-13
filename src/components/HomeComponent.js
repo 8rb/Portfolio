@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
         return(
-            <Jumbotron className="row align-items-center bg">
+            <Jumbotron className="row align-items-center home bg">
                 <div className="container">
                     <div className="row justify-content-center align-items-center">
                         <div className="col-auto offset-0">
