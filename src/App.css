@@ -1,7 +1,8 @@
 .home {
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
-    margin:0px auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     border-radius: 0;
     color: #000000;
 }
@@ -23,6 +24,15 @@ h1 {
 
 h2 {
     font-size: 250%;
+}
+
+h3 {
+    font-size: 150%;
+}
+
+h4 {
+    font-size: 100%;
+    color: #43a892;
 }
 
 .pokeball {
@@ -64,4 +74,12 @@ h2 {
 
 .iconCool:hover {
     filter: brightness(0.8);
+}
+
+.main {
+    height: 100vh;
+}
+
+.homeFooter {
+    margin-top: 0px;
 }
