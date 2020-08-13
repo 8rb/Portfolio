@@ -1,6 +1,7 @@
 import React from 'react';
 import { Jumbotron } from 'reactstrap';
 import Pdf from '../Documents/Rodrigo_Ramirez_Resume_2020.pdf';
+import { Link } from 'react-router-dom';
 
 function Home() {
         return(
@@ -46,9 +47,9 @@ function Home() {
                 </div>
                 <div className="container">
                     <div className="row justify-content-center">
-                        <a className="col-auto" href="/projects">
-                            <i className="fas fa-angle-down fa-2x"></i>
-                        </a>
+                        <Link className="nav-link" to="/projects">
+                            <span className="fas fa-angle-down fa-2x"></span>
+                        </Link>
                     </div>
                 </div>
             </Jumbotron>
