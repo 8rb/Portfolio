@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import history from './components/history';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Router history={history}>
+  <React.StrictMode>
     <App/>
-  </Router>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
