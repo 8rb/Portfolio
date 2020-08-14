@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Media } from 'reactstrap';
 import Pokeball from '../images/pokeffective.png';
 import InterlabLogo from '../images/interlab.png';
@@ -106,20 +106,49 @@ function Interlab() {
     );
 }
 
-function Projects() {
+class Projects extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          isPhone: false
+        };
+        this.updatePredicate = this.updatePredicate.bind(this);
+    }
+    componentDidMount() {
+        this.updatePredicate();
+        window.addEventListener("resize", this.updatePredicate);
+      }
+    
+      componentWillUnmount() {
+        window.removeEventListener("resize", this.updatePredicate);
+      }
+    
+      updatePredicate() {
+        this.setState({ isPhone: window.innerWidth < 576 });
+      }
+    render() {
+        const isPhone = this.state.isPhone;
         return(
             <div className="main">
                 <ProjectsHeader/>
                 <Pokeffective/>
                 <Interlab/>
-                <div className="blank">
-                    
+                <div>
+                    {isPhone ? (
+                    <div className="blank">
+                        <footer className="footer fixed-bottom">
+                            <Contact/>
+                        </footer>
+                    </div>
+                    ) : (
+                    <footer className="footer">
+                        <Contact/>
+                    </footer>
+                    )}
                 </div>
-                <footer className="footer fixed-bottom">
-                    <Contact/>
-                </footer>
             </div>
-        )
+        );
+    }
 }
 
 export default Projects;
