@@ -2,7 +2,6 @@ import React from 'react';
 import { Jumbotron } from 'reactstrap';
 import Contact from './ContactComponent';
 import { Link } from 'react-router-dom';
-import { useHistory } from "react-router-dom";
 
 function HomeFooter() {
     return(
@@ -24,12 +23,6 @@ function HomeFooter() {
 }
 
 function Home() {
-    const history = useHistory();
-
-    function fakeReload(){
-        console.log("reloaded");
-        history.push('/projects');
-    }
 
     return(
         <div className="main">
@@ -57,7 +50,6 @@ function Home() {
                     <Contact/>
                 </div>
             </Jumbotron>
-            <button onClick={fakeReload}></button>
             <HomeFooter></HomeFooter>
         </div>
     ); 
