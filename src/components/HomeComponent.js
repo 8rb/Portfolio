@@ -2,6 +2,7 @@ import React from 'react';
 import { Jumbotron } from 'reactstrap';
 import Contact from './ContactComponent';
 import { Link } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 function HomeFooter() {
     return(
@@ -23,34 +24,43 @@ function HomeFooter() {
 }
 
 function Home() {
-        return(
-            <div className="main">
-                <Jumbotron className="row align-items-center home">
-                    <div className="container">
-                        <div className="row justify-content-center align-items-center">
-                            <div className="col-auto offset-0">
-                                <h1>Rodrigo</h1>
-                            </div>
-                            <div className="col-auto offset-0">
-                                <h1>Ramirez</h1>
-                            </div>
+    const history = useHistory();
+
+    function fakeReload(){
+        console.log("reloaded");
+        history.push('/projects');
+    }
+
+    return(
+        <div className="main">
+            <Jumbotron className="row align-items-center home">
+                <div className="container">
+                    <div className="row justify-content-center align-items-center">
+                        <div className="col-auto offset-0">
+                            <h1>Rodrigo</h1>
                         </div>
-                        <div className="row justify-content-center align-items-center">
-                            <hr className="col-5"></hr>
+                        <div className="col-auto offset-0">
+                            <h1>Ramirez</h1>
                         </div>
-                        <div className="row justify-content-center align-items-center">
-                            <div className="col-auto offset-0">
-                                <h2>Front-End</h2>
-                            </div>
-                            <div className="col-auto offset-0">
-                                <h2>Developer</h2>
-                            </div>
-                        </div>
-                        <Contact/>
                     </div>
-                </Jumbotron>
-                <HomeFooter></HomeFooter>
-            </div>
-        );
+                    <div className="row justify-content-center align-items-center">
+                        <hr className="col-5"></hr>
+                    </div>
+                    <div className="row justify-content-center align-items-center">
+                        <div className="col-auto offset-0">
+                            <h2>Front-End</h2>
+                        </div>
+                        <div className="col-auto offset-0">
+                            <h2>Developer</h2>
+                        </div>
+                    </div>
+                    <Contact/>
+                </div>
+            </Jumbotron>
+            <button onClick={fakeReload}></button>
+            <HomeFooter></HomeFooter>
+        </div>
+    ); 
+
 }
 export default Home;
