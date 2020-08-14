@@ -8,7 +8,7 @@ import Contact from './ContactComponent';
 function ProjectsHeader() {
     return(
         <div>
-            <div className="container bg pt-2 pb-3">
+            <div className="container pt-3 pb-3">
                 <div className="row justify-content-center">
                     <Link className="nav-link" to="/home">
                         <div className="homeIcon">
@@ -22,7 +22,7 @@ function ProjectsHeader() {
                     </Link>
                 </div>
             </div>
-            <div className="container">
+            <div className="container pb-4">
                 <div className="row justify-content-center align-items-center">
                     <div className="col-auto offset-0">
                         <h1>My</h1>
@@ -38,7 +38,7 @@ function ProjectsHeader() {
 
 function Pokeffective() {
     return(
-        <div className="container">
+        <div>
             <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
                 <div className="col-12 col-sm-2 container mb-5 mt-4">
                     <Media left middle className="iconCool row justify-content-center"
@@ -72,7 +72,7 @@ function Pokeffective() {
 
 function Interlab() {
     return(
-        <div className="container">
+        <div>
             <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
                 <div className="col-12 col-sm-2 container mb-5 mt-4">
                     <Media left middle className="iconCool row justify-content-center"
@@ -108,11 +108,16 @@ function Interlab() {
 
 function Projects() {
         return(
-            <div className="projects bg">
+            <div className="main">
                 <ProjectsHeader/>
                 <Pokeffective/>
                 <Interlab/>
-                <Contact/>
+                <div className="blank">
+                    
+                </div>
+                <footer className="footer fixed-bottom">
+                    <Contact/>
+                </footer>
             </div>
         )
 }
