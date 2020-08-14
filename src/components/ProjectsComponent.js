@@ -4,6 +4,8 @@ import Pokeball from '../images/pokeffective.png';
 import InterlabLogo from '../images/interlab.png';
 import { Link } from 'react-router-dom';
 import Contact from './ContactComponent';
+import history from './history'
+
 
 function ProjectsHeader() {
     return(
@@ -112,26 +114,36 @@ class Projects extends Component {
         this.state = {
           isPhone: false
         };
-        this.updatePredicate = this.updatePredicate.bind(this);
+        this.updateFooter = this.updateFooter.bind(this);
+        this.fakeReload = this.fakeReload.bind(this);
     }
     componentDidMount() {
-        this.updatePredicate();
+        this.updateFooter();
         window.addEventListener("resize", this.updatePredicate);
       }
     
-      componentWillUnmount() {
+    componentWillUnmount() {
+        this.fakeReload();
         window.removeEventListener("resize", this.updatePredicate);
-      }
+    }
     
-      updatePredicate() {
+    updateFooter() {
         this.setState({ isPhone: window.innerWidth < 576 });
-      }
+    }
+
+    fakeReload(){
+        window.location.reload(false);
+        history.push('/projects');
+        console.log("reloaded");
+    }
+
     render() {
         const isPhone = this.state.isPhone;
         return(
             <div className="main">
                 <ProjectsHeader/>
                 <Pokeffective/>
+                <button onClick={this.fakeReload}></button>
                 <Interlab/>
                 <div>
                     {isPhone ? (
