@@ -4,9 +4,11 @@ Hello! My Name is **Rodrigo Ramirez**, and this is the code respository for my W
 
 This portfolio was made using React.js and is a compilation of my most important Front-End projects.
 
+It's currently hosted in Render, here's the link: [https://rodrigo.onrender.com/]
+
 I hope you enjoyed as much as I enjoyed creating it!
 
 ## Contact info:
 
 **Email**
-[rodrigo8rb@gmail.com]
+rodrigo8rb@gmail.com
