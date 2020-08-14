@@ -2,6 +2,10 @@ body {
     background: #FCFAF9;
 }
 
+.main {
+    width: 100vw;
+}
+
 .jumbotron {
     background: #FCFAF9;
 }

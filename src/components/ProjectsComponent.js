@@ -130,7 +130,7 @@ class Projects extends Component {
     render() {
         const isPhone = this.state.isPhone;
         return(
-            <div className="main">
+            <div className="container main">
                 <ProjectsHeader/>
                 <Pokeffective/>
                 <Interlab/>
