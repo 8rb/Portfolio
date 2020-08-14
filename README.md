@@ -11,4 +11,8 @@ I hope you enjoyed as much as I enjoyed creating it!
 ## Contact info:
 
 **Email**
+<<<<<<< HEAD
 rodrigo8rb@gmail.com
+=======
+rodrigo8rb@gmail.com
+>>>>>>> 71ceca34ba95df31de3cd6fdb21ab483104973a5
