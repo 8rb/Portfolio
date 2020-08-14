@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Pdf from '../Documents/Rodrigo_Ramirez_Resume_2020.pdf';
-import { Link } from 'react-router-dom';
 
 class Contact extends Component {
     constructor(props) {
@@ -33,7 +32,7 @@ class Contact extends Component {
 
     render() {
         return (
-          <div className="container pb-3">
+          <div className="container">
             <div className="row justify-content-center align-items-center">
                 <div className="col-auto col-sm-auto">
                     <div className="row mt-4">

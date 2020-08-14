@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function HomeFooter() {
     return(
-        <div className="container bg">
+        <div className="container">
             <div className="row justify-content-center">
                 <Link className="nav-link" to="/projects">
                     <div className="homeIcon">
@@ -24,8 +24,8 @@ function HomeFooter() {
 
 function Home() {
         return(
-            <div className="bg main">
-                <Jumbotron className="row align-items-center home bg">
+            <div className="main">
+                <Jumbotron className="row align-items-center home">
                     <div className="container">
                         <div className="row justify-content-center align-items-center">
                             <div className="col-auto offset-0">
@@ -49,7 +49,7 @@ function Home() {
                         <Contact/>
                     </div>
                 </Jumbotron>
-                <HomeFooter className="mt-0"></HomeFooter>
+                <HomeFooter></HomeFooter>
             </div>
         );
 }
