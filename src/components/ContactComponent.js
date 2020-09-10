@@ -35,7 +35,7 @@ class Contact extends Component {
           <div className="container">
             <div className="row justify-content-center align-items-center">
                 <div className="col-auto col-sm-auto">
-                    <div className="row mt-4">
+                    <div className="row mt-2">
                         <a onMouseEnter={this.toggleResume} onMouseLeave={this.toggleResume} className="col-3" href={Pdf} target ="_blank" rel="noopener noreferrer">
                             <i className="homeIcon fas fa-file-pdf fa-2x"></i>
                         </a>

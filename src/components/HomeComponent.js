@@ -47,7 +47,9 @@ function Home() {
                             <h2>Developer</h2>
                         </div>
                     </div>
-                    <Contact/>
+                    <div className="row mt-4">
+                        <Contact/>
+                    </div>
                 </div>
             </Jumbotron>
             <HomeFooter></HomeFooter>
