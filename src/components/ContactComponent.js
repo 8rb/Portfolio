@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Pdf from '../Documents/Rodrigo_Ramirez_Resume_2020.pdf';
+import Pdf from '../Documents/Rodrigo Ramirez Resume 2020.pdf';
 
 class Contact extends Component {
     constructor(props) {
