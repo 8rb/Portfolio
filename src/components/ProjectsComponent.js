@@ -50,7 +50,7 @@ function Pokeffective() {
                     <Media body className="ml-4">
                         <h3>Pokeffective</h3>
                         <p className="mb-4">Pokeffective is a Pokemon type calculator, developed in Vue.js. I was in charge of the design, and the programming of this Application, and was made using responsive design and UX techniques.</p>
-                        <a href="https://github.com/8rb/Pokeffective2" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/8rb/Pokeffective" target="_blank" rel="noopener noreferrer">
                             <i className="codeIcon fas fa-code fa-2x"></i>
                         </a>
                         <a href="https://pokeffective.onrender.com/" target="_blank" rel="noopener noreferrer">
