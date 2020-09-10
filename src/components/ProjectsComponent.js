@@ -137,7 +137,7 @@ class Projects extends Component {
                 <div>
                     {isPhone ? (
                     <div className="blank">
-                        <footer className="footer fixed-bottom">
+                        <footer className="footer">
                             <Contact/>
                         </footer>
                     </div>
