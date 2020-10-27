@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Media } from 'reactstrap';
 import Pokeball from '../images/pokeffective.png';
 import InterlabLogo from '../images/interlab.png';
+import FinanceAppLogo from '../images/FinanceeApp.png';
 import { Link } from 'react-router-dom';
 import Contact from './ContactComponent';
 
@@ -77,7 +78,7 @@ function Interlab() {
                 <div className="col-12 col-sm-2 container mb-5 mt-4">
                     <Media left middle className="iconCool row justify-content-center"
                         href="https://interlab.onrender.com/#/" target="_blank" rel="noopener noreferrer">
-                        <Media object className="interlabLogo rounded-circle" src={InterlabLogo} alt="InterLab"
+                        <Media object className="roundedLogo rounded-circle" src={InterlabLogo} alt="InterLab"
                             >
                         </Media>
                     </Media>
@@ -90,6 +91,42 @@ function Interlab() {
                             <i className="codeIcon fas fa-code fa-2x"></i>
                         </a>
                         <a href="https://interlab.onrender.com/#/" target="_blank" rel="noopener noreferrer">
+                            <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
+                        </a>
+                    </Media>
+                </div>
+            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <hr></hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function FinanceeApp() {
+    return(
+        <div>
+            <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
+                <div className="col-12 col-sm-2 container mb-5 mt-4">
+                    <Media left middle className="iconCool row justify-content-center"
+                        href="https://financeeapp.onrender.com" target="_blank" rel="noopener noreferrer">
+                        <Media object className="roundedLogo rounded-circle" src={FinanceAppLogo} alt="FinanceeApp"
+                            >
+                        </Media>
+                    </Media>
+                </div>
+                <div className="col-12 col-sm-6 mt-4 mb-2">
+                    <Media body className="ml-4">
+                        <h3>FinanceeApp</h3>
+                        <p className="mb-4">FinanceeApp is an online shopping website, based on Peruvian "Bodegas". It was developed in Vue and Typescript, and uses bootstrap and SCSS for the UI elements. This project takes advantage of the Vuex Store functionalities and uses Axios to make HTTP requests to the Server.</p>
+                        <a href="https://github.com/8rb/FinanciApp-FrontEnd" target="_blank" rel="noopener noreferrer">
+                            <i className="codeIcon fas fa-code fa-2x"></i>
+                        </a>
+                        <a href="https://financeeapp.onrender.com" target="_blank" rel="noopener noreferrer">
                             <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
                         </a>
                     </Media>
@@ -134,6 +171,7 @@ class Projects extends Component {
                 <ProjectsHeader/>
                 <Pokeffective/>
                 <Interlab/>
+                <FinanceeApp/>
                 <div>
                     {isPhone ? (
                     <div className="blank">
