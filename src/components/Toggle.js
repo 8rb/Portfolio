@@ -7,20 +7,34 @@ class ComponentWrapper extends React.Component {
 		this.state = {
 			isOn: null
 		};
+		let MY_SALVATION = document.getElementById('darkHtml').getAttribute('data-theme');
+		if(MY_SALVATION === "") {
+			this.state = {
+				isOn: false
+			};
+		}
+		if(MY_SALVATION === "dark") {
+			this.state = {
+				isOn: true
+			};
+		}
 	}
 	
 	handleToggle(e) {
 		let MY_SALVATION = document.getElementById('darkHtml').getAttribute('data-theme');
 		if(MY_SALVATION === "") {
 			this.setState({isOn: true});
+			document.getElementById('darkHtml').setAttribute('data-theme', 'dark');
 		}
 		if(MY_SALVATION === "dark") {
 			this.setState({isOn: false});
+			document.getElementById('darkHtml').setAttribute('data-theme', '');
 		}
-		
+		this.setState({isOn: !this.state.isOn});
 	}
 	
 	render() {
+		console.log("Button rendering");
 		let classNames = ["component-wrapper", (this.state.isOn) ? "component-wrapper_is-light" : "component-wrapper_is-dark"].join(" ");
 		return (
 			<div className={classNames}>
@@ -35,19 +49,6 @@ class ComponentWrapper extends React.Component {
 
 const Switch = function(props) {
 	let classNames = ["switch", (props.isOn) ? "switch_is-on" : "switch_is-off"].join(" ");
-	let MY_SALVATION = document.getElementById('darkHtml').getAttribute('data-theme');
-	if(MY_SALVATION === "") {
-		console.log("True, meaning dark mode on");
-		//props.isOn = false;
-		//this.state.isOn = false;
-		document.getElementById('darkHtml').setAttribute('data-theme', 'dark');
-	}
-	if(MY_SALVATION === "dark") {
-		console.log("False, meaning dark mode off");
-		//props.isOn = true;
-		//this.state.isOn = true;
-		document.getElementById('darkHtml').setAttribute('data-theme', '');
-	}
 	return (
 		<div className={classNames} onClick={props.handleToggle}>
 			<ToggleButton 
