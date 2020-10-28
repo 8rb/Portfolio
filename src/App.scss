@@ -1,0 +1,202 @@
+$white:		#FCFAF9;
+$dark:      #323231;
+$black:		#000000;
+$primary:   #48E5C2;
+$secondary: #43a892;
+$gray:		#333333;
+$accent1:   #FF99C9;
+$accent2:   #FA9F42;
+
+html {
+    background: var(--bgColor);
+    color: var(--textColor);
+    --bgColor: $white;
+    --lightBtn: #FE016C;
+    --textColor: #000000;
+  }
+  
+  html[data-theme='dark'] {
+    background: var(--bgColor) !important;
+    color: var(--textColor);
+    --lightBtn: #FFBD07;
+    --bgColor: #323231;
+    --textColor: #FCFAF9;
+    --grayColor: #c2c2c2;
+    p {
+        color: var(--grayColor);
+    }
+}
+
+.main {
+    width: 100vw;
+    background: var(--bgColor) !important;
+    color: var(--textColor);
+}
+
+.jumbotron {
+    background: var(--bgColor);
+    color: var(--textColor);
+}
+
+.no-padding {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border:  0px 0px 0px 0px;;
+    width: auto;
+}
+
+.home {
+    height: 80vh;
+    width: 100vw;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border-radius: 0;
+}
+
+.projectCard {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border:  0px 0px 0px 0px;;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.marginProject {
+    margin-right: 2%;
+}
+
+@media only screen and (min-width: 800px) {
+    .marginProject {
+        margin-right: 10%;
+    }
+}
+
+h1 {
+    font-size: 350%;
+}
+
+h2 {
+    font-size: 250%;
+}
+
+h3 {
+    font-size: 150%;
+}
+
+h4 {
+    font-size: 100%;
+    color: $primary;
+}
+
+.pokeball {
+    width: 150px;
+    height: 150px;
+}
+
+.roundedLogo {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.homeIcon {
+    color: $primary;
+}
+.homeIcon:hover {
+    color: $secondary;
+}
+
+.codeIcon {
+    color: $gray;
+}
+.codeIcon:hover {
+    color: $accent1;
+}
+
+.projectIcon {
+    color: $gray;
+}
+.projectIcon:hover {
+    color: $accent2;
+}
+
+.iconCool:hover {
+    filter: brightness(0.8);
+}
+
+.footer {
+    background: var(--bgColor);
+    width: 100%;
+    height: 80px;
+}
+
+.blank {
+    height: 100px;
+}
+
+//DARK MODE STYLES
+
+// Variables
+// =========
+$dark:		#000411;
+$black2:	#353535;
+$gray:		#F1FFFA;
+$red:		#FF495C;
+
+$off-state: 	$red;
+$on-state: 		$primary;
+
+$react-blue:	#61dafb;
+
+.switch{
+    margin-top: 1rem; //me
+    margin-left: 2rem; //me
+	position: relative;
+	width: 4rem;
+	height: 3rem;
+	border-radius: 20%;
+	transition: background-color 100ms ease-out;
+	z-index: 1;
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		background-color: inherit;
+		border-radius: 50%;
+		width: 3rem;
+		height: 3rem;
+        z-index: 2;
+    }
+	&:before{
+        left: -1rem;
+    }
+	&:after{
+		right: -1rem;
+    }
+}
+.toggle-button {
+	position: absolute;
+	width: 3rem;
+	height: 3rem;
+	background-color: $black2;
+	border-radius: 50%;
+	transition: transform 100ms ease-in-out;
+	z-index: 3;
+	border: 0.05rem solid $black2;
+	top: -0.05rem;
+}
+// State
+
+.switch_is-off{
+	background-color: $off-state;
+}
+.switch_is-on{
+	background-color: $on-state;
+}
+.toggle-button_position-left{
+	transform: translateX(-1.05rem);
+}
+.toggle-button_position-right{
+    transform: translateX(2.05rem)
+}

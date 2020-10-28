@@ -37,27 +37,42 @@ function ProjectsHeader() {
     );
 }
 
-function Pokeffective() {
+function Poke({isPhone}) {
     return(
         <div>
-            <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
-                <div className="col-12 col-sm-2 container mb-5 mt-4">
-                    <Media left middle className="iconCool row justify-content-center"
-                        href="https://pokeffective.onrender.com/" target="_blank" rel="noopener noreferrer">
-                        <Media object className="pokeball" src={Pokeball} alt="Pokeffective"></Media>
-                    </Media>
-                </div>
-                <div className="col-12 col-sm-6 mt-4 mb-2">
-                    <Media body className="ml-4">
-                        <h3>Pokeffective</h3>
-                        <p className="mb-4">Pokeffective is a Pokemon type calculator, developed in Vue.js. I was in charge of the design, and the programming of this Application, and was made using responsive design and UX techniques.</p>
-                        <a href="https://github.com/8rb/Pokeffective" target="_blank" rel="noopener noreferrer">
-                            <i className="codeIcon fas fa-code fa-2x"></i>
-                        </a>
-                        <a href="https://pokeffective.onrender.com/" target="_blank" rel="noopener noreferrer">
-                            <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
-                        </a>
-                    </Media>
+            <div className="row justify-content-center align-items-center mt-4 mb-5 projectCard">
+                <div className="row col-auto mt-3">
+                        <Media left middle className="iconCool d-flex justify-content-center col-12 col-sm-5 col-md-4 mb-sm-3 mt-sm-3 mb-5"
+                            href="https://pokeffective.onrender.com/" target="_blank" rel="noopener noreferrer">
+                            <Media object className="pokeball" src={Pokeball} alt="Pokeffective"
+                                >
+                            </Media>
+                        </Media>
+                        <Media body className="ml-4 col-12 col-sm-7 col-md-8 marginProject mb-sm-3 mt-sm-3 mt-5">
+                            <h3>Pokeffective</h3>
+                            <p className="mb-4 mr-sm-0 mr-3">Pokeffective is a Pokemon type calculator, developed in Vue.js. I was in charge of the design, and the programming of this Application, and was made using responsive design and UX techniques.</p>
+                            <div>
+                                {isPhone ? (
+                                <div className="row justify-content-center marginProject">
+                                    <a href="https://github.com/8rb/Pokeffective" target="_blank" rel="noopener noreferrer">
+                                        <i className="codeIcon fas fa-code fa-2x"></i>
+                                    </a>
+                                    <a href="https://pokeffective.onrender.com/" target="_blank" rel="noopener noreferrer">
+                                        <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
+                                    </a>
+                                </div>
+                                ) : (
+                                <div className="marginProject">
+                                    <a href="https://github.com/8rb/Pokeffective" target="_blank" rel="noopener noreferrer">
+                                        <i className="codeIcon fas fa-code fa-2x"></i>
+                                    </a>
+                                    <a href="https://pokeffective.onrender.com/" target="_blank" rel="noopener noreferrer">
+                                        <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
+                                    </a>
+                                </div>
+                                )}
+                            </div>
+                        </Media>
                 </div>
             </div>
             <div className="container">
@@ -71,29 +86,42 @@ function Pokeffective() {
     );
 }
 
-function Interlab() {
+function Interlab({isPhone}) {
     return(
         <div>
-            <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
-                <div className="col-12 col-sm-2 container mb-5 mt-4">
-                    <Media left middle className="iconCool row justify-content-center"
-                        href="https://interlab.onrender.com/#/" target="_blank" rel="noopener noreferrer">
-                        <Media object className="roundedLogo rounded-circle" src={InterlabLogo} alt="InterLab"
-                            >
+            <div className="row justify-content-center align-items-center mt-4 mb-5 projectCard">
+                <div className="row col-auto mt-3">
+                        <Media left middle className="iconCool d-flex justify-content-center col-12 col-sm-5 col-md-4 mb-sm-3 mt-sm-3 mb-5"
+                            href="https://interlab.onrender.com/#/" target="_blank" rel="noopener noreferrer">
+                            <Media object className="roundedLogo rounded-circle" src={InterlabLogo} alt="InterLab"
+                                >
+                            </Media>
                         </Media>
-                    </Media>
-                </div>
-                <div className="col-12 col-sm-6 mt-4 mb-2">
-                    <Media body className="ml-4">
-                        <h3>InterLab</h3>
-                        <p className="mb-4">Interlab is a LinkedIn clone, developed in Vue.js in the Front-End and .Net Core in the backend. I was in charge of the Majority of the Front-End programming and the database design.</p>
-                        <a href="https://github.com/8rb/interlab-webapps" target="_blank" rel="noopener noreferrer">
-                            <i className="codeIcon fas fa-code fa-2x"></i>
-                        </a>
-                        <a href="https://interlab.onrender.com/#/" target="_blank" rel="noopener noreferrer">
-                            <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
-                        </a>
-                    </Media>
+                        <Media body className="ml-4 col-12 col-sm-7 col-md-8 marginProject mb-sm-3 mt-sm-3 mt-5">
+                            <h3>InterLab</h3>
+                            <p className="mb-4 mr-sm-0 mr-3">Interlab is a LinkedIn clone, developed in Vue.js in the Front-End and .Net Core in the backend. I was in charge of the Majority of the Front-End programming and the database design. This application accesses the backend using Axios for HTTP requests.</p>
+                            <div>
+                                {isPhone ? (
+                                <div className="row justify-content-center marginProject">
+                                    <a href="https://github.com/8rb/interlab-webapps" target="_blank" rel="noopener noreferrer">
+                                        <i className="codeIcon fas fa-code fa-2x"></i>
+                                    </a>
+                                    <a href="https://interlab.onrender.com/#/" target="_blank" rel="noopener noreferrer">
+                                        <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
+                                    </a>
+                                </div>
+                                ) : (
+                                <div className="marginProject">
+                                    <a href="https://github.com/8rb/interlab-webapps" target="_blank" rel="noopener noreferrer">
+                                        <i className="codeIcon fas fa-code fa-2x"></i>
+                                    </a>
+                                    <a href="https://interlab.onrender.com/#/" target="_blank" rel="noopener noreferrer">
+                                        <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
+                                    </a>
+                                </div>
+                                )}
+                            </div>
+                        </Media>
                 </div>
             </div>
             <div className="container">
@@ -107,29 +135,42 @@ function Interlab() {
     );
 }
 
-function FinanceeApp() {
+function Financee({isPhone}) {
     return(
         <div>
-            <div className="row justify-content-center align-items-center mt-4 mt-sm-0 mb-2 proyectCard">
-                <div className="col-12 col-sm-2 container mb-5 mt-4">
-                    <Media left middle className="iconCool row justify-content-center"
-                        href="https://financeeapp.onrender.com" target="_blank" rel="noopener noreferrer">
-                        <Media object className="roundedLogo rounded-circle" src={FinanceAppLogo} alt="FinanceeApp"
+            <div className="row justify-content-center align-items-center mt-4 mb-5 projectCard">
+                <div className="row col-auto mt-3">
+                        <Media left middle className="iconCool d-flex justify-content-center col-12 col-sm-5 col-md-4 mb-sm-3 mt-sm-3 mb-5"
+                            href="https://financeeapp.onrender.com" target="_blank" rel="noopener noreferrer">
+                            <Media object className="roundedLogo rounded-circle" src={FinanceAppLogo} alt="FinanceeApp"
                             >
                         </Media>
-                    </Media>
-                </div>
-                <div className="col-12 col-sm-6 mt-4 mb-2">
-                    <Media body className="ml-4">
-                        <h3>FinanceeApp</h3>
-                        <p className="mb-4">FinanceeApp is an online shopping website, based on Peruvian "Bodegas". It was developed in Vue and Typescript, and uses bootstrap and SCSS for the UI elements. This project takes advantage of the Vuex Store functionalities and uses Axios to make HTTP requests to the Server.</p>
-                        <a href="https://github.com/8rb/FinanciApp-FrontEnd" target="_blank" rel="noopener noreferrer">
-                            <i className="codeIcon fas fa-code fa-2x"></i>
-                        </a>
-                        <a href="https://financeeapp.onrender.com" target="_blank" rel="noopener noreferrer">
-                            <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
-                        </a>
-                    </Media>
+                        </Media>
+                        <Media body className="ml-4 col-12 col-sm-7 col-md-8 marginProject mb-sm-3 mt-sm-3 mt-5">
+                            <h3>FinanceeApp</h3>
+                            <p className="mb-4 mr-sm-0 mr-3">FinanceeApp is an online shopping website, based on Peruvian "Bodegas". It was developed in Vue and Typescript, and uses bootstrap and SCSS for the UI elements. This project uses Vuex store and takes advantage of Axios to make HTTP requests to the Server.</p>
+                            <div>
+                                {isPhone ? (
+                                <div className="row justify-content-center marginProject">
+                                    <a href="https://github.com/8rb/FinanciApp-FrontEnd" target="_blank" rel="noopener noreferrer">
+                                        <i className="codeIcon fas fa-code fa-2x"></i>
+                                    </a>
+                                    <a href="https://financeeapp.onrender.com" target="_blank" rel="noopener noreferrer">
+                                        <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
+                                    </a>
+                                </div>
+                                ) : (
+                                <div className="marginProject">
+                                    <a href="https://github.com/8rb/FinanciApp-FrontEnd" target="_blank" rel="noopener noreferrer">
+                                        <i className="codeIcon fas fa-code fa-2x"></i>
+                                    </a>
+                                    <a href="https://financeeapp.onrender.com" target="_blank" rel="noopener noreferrer">
+                                        <i className="projectIcon fas fa-external-link-alt fa-2x ml-4"></i>
+                                    </a>
+                                </div>
+                                )}
+                            </div>
+                        </Media>
                 </div>
             </div>
             <div className="container">
@@ -167,14 +208,14 @@ class Projects extends Component {
     render() {
         const isPhone = this.state.isPhone;
         return(
-            <div className="container main">
+            <div className="main no-padding">
                 <ProjectsHeader/>
-                <Pokeffective/>
-                <Interlab/>
-                <FinanceeApp/>
+                <Financee isPhone={isPhone}/>
+                <Interlab isPhone={isPhone}/>
+                <Poke isPhone={isPhone}/>
                 <div>
                     {isPhone ? (
-                    <div className="blank">
+                    <div className="">
                         <footer className="footer">
                             <Contact/>
                         </footer>

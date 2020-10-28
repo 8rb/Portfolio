@@ -2,6 +2,7 @@ import React from 'react';
 import { Jumbotron } from 'reactstrap';
 import Contact from './ContactComponent';
 import { Link } from 'react-router-dom';
+import Toggle from './Toggle';
 
 function HomeFooter() {
     return(
@@ -23,9 +24,11 @@ function HomeFooter() {
 }
 
 function Home() {
-
     return(
         <div className="main">
+            <div className="row align-items-center no-padding">
+                <Toggle/>
+            </div>
             <Jumbotron className="row align-items-center home">
                 <div className="container">
                     <div className="row justify-content-center align-items-center">
