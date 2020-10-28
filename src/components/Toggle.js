@@ -34,7 +34,6 @@ class ComponentWrapper extends React.Component {
 	}
 	
 	render() {
-		console.log("Button rendering");
 		let classNames = ["component-wrapper", (this.state.isOn) ? "component-wrapper_is-light" : "component-wrapper_is-dark"].join(" ");
 		return (
 			<div className={classNames}>
@@ -59,7 +58,7 @@ const Switch = function(props) {
 }
 
 const ToggleButton = function(props) {
-		let classNames = ["toggle-button", (props.isOn) ? "toggle-button_position-right" : "toggle-button_position-left"].join(" ");
+		let classNames = ["", (props.isOn) ? "toggle-button-on toggle-button_position-right" : "toggle-button toggle-button_position-left"].join(" ");
 		return (<div className={classNames}></div>);
 };
 

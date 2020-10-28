@@ -4,8 +4,10 @@ $black:		#000000;
 $primary:   #48E5C2;
 $secondary: #43a892;
 $gray:		#333333;
+$gray2:     #919191;
 $accent1:   #FF99C9;
 $accent2:   #FA9F42;
+$initial_pos: -0.14rem;
 
 html {
     background: var(--bgColor);
@@ -13,6 +15,8 @@ html {
     --bgColor: $white;
     --lightBtn: #FE016C;
     --textColor: #000000;
+    --iconColor1: #333333;
+    --iconColor2: #333333;
   }
   
   html[data-theme='dark'] {
@@ -22,6 +26,8 @@ html {
     --bgColor: #323231;
     --textColor: #FCFAF9;
     --grayColor: #c2c2c2;
+    --iconColor1: #c2c2c2;
+    --iconColor2: #c2c2c2;
     p {
         color: var(--grayColor);
     }
@@ -108,14 +114,14 @@ h4 {
 }
 
 .codeIcon {
-    color: $gray;
+    color: var(--iconColor1);
 }
 .codeIcon:hover {
     color: $accent1;
 }
 
 .projectIcon {
-    color: $gray;
+    color: var(--iconColor2);
 }
 .projectIcon:hover {
     color: $accent2;
@@ -137,56 +143,66 @@ h4 {
 
 //DARK MODE STYLES
 
-// Variables
-// =========
 $dark:		#000411;
 $black2:	#353535;
-$gray:		#F1FFFA;
 $red:		#FF495C;
 
-$off-state: 	$red;
+$off-state: 	$primary;
 $on-state: 		$primary;
 
 $react-blue:	#61dafb;
 
 .switch{
     margin-top: 1rem; //me
-    margin-left: 2rem; //me
+    margin-left: 1.8rem; //me
 	position: relative;
-	width: 4rem;
-	height: 3rem;
-	border-radius: 20%;
+	width: 1.3rem;
+	height: 1.5rem;
+	//border-radius: 10%;
 	transition: background-color 100ms ease-out;
 	z-index: 1;
 	&:before, &:after {
 		content: "";
-		position: absolute;
+        position: absolute;
 		top: 0;
 		background-color: inherit;
 		border-radius: 50%;
-		width: 3rem;
-		height: 3rem;
+		width: 1.5rem;
+		height: 1.5rem;
         z-index: 2;
     }
 	&:before{
-        left: -1rem;
+        left: -0.69rem;
     }
 	&:after{
-		right: -1rem;
+		right: -0.69rem;
     }
 }
 .toggle-button {
-	position: absolute;
-	width: 3rem;
-	height: 3rem;
-	background-color: $black2;
+    transform: translateX($initial_pos);
+    position: absolute;
+	width: 1.6rem;
+	height: 1.6rem;
+	background-color: $gray;
 	border-radius: 50%;
-	transition: transform 100ms ease-in-out;
+	transition: transform 160ms ease-in-out;
 	z-index: 3;
-	border: 0.05rem solid $black2;
+	border: 0.05rem solid $gray;
 	top: -0.05rem;
 }
-// State
+
+.toggle-button-on {
+    transform: translateX($initial_pos);
+    position: absolute;
+	width: 1.6rem;
+	height: 1.6rem;
+	background-color: $gray2;
+	border-radius: 50%;
+	transition: transform 160ms ease-in-out;
+	z-index: 3;
+	border: 0.05rem solid $gray2;
+	top: -0.05rem;
+}
 
 .switch_is-off{
 	background-color: $off-state;
@@ -195,8 +211,8 @@ $react-blue:	#61dafb;
 	background-color: $on-state;
 }
 .toggle-button_position-left{
-	transform: translateX(-1.05rem);
+	transform: translateX(-0.8rem + $initial_pos);
 }
 .toggle-button_position-right{
-    transform: translateX(2.05rem)
+    transform: translateX(+ 0.8rem + $initial_pos)
 }
