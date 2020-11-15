@@ -1,0 +1,50 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "FinanceeApp",
+            "description": "FinanceeApp is an online shopping website, based on Peruvian 'Bodegas'. It was developed in Vue and Typescript, and uses bootstrap and SCSS for the UI elements. This project uses Vuex store and takes advantage of Axios to make HTTP requests to the Server.",
+            "github_link": "https://github.com/8rb/FinanciApp-FrontEnd",
+            "deployed_link": "https://financeeapp.onrender.com",
+            "logo": "FinanceAppLogo",
+            "img_classname": "roundedLogo rounded-circle"
+        },
+        {
+            "id": 2,
+            "title": "InterLab",
+            "description": "",
+            "github_link": "",
+            "deployed_link": "",
+            "logo": "",
+            "img_classname": ""
+        },
+        {
+            "id": 3,
+            "title": "PokeApp",
+            "description": "",
+            "github_link": "",
+            "deployed_link": "",
+            "logo": "",
+            "img_classname": ""
+        },
+        {
+            "id": 4,
+            "title": "Algorithm Visualizer",
+            "description": "",
+            "github_link": "",
+            "deployed_link": "",
+            "logo": "",
+            "img_classname": ""
+        },
+        {
+            "id": 5,
+            "title": "Useless App",
+            "description": "",
+            "github_link": "",
+            "deployed_link": "",
+            "logo": "",
+            "img_classname": ""
+        }
+    ]
+
+}
