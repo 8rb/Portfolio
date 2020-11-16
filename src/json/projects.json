@@ -12,20 +12,20 @@
         {
             "id": 2,
             "title": "InterLab",
-            "description": "",
-            "github_link": "",
-            "deployed_link": "",
-            "logo": "",
-            "img_classname": ""
+            "description": "Interlab is a LinkedIn clone, developed in Vue.js in the Front-End and .Net Core in the backend. I was in charge of the Majority of the Front-End programming and the database design. This application accesses the backend using Axios for HTTP requests.",
+            "github_link": "https://github.com/8rb/interlab-webapps",
+            "deployed_link": "https://interlab.onrender.com/#/",
+            "logo": "InterlabLogo",
+            "img_classname": "roundedLogo rounded-circle"
         },
         {
             "id": 3,
             "title": "PokeApp",
-            "description": "",
-            "github_link": "",
-            "deployed_link": "",
-            "logo": "",
-            "img_classname": ""
+            "description": "Pokeffective is a Pokemon type calculator, developed in Vue.js. I was in charge of the design, and the programming of this Application, and was made using responsive design and UX techniques.",
+            "github_link": "https://github.com/8rb/Pokeffective",
+            "deployed_link": "https://pokeffective.onrender.com/",
+            "logo": "Pokeball",
+            "img_classname": "pokeball"
         },
         {
             "id": 4,
