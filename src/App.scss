@@ -1,19 +1,23 @@
-$white:		#FCFAF9;
-$dark:      #323231;
-$black:		#000000;
-$primary:   #48E5C2;
-$secondary: #43a892;
-$gray:		#333333;
-$gray2:     #919191;
-$accent1:   #FF99C9;
-$accent2:   #FA9F42;
-$initial_pos: -0.14rem;
+$white:		#FCFAF9; //Background color Light Theme
+$light-gray:#dedcdc; //Nice gray
+$dark-gray: #a3a3a3; //Darker gray 
+
+$dark:      #141414; //Background color Dark Theme
+$black:		#191919; //Darkest dark
+
+$primary:   #48E5C2; //Primary color of the theme
+$secondary: #43a892; //Secondary color of the theme
+$tertiary:  #135446; //is this even necessary?
+
+$accent1:   #FF99C9; //Hover of icons
+$accent2:   #FA9F42; //Hover of icons
+
+$initial_pos: -0.14rem; //Position of toggle dark mode button
 
 html {
     background: var(--bgColor);
     color: var(--textColor);
     --bgColor: $white;
-    --lightBtn: #FE016C;
     --textColor: #000000;
     --iconColor1: #333333;
     --iconColor2: #333333;
@@ -22,8 +26,7 @@ html {
   html[data-theme='dark'] {
     background: var(--bgColor) !important;
     color: var(--textColor);
-    --lightBtn: #FFBD07;
-    --bgColor: #323231;
+    --bgColor: #141414;
     --textColor: #FCFAF9;
     --grayColor: #c2c2c2;
     --iconColor1: #c2c2c2;
@@ -141,16 +144,15 @@ h4 {
     height: 100px;
 }
 
-//DARK MODE STYLES
+//TOGGLE BUTTON STYLES:
 
-$dark:		#000411;
-$black2:	#353535;
-$red:		#FF495C;
+//CIRCLE
+$button-on:  $primary;
+$button-off: $dark;
 
-$off-state: 	$primary;
-$on-state: 		$primary;
-
-$react-blue:	#61dafb;
+//BACKGROUND
+$off-state: 	$dark-gray;
+$on-state: 		$tertiary;
 
 .switch{
     margin-top: 1rem; //me
@@ -183,11 +185,11 @@ $react-blue:	#61dafb;
     position: absolute;
 	width: 1.6rem;
 	height: 1.6rem;
-	background-color: $gray;
+	background-color: $button-off;
 	border-radius: 50%;
 	transition: transform 160ms ease-in-out;
 	z-index: 3;
-	border: 0.05rem solid $gray;
+	border: 0.05rem solid $button-off;
 	top: -0.05rem;
 }
 
@@ -196,16 +198,16 @@ $react-blue:	#61dafb;
     position: absolute;
 	width: 1.6rem;
 	height: 1.6rem;
-	background-color: $gray2;
+	background-color: $button-on;
 	border-radius: 50%;
 	transition: transform 160ms ease-in-out;
 	z-index: 3;
-	border: 0.05rem solid $gray2;
+    border: 0.05rem solid $button-on;
 	top: -0.05rem;
 }
 
 .switch_is-off{
-	background-color: $off-state;
+    background-color: $off-state;
 }
 .switch_is-on{
 	background-color: $on-state;
