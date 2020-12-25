@@ -7,18 +7,18 @@ import Col from 'react-bootstrap/Col';
 
 function HomeFooter() {
     return(
-        <Row className="justify-content-center myprojects-height">
-            <Col xs="auto" className="justify-content-center myprojects-height">
-                <Link className="nav-link" to="/projects">
-                    <div className="homeIcon">
+        <Row className="myprojects-height align-items-center">
+            <Col xs={12} className="justify-content-center">
+                <Link className="nav-link auto-height" to="/projects">
+                    <div className="homeArrow">
                         <Row className="justify-content-center">
-                            <Col>
-                                <h3 className="row">My Projects</h3>
+                            <Col xs="auto">
+                                <h3>My Projects</h3>
                             </Col>
                         </Row>
                         <Row className="justify-content-center">
                             <Col xs="auto">
-                                <span className="row fas fa-angle-down fa-2x"></span>
+                                <span className="fas fa-angle-down fa-2x"></span>
                             </Col>
                         </Row>
                     </div>
@@ -32,21 +32,21 @@ function Home() {
     return(
         <div className="home">
             <Row className="align-items-center toggle-height">
-                <Col>
+                <Col xs={12}>
                     <Row>
                         <Toggle/>
                     </Row>
                 </Col>
             </Row>
             <Row className="align-items-center home-height">
-                <Col>
+                <Col xs={12}>
                     <Row className="justify-content-center">
                         <Col xs={12}>
                             <h1 className="centered-text">Rodrigo Ramirez</h1>
                         </Col>
                     </Row>
                     <Row className="justify-content-center">
-                        <Col xs={4}>
+                        <Col xs={6} sm={10} md={4} lg={4}>
                             <hr></hr>
                         </Col>
                     </Row>
@@ -55,9 +55,7 @@ function Home() {
                             <h2 className="centered-text">Front-End Developer</h2>
                         </Col>
                     </Row>
-                    <div className="row mt-4">
-                        <Contact/>
-                    </div>
+                    <Contact/>
                 </Col>
             </Row>
             <HomeFooter></HomeFooter>
