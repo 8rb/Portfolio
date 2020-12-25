@@ -59,7 +59,7 @@ html {
 }
 
 .toggle-height {
-    height: 8vh;
+    height: 6vh;
 }
 
 .home-height {
@@ -67,7 +67,15 @@ html {
 }
 
 .myprojects-height {
-    height: 12vh;
+    height: 14vh;
+}
+
+.auto-height {
+    height: 100%;
+}
+
+.auto-width {
+    width: 100%;
 }
 
 .centered-text {
@@ -80,10 +88,13 @@ html {
 }
 
 .logo {
-    height: 80%;
-    width: 80%;
-    max-width: 200px;
-    max-height: 200px;
+    height: 12vw;
+    width: 12vw;
+    min-width: 120px;
+    min-height: 120px;
+    // max-width: 100px;
+    // max-height: 100px;
+    border-radius: 100px;
 }
 
 .project-text {
@@ -91,37 +102,58 @@ html {
 }
 
 h1 {
-    font-size:calc(30px + 1.5vw);
+    font-size:calc(35px + 1.5vw);
+    font-weight: 200;
 }
 
 h2 {
-    font-size:calc(25px + 1vw);
+    font-size:calc(30px + 1vw);
+    font-weight: 200;
 }
 
 h3 {
-    font-size: 150%;
+    font-size:calc(18px + 0.5vw);
+    font-weight: 300;
 }
 
 h4 {
-    font-size: 100%;
+    font-size:calc(25px + 0.2vw);
+    font-weight: 400;
+}
+
+.contact-text {
+    font-size:calc(12px + 0.5vw);
     color: $primary;
+    font-weight: 400;
 }
 
-.pokeball {
-    width: 150px;
-    height: 150px;
-}
 
-.roundedLogo {
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
+p {
+    font-size:calc(14px + 0.4vw);
+    font-weight: 300;
 }
 
 .homeIcon {
+    font-size:calc(25px + 0.8vw);
     color: $primary;
 }
+
 .homeIcon:hover {
+    color: $secondary;
+}
+
+.nav-link {
+    width: 100%;
+}
+
+.homeArrow {
+    width: auto;
+    color: $primary;
+    font-size:calc(10px + 0.5vw);
+    font-weight: 100;
+}
+
+.homeArrow:hover {
     color: $secondary;
 }
 
@@ -164,7 +196,7 @@ $on-state: 		$tertiary;
 
 .switch{
     // margin-top: 1rem; //me
-    margin-left: 1.8rem; //me
+    margin-left: calc(15px + 1vw); //me
 	position: relative;
 	width: 1.3rem;
 	height: 1.5rem;

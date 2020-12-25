@@ -6,7 +6,8 @@ export const projects = [
         "github_link": "https://github.com/8rb/PokeApp",
         "deployed_link": "https://pokeapp.onrender.com/",
         "img": require("../images/pokeffective.png"),
-        "img_classname": "pokeball logo iconCool"
+        "img_classname": "logo iconCool",
+        "row_classname": "align-items-center justify-content-center pt-0 pt-sm-4 pb-0 pb-sm-4"
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@ export const projects = [
         "github_link": "https://github.com/8rb/FinanciApp-FrontEnd",
         "deployed_link": "https://financeeapp.onrender.com",
         "img": require("../images/FinanceeApp.png"),
-        "img_classname": "roundedLogo rounded-circle logo iconCool"
+        "img_classname": "logo iconCool",
+        "row_classname": "align-items-center justify-content-center pt-0 pt-sm-4 pb-0 pb-sm-4"
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@ export const projects = [
         "github_link": "https://github.com/8rb/interlab-webapps",
         "deployed_link": "https://interlab.onrender.com/#/",
         "img": require("../images/interlab.png"),
-        "img_classname": "roundedLogo rounded-circle logo iconCool"
+        "img_classname": "logo iconCool",
+        "row_classname": "align-items-center justify-content-center pt-0 pt-sm-4"
     },
         
         // {
