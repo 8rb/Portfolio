@@ -1,60 +1,65 @@
 import React from 'react';
-import { Jumbotron } from 'reactstrap';
 import Contact from './ContactComponent';
 import { Link } from 'react-router-dom';
 import Toggle from './Toggle';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function HomeFooter() {
     return(
-        <div className="container">
-            <div className="row justify-content-center">
+        <Row className="justify-content-center myprojects-height">
+            <Col xs="auto" className="justify-content-center myprojects-height">
                 <Link className="nav-link" to="/projects">
                     <div className="homeIcon">
-                        <div className="row justify-content-center">
-                            <h3 className="row">My Projects</h3>
-                        </div>
-                        <div className="row justify-content-center">
-                            <span className="row fas fa-angle-down fa-2x"></span>
-                        </div>
+                        <Row className="justify-content-center">
+                            <Col>
+                                <h3 className="row">My Projects</h3>
+                            </Col>
+                        </Row>
+                        <Row className="justify-content-center">
+                            <Col xs="auto">
+                                <span className="row fas fa-angle-down fa-2x"></span>
+                            </Col>
+                        </Row>
                     </div>
                 </Link>
-            </div>
-        </div>
+            </Col>
+        </Row>
     );
 }
 
 function Home() {
     return(
-        <div className="main">
-            <div className="row align-items-center no-padding">
-                <Toggle/>
-            </div>
-            <Jumbotron className="row align-items-center home">
-                <div className="container">
-                    <div className="row justify-content-center align-items-center">
-                        <div className="col-auto offset-0">
-                            <h1>Rodrigo</h1>
-                        </div>
-                        <div className="col-auto offset-0">
-                            <h1>Ramirez</h1>
-                        </div>
-                    </div>
-                    <div className="row justify-content-center align-items-center">
-                        <hr className="col-5"></hr>
-                    </div>
-                    <div className="row justify-content-center align-items-center">
-                        <div className="col-auto offset-0">
-                            <h2>Front-End</h2>
-                        </div>
-                        <div className="col-auto offset-0">
-                            <h2>Developer</h2>
-                        </div>
-                    </div>
+        <div className="home">
+            <Row className="align-items-center toggle-height">
+                <Col>
+                    <Row>
+                        <Toggle/>
+                    </Row>
+                </Col>
+            </Row>
+            <Row className="align-items-center home-height">
+                <Col>
+                    <Row className="justify-content-center">
+                        <Col xs={12}>
+                            <h1 className="centered-text">Rodrigo Ramirez</h1>
+                        </Col>
+                    </Row>
+                    <Row className="justify-content-center">
+                        <Col xs={4}>
+                            <hr></hr>
+                        </Col>
+                    </Row>
+                    <Row className="justify-content-center">
+                        <Col xs={12}>
+                            <h2 className="centered-text">Front-End Developer</h2>
+                        </Col>
+                    </Row>
                     <div className="row mt-4">
                         <Contact/>
                     </div>
-                </div>
-            </Jumbotron>
+                </Col>
+            </Row>
             <HomeFooter></HomeFooter>
         </div>
     ); 
