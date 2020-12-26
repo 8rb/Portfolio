@@ -80,9 +80,6 @@ const projectsList = projects.map(item =>
     );
 
 class Projects extends Component {
-    constructor(props) {
-        super(props);
-    }
     
     render() {
         return(
