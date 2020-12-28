@@ -11,7 +11,7 @@ function Footer() {
     const myProjectsProps = useSpring({
         opacity: 1, 
         from: {opacity: 0},
-        config: {duration: 2000}
+        config: {duration: 1000}
     })
     return(
         <Row className="justify-content-center myprojects-height">
@@ -35,36 +35,6 @@ function Footer() {
     )
 }
 
-function HomeFooter() {
-    const myProjectsProps = useSpring({
-        opacity: 1, 
-        from: {opacity: 0},
-        config: {duration: 2000}
-    })
-    return(
-        <Row className="align-items-center myprojects-height">
-            <Col xs={12} className="justify-content-center">
-                <Link className="nav-link auto-height" to="/projects">
-                    <animated.div style={myProjectsProps}>
-                        <div className="homeArrow">
-                            <Row className="justify-content-center">
-                                <Col xs={1}>
-                                    <h3>My Projects</h3>
-                                </Col>
-                            </Row>
-                            <Row className="justify-content-center">
-                                <Col xs="auto">
-                                    <span className="fas fa-angle-down fa-2x"></span>
-                                </Col>
-                            </Row>
-                        </div>
-                    </animated.div>
-                </Link>
-            </Col>
-        </Row>
-    );
-}
-
 function Home() {
     const props = useSpring({
         opacity: 1, 
@@ -78,9 +48,9 @@ function Home() {
                 <Col xs={12}>
                     <Row>
                         <Spring
-                            from={{marginTop: -500 }}
+                            from={{marginTop: -100 }}
                             to={{marginTop: 0 }}
-                            config={{delay: 100, duration: 1500}}
+                            config={{delay: 0, duration: 600}}
                         >
                             { props => (
                         <div style={props}>
