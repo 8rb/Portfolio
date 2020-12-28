@@ -34,7 +34,9 @@ html {
     p {
         color: var(--grayColor);
     }
-
+    .contact-text {
+        color: $primary;
+    }
     hr {
         background-color: #262626;
         height: 0.5px;
@@ -130,16 +132,15 @@ h4 {
     font-weight: 400;
 }
 
+p {
+    font-size:calc(14px + 0.4vw);
+    font-weight: 300;
+}
+
 .contact-text {
     font-size:calc(12px + 0.5vw);
     color: $primary;
     font-weight: 400;
-}
-
-
-p {
-    font-size:calc(14px + 0.4vw);
-    font-weight: 300;
 }
 
 .homeIcon {
