@@ -7,23 +7,58 @@ import Col from 'react-bootstrap/Col';
 import {useSpring, animated} from 'react-spring';
 import {Spring} from 'react-spring/renderprops';
 
-function HomeFooter() {
+function Footer() {
+    const myProjectsProps = useSpring({
+        opacity: 1, 
+        from: {opacity: 0},
+        config: {duration: 2000}
+    })
     return(
-        <Row className="myprojects-height align-items-center">
-            <Col xs={12} className="justify-content-center">
-                <Link className="nav-link auto-height" to="/projects">
-                    <div className="homeArrow">
+        <Row className="justify-content-center myprojects-height">
+            <Col xs="auto">
+                <Link className="nav-link" to="/projects">
+                    <animated.div style={myProjectsProps}>
                         <Row className="justify-content-center">
                             <Col xs="auto">
                                 <h3>My Projects</h3>
                             </Col>
                         </Row>
-                        <Row className="justify-content-center">
+                        <Row className="justify-content-center homeArrow">
                             <Col xs="auto">
                                 <span className="fas fa-angle-down fa-2x"></span>
                             </Col>
                         </Row>
-                    </div>
+                    </animated.div>
+                </Link>
+            </Col>
+        </Row>
+    )
+}
+
+function HomeFooter() {
+    const myProjectsProps = useSpring({
+        opacity: 1, 
+        from: {opacity: 0},
+        config: {duration: 2000}
+    })
+    return(
+        <Row className="align-items-center myprojects-height">
+            <Col xs={12} className="justify-content-center">
+                <Link className="nav-link auto-height" to="/projects">
+                    <animated.div style={myProjectsProps}>
+                        <div className="homeArrow">
+                            <Row className="justify-content-center">
+                                <Col xs={1}>
+                                    <h3>My Projects</h3>
+                                </Col>
+                            </Row>
+                            <Row className="justify-content-center">
+                                <Col xs="auto">
+                                    <span className="fas fa-angle-down fa-2x"></span>
+                                </Col>
+                            </Row>
+                        </div>
+                    </animated.div>
                 </Link>
             </Col>
         </Row>
@@ -66,9 +101,9 @@ function Home() {
                         </Col>
                     </Row>
                     <Row className="justify-content-center">
-                        <Col xs={6} sm={10} md={4} lg={4}>
+                        <Col xs="auto">
                             <animated.div style={props}>
-                                <hr></hr>
+                                <hr className="hori-home"></hr>
                             </animated.div>
                         </Col>
                     </Row>
@@ -82,9 +117,7 @@ function Home() {
                     <Contact/>
                 </Col>
             </Row>
-            <animated.div style={props}>
-                <HomeFooter></HomeFooter>
-            </animated.div>
+            <Footer/>
         </div>
     ); 
 

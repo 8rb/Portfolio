@@ -60,14 +60,23 @@ html {
 
 .toggle-height {
     height: 6vh;
+    // min-height: 50px;
+    min-width: 200px;
+    // max-height: 50px;
 }
 
 .home-height {
     height: 80vh;
+    // min-height: 400px;
+    min-width: 200px;
+    // max-height: 600px;
 }
 
 .myprojects-height {
-    height: 14vh;
+    // height: 14vh;
+    // min-height: 80px;
+    min-width: 200px;
+    // max-height: 120px;
 }
 
 .auto-height {
@@ -143,18 +152,24 @@ p {
 }
 
 .nav-link {
-    width: 100%;
+    padding: 0;
+    color: $primary;
+}
+
+.nav-link:hover {
+    padding: 0;
+    color: $secondary;
 }
 
 .homeArrow {
-    width: auto;
-    color: $primary;
     font-size:calc(10px + 0.5vw);
     font-weight: 100;
 }
 
-.homeArrow:hover {
-    color: $secondary;
+.hori-home {
+    width: 85vw;
+    max-width: 500px;
+    // min-width: 250px;
 }
 
 .codeIcon {
@@ -195,8 +210,8 @@ $off-state: 	$dark-gray;
 $on-state: 		$tertiary;
 
 .switch{
-    // margin-top: 1rem; //me
-    margin-left: calc(15px + 1vw); //me
+    // margin-top: 0rem; //me
+    margin-left: 2.15rem; //me
 	position: relative;
 	width: 1.3rem;
 	height: 1.5rem;
