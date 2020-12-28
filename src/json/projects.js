@@ -5,7 +5,7 @@ export const projects = [
         "description": "PokeApp is a Pokemon Encyclopedia and type calculator developed in React + TypeScript. It fetches data from an external API (PokeAPI) using Axios. It also takes advantage of React Hooks, Function Components, Use Effect, etc. The prototyping was made using Adobe XD and the views were made using React Bootstrap.",
         "github_link": "https://github.com/8rb/PokeApp",
         "deployed_link": "https://pokeapp.onrender.com/",
-        "img": require("../images/pokeffective.png"),
+        "img": require("../images/pokeapp.png"),
         "img_classname": "logo iconCool",
         "row_classname": "align-items-center justify-content-center pt-0 pt-sm-4 pb-0 pb-sm-4"
     },
