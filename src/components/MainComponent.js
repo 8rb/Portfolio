@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Projects from './ProjectsComponent';
-import { Switch, Route, withRouter, Redirect, HashRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, Redirect, BrowserRouter } from 'react-router-dom';
 
 class Main extends Component {
 
     render(){
         return(
-            <HashRouter>
+            <BrowserRouter>
                 <div className="theme">
                     <div className="container-fluid">
                         <Switch>
@@ -23,7 +23,7 @@ class Main extends Component {
                         </Switch>
                     </div>
                 </div>
-            </HashRouter>
+            </BrowserRouter>
         );
     }
 }
