@@ -14,7 +14,7 @@ export const projects = [
         "title": "Bodega",
         "description": "Bodega is an online shopping website, based on Peruvian 'Bodegas'. It was developed in Vue and Typescript, and uses Bootstrap and SCSS for the UI elements. This project uses Vuex store to store the state of the cart when rendering the component.",
         "github_link": "https://github.com/8rb/Bodega-FrontEnd",
-        "deployed_link": "https://bodega.onrender.com",
+        "deployed_link": "https://bodega.onrender.com/store",
         "img": require("../images/Bodega.png"),
         "img_classname": "logo iconCool",
         "row_classname": "align-items-center justify-content-center pt-0 pt-sm-4 pb-0 pb-sm-4"
