@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Home from './HomeComponent';
-import Projects from './ProjectsComponent';
+import Home from './Home';
+import Projects from './Projects';
+import AllProjects from './AllProjects/AllProjects';
 import { Switch, Route, withRouter, Redirect, BrowserRouter } from 'react-router-dom';
 
 class Main extends Component {
@@ -15,6 +16,7 @@ class Main extends Component {
                                 <Home/>
                             </Route>
                             <Route path="/projects">
+                                {/* <AllProjects/> */}
                                 <Projects/>
                             </Route>
                             <Route path="*">
