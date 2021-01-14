@@ -9,6 +9,8 @@ $primary:   #48E5C2; //Primary color of the theme
 $secondary: #43a892; //Secondary color of the theme
 $tertiary:  #135446; //is this even necessary?
 
+$complementary1: #FA6466;
+
 $accent1:   #FF99C9; //Hover of icons
 $accent2:   #FA9F42; //Hover of icons
 
@@ -273,4 +275,8 @@ $on-state: 		$tertiary;
 }
 .toggle-button_position-right{
     transform: translateX(+ 0.8rem + $initial_pos)
+}
+
+.full-height {
+    height: 100%;
 }

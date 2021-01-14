@@ -1,5 +1,5 @@
 import React from 'react';
-import Contact from './ContactComponent';
+import Contact from './Contact';
 import { Link } from 'react-router-dom';
 import Toggle from './Toggle';
 import Row from 'react-bootstrap/Row';

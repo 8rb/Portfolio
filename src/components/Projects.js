@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Contact from './ContactComponent';
+import Contact from './Contact';
 import projects from '../json/projects';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
