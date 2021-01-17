@@ -5,7 +5,7 @@ $dark-gray: #a3a3a3; //Darker gray
 $dark:      #141414; //Background color Dark Theme
 $black:		#191919; //Darkest dark
 
-$primary:   #48E5C2; //Primary color of the theme
+$primary:   #27c28e; //Primary color of the theme
 $secondary: #43a892; //Secondary color of the theme
 $tertiary:  #135446; //is this even necessary?
 
@@ -67,13 +67,6 @@ html {
     // min-height: 50px;
     min-width: 200px;
     // max-height: 50px;
-}
-
-.home-height {
-    height: 80vh;
-    // min-height: 400px;
-    min-width: 200px;
-    // max-height: 600px;
 }
 
 .myprojects-height {
@@ -148,6 +141,7 @@ p {
 .homeIcon {
     font-size:calc(25px + 0.8vw);
     color: $primary;
+    opacity: 0.6;
 }
 
 .homeIcon:hover {

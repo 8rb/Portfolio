@@ -3,8 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import PokeApp from '../../images/PokeApp.jpg';
 import './Styles.scss';
 
-function Project() {
-
+const Project = () => {
   return (
     <>
     <Row className="align-items-center justify-content-center nav-div">
