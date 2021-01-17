@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import PokeApp from '../../images/PokeApp.jpg';
 import './Styles.scss';
 
-function AllProjects() {
+const AllProjects = () => {
 
   return (
     <>

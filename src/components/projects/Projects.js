@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Contact from './Contact';
-import projects from '../json/projects';
+import Contact from '../contact/Contact';
+import projects from '../../json/projects';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
-function ProjectsHeader() {
+const ProjectsHeader = () => {
     return(
         <Row>
             <Col className="pt-3 pb-3" xs={12}>

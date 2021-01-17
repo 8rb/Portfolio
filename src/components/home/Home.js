@@ -1,13 +1,14 @@
 import React from 'react';
-import Contact from './Contact';
+import Contact from '../contact/Contact';
 import { Link } from 'react-router-dom';
-import Toggle from './Toggle';
+import Toggle from '../toggle/Toggle';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {useSpring, animated} from 'react-spring';
 import {Spring} from 'react-spring/renderprops';
+import './Styles.scss';
 
-function Footer() {
+const Footer = () => {
     const myProjectsProps = useSpring({
         opacity: 1, 
         from: {opacity: 0},
@@ -35,7 +36,7 @@ function Footer() {
     )
 }
 
-function Home() {
+const Home = () => {
     const props = useSpring({
         opacity: 1, 
         from: {opacity: 0},
@@ -44,7 +45,7 @@ function Home() {
 
     return(
         <div className="home">
-            <Row className="align-items-center toggle-height">
+            {/* <Row className="align-items-center toggle-height">
                 <Col xs={12}>
                     <Row>
                         <Spring
@@ -60,34 +61,27 @@ function Home() {
                         </Spring>
                     </Row>
                 </Col>
-            </Row>
+            </Row> */}
             <Row className="align-items-center home-height">
                 <Col xs={12}>
                     <Row className="justify-content-center">
                         <Col xs={12}>
                             <animated.div style={props}>
-                                <h1 className="centered-text">Rodrigo Ramirez</h1>
-                            </animated.div>
-                        </Col>
-                    </Row>
-                    <Row className="justify-content-center">
-                        <Col xs="auto">
-                            <animated.div style={props}>
-                                <hr className="hori-home"></hr>
+                                <h1 className="centered-text name">Rodrigo Ramirez</h1>
                             </animated.div>
                         </Col>
                     </Row>
                     <Row className="justify-content-center">
                         <Col xs={12}>
                             <animated.div style={props}>
-                                <h2 className="centered-text">Front-End Developer</h2>
+                                <h2 className="centered-text job">Front-End Developer</h2>
                             </animated.div>
                         </Col>
                     </Row>
                     <Contact/>
                 </Col>
             </Row>
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     ); 
 
