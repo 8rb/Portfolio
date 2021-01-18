@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Pdf from '../../Documents/Rodrigo_Ramirez_Resume_2021.pdf';
+import Pdf from '../../documents/Rodrigo_Ramirez_Resume_2021.pdf';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Spring} from 'react-spring/renderprops';

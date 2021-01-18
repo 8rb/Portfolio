@@ -1,3 +1,27 @@
+@import '../../assets/colors.scss';
+
 .navBar {
     height: 20vh;
+    background: #F2FFFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    /* position: sticky; */
+    top: 0;
+    z-index: 10;
+}
+
+.nav-link {
+    padding: 0;
+    color: $primary;
+
+    &:hover {
+        padding: 0;
+        color: $secondary;
+    }
+}
+
+p {
+    text-align: center;
 }
