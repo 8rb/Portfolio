@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Styles.scss';
 class ComponentWrapper extends React.Component {
 	
 	constructor(props) {

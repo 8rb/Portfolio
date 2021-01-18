@@ -1,11 +1,10 @@
-.nav-div {
-    height: 15vh;
-}
+@import '../../assets/colors.scss';
 .title-div {
-    height: 15vh;
+    height: 40%;
 }
-.projects-div {
-    height: 60vh;
+
+.projects {
+    height: 80%;
 }
 .contact-div {
     height: 10vh;
@@ -16,11 +15,20 @@
 }
 
 .image {
-    height: 10vw;
-    width: 20vw;
+    margin: 0 2rem;
+    height: 20vw;
     min-width: 210px;
     min-height: 120px;
     max-width: 400px;
     max-height: 250px;
-    justify-content: center;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        filter: brightness(80%);
+    }
+}
+
+.title {
+    color: $primary;
+    font-weight: 700;
+    font-size:calc(35px + 1.5vw);
 }

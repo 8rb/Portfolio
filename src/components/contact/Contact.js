@@ -3,6 +3,7 @@ import Pdf from '../../assets/documents/Rodrigo_Ramirez_Resume_2021.pdf';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Spring} from 'react-spring/renderprops';
+import './Styles.scss';
 
 class Contact extends Component {
     constructor(props) {
@@ -35,9 +36,9 @@ class Contact extends Component {
     
     render() {
         return (
-            <Row className="justify-content-center align-items-center mt-4">
+            <Row className="justify-content-center align-items-center">
                 <Col xs="auto">
-                    <Row className="mt-2">
+                    <Row>
                         <Spring
                             from={{opacity: 0 }}
                             to={{opacity: 1 }}
@@ -89,7 +90,7 @@ class Contact extends Component {
                         config={{delay: 1300, duration: 500}}
                         >
                         { props => (
-                        <Row style={props} className="justify-content-center mt-2">
+                        <Row style={props} className="justify-content-center">
                             { this.state.showResume && 
                                 <Col xs="auto">
                                     <p className="contact-text">Resume</p>

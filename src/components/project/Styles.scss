@@ -1,0 +1,58 @@
+.project-div {
+    height: 60vh;
+}
+.links-div {
+    height: 10vh;
+}
+.contact-div {
+    height: 10vh;
+}
+.imageP {
+    border-radius: 10px;
+    width: 80%;
+}
+
+.titleP {
+    font-weight: 700;
+    color: #2D3331;
+    font-size:calc(35px + 1.5vw);
+}
+
+.tag-div {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.tag {
+    font-size:calc(20px + 0.9vw);
+    text-align: start;
+}
+
+.text-div {
+    width: 60%;
+}
+
+
+.text {
+    font-size:calc(12px + 0.6vw);
+    text-align: justify;
+}
+
+.btn {
+    padding: 1em 0;
+    width: 30%;
+    color: #F2FFFB;
+    font-weight: 700;
+    border-radius: 50px;
+    &.github {
+        align-content: flex-end;
+        background-color: #C2275B;
+    }
+    &.live {
+        background-color: #275BC2;
+    }
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        filter: brightness(80%); 
+    }
+}
