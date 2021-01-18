@@ -1,0 +1,17 @@
+@import '../../assets/colors.scss';
+
+.contact-text {
+    font-size:calc(12px + 0.5vw);
+    color: $primary;
+    opacity: 0.73;
+    font-weight: 400;
+}
+
+.homeIcon {
+    font-size:calc(25px + 0.8vw);
+    color: $primary;
+    opacity: 0.6;
+    &:hover{
+        color: $secondary;
+    }
+}

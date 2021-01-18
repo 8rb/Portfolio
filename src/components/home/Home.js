@@ -8,34 +8,6 @@ import {useSpring, animated} from 'react-spring';
 import {Spring} from 'react-spring/renderprops';
 import './Styles.scss';
 
-const Footer = () => {
-    const myProjectsProps = useSpring({
-        opacity: 1, 
-        from: {opacity: 0},
-        config: {duration: 1000}
-    })
-    return(
-        <Row className="justify-content-center myprojects-height">
-            <Col xs="auto">
-                <Link className="nav-link" to="/projects">
-                    <animated.div style={myProjectsProps}>
-                        <Row className="justify-content-center">
-                            <Col xs="auto">
-                                <h3>My Projects</h3>
-                            </Col>
-                        </Row>
-                        <Row className="justify-content-center homeArrow">
-                            <Col xs="auto">
-                                <span className="fas fa-angle-down fa-2x"></span>
-                            </Col>
-                        </Row>
-                    </animated.div>
-                </Link>
-            </Col>
-        </Row>
-    )
-}
-
 const Home = () => {
     const props = useSpring({
         opacity: 1, 
@@ -79,10 +51,13 @@ const Home = () => {
                                 </animated.div>
                             </Col>
                         </Row>
+                    </Col>
+                </Row>
+                <Row className="align-items-center footer-height">
+                    <Col>
                         <Contact/>
                     </Col>
                 </Row>
-                {/* <Footer/> */}
             </div>
         </div>
     ); 

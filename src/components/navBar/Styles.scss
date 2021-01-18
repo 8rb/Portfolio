@@ -1,24 +1,24 @@
 @import '../../assets/colors.scss';
 
 .navBar {
-    height: 20vh;
+    height: 15vh;
+    min-width: 250px;
     background: #F2FFFB;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 1rem;
+    align-items: flex-end;
     /* position: sticky; */
     top: 0;
     z-index: 10;
 }
 
 .nav-link {
-    padding: 0;
-    color: $primary;
-
+    color: $dark;
+    font-size:calc(16px + 0.8vw);
+    font-weight: 300;
     &:hover {
-        padding: 0;
-        color: $secondary;
+        transition: all 0.2s ease-in-out;
+        color: $accent1;
     }
 }
 

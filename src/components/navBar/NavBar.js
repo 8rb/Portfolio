@@ -5,10 +5,18 @@ import Col from 'react-bootstrap/Col';
 import {useSpring, animated} from 'react-spring';
 import './Styles.scss';
 import { Link } from 'react-router-dom';
+import Toggle from '../toggle/Toggle';
 
 const NavBar = () => {
     return(
         <div className="navBar">
+            {/* <nav>
+                <Row className="justify-content-start align-items-center">
+                    <Col>
+                        <Toggle/>
+                    </Col>
+                </Row>
+            </nav> */}
             <nav>
                 <div className="container-fluid">
                     <Row className="justify-content-center align-items-center">

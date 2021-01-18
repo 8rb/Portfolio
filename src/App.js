@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './components/navBar/NavBar';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
+import AllProjects from './components/projectsList/AllProjects';
 import './App.scss';
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
 class App extends Component {
@@ -17,8 +18,8 @@ class App extends Component {
             </Route>
             <Route path="/projects">
                 {/* <Project/> */}
-                {/* <AllProjects/> */}
-                <Projects/>
+                <AllProjects/>
+                {/* <Projects/> */}
             </Route>
             <Route path="*">
                 <Redirect to="/"/>
