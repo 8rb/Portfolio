@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
-import Content from './components/content/Content';
 import NavBar from './components/navBar/NavBar';
+import Home from './components/home/Home';
+import Projects from './components/projects/Projects';
 import './App.scss';
-
+import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
 class App extends Component {
   
   render() {
     return(
-      <>
+      <Router>
         <NavBar/>
-        <Content/>
-      </>
+        <div className="theme content">
+          <Switch>
+            <Route exact path="/">
+                <Home/>
+            </Route>
+            <Route path="/projects">
+                {/* <Project/> */}
+                {/* <AllProjects/> */}
+                <Projects/>
+            </Route>
+            <Route path="*">
+                <Redirect to="/"/>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     )
   }
 }
