@@ -4,27 +4,26 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {useSpring, animated} from 'react-spring';
 import './Styles.scss';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
-    const props = useSpring({
-        opacity: 1, 
-        from: {opacity: 0},
-        config: {duration: 1500}
-    })
-
     return(
         <div className="navBar">
-            <Row className="justify-content-center align-items-center">
-                <Col xs={4}>
-                    <p>Home</p>
-                </Col>
-                <Col xs={4}>
-                    <p>Projects</p>
-                </Col>
-                <Col xs={4}>
-                    <p>Contact</p>
-                </Col>
-            </Row>
+            <nav>
+                <div className="container-fluid">
+                    <Row className="justify-content-center align-items-center">
+                        <Col xs={6}>
+                            <Link className="nav-link" to="/">Home</Link>
+                        </Col>
+                        <Col xs={6}>
+                            <Link className="nav-link" to="/projects">Projects</Link>
+                        </Col>
+                        {/* <Col xs={4}>
+                            <Link to="/contact">Contact</Link>
+                        </Col> */}
+                    </Row> 
+                </div>
+            </nav>
         </div>
     ); 
 
