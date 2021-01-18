@@ -1,4 +1,4 @@
-$white:		#FCFAF9; //Background color Light Theme
+$white:		#F2FFFB; //Background color Light Theme
 $light-gray:#dedcdc; //Nice gray
 $dark-gray: #a3a3a3; //Darker gray 
 
@@ -19,7 +19,7 @@ $initial_pos: -0.14rem; //Position of toggle dark mode button
 html {
     background: var(--bgColor);
     color: var(--textColor);
-    --bgColor: $white;
+    --bgColor: #F2FFFB;
     --textColor: #000000;
     --iconColor1: #333333;
     --iconColor2: #333333;
@@ -45,21 +45,22 @@ html {
     }
 }
 
+.content {
+    height: 80vh;
+}
+
 .theme {
     background: var(--bgColor) !important;
     color: var(--textColor);
 }
 
 .container-fluid {
+    height: 100%;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-}
-
-.home {
-    height: 100vh;
 }
 
 .toggle-height {
