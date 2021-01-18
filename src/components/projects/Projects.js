@@ -1,38 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Contact from '../contact/Contact';
 import projects from '../../json/projects';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-
-const ProjectsHeader = () => {
-    return(
-        <Row>
-            <Col className="pt-3 pb-3" xs={12}>
-                <Row className="justify-content-center">
-                    <Link className="nav-link" to="/home">
-                        <div className="homeArrow">
-                            <Row className="justify-content-center">
-                                <span className="fas fa-angle-up fa-2x"></span>
-                            </Row>
-                            <Row className="justify-content-center">
-                                <h3 className="">Home</h3>
-                            </Row>
-                        </div>
-                    </Link>
-                </Row>
-            </Col>
-            <Col className="pb-4" xs={12}>
-                <Row className="justify-content-center align-items-center">
-                    <Col xs={12}>
-                        <h2 className="centered-text">My Projects</h2>
-                    </Col>
-                </Row>
-            </Col>
-        </Row>
-    );
-}
 
 const projectsList = projects.map(item =>
         <Row key={item.id} className={item.row_classname}>
@@ -83,10 +54,9 @@ class Projects extends Component {
     
     render() {
         return(
-            <div>
+            <div className="container-fluid projects">
                 <Row>
                     <Col>
-                        <ProjectsHeader/>
                         {projectsList}
                         <footer className="footer">
                             <Contact/>
