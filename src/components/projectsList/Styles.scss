@@ -18,6 +18,7 @@ $max-size: 800px;
 }
 
 .projects-container {
+    height: 100%;
     display: flex;
     margin: 0em 3em;
     align-items: center;
@@ -37,8 +38,8 @@ $max-size: 800px;
 }
 
 .project-col {
-    width: 30%;
-    margin: 5em;
+    width: 40%;
+    margin: 4vw;
 }
 
 @media screen and (max-width: $max-size) {
@@ -48,13 +49,28 @@ $max-size: 800px;
     }
 }
 
+.img-container {
+    position: relative;
+    width: 100%;
+    transition: all .3s ease-in-out;
+    &:hover {
+        transform: scale(1.25);
+        .image {
+            opacity: 1;
+        }
+        .overlay {
+            opacity: 1;
+        }
+    }
+}
+
 .image {
     display: block;
     width: 100%;
-    height: auto;
-  }
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+}
   
-  .overlay {
+.overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -63,17 +79,13 @@ $max-size: 800px;
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-  }
+    transition: 0.3s ease-in-out;
+    background: $primary;
+}
   
-  .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
+.overlay-text {
+    color: #fff;
+    font-size: 3rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -81,20 +93,7 @@ $max-size: 800px;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-  }
-
-
-// .image {
-//     max-width: 100%;
-//     box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
-//     transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-//     &:hover {
-//         box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
-//         .overlay {
-//             opacity: 1;
-//         }
-//     }
-// }
+}
 
 .title {
     color: $primary;

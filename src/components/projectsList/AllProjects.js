@@ -35,26 +35,25 @@ const AllProjects = () => {
       </Row> */}
         <div className="projects-row">
           <div className="project-col">
-            <Link to='/projects/pokeapp'>
-              <img className="image" src={PokeAppImg} alt="project"/>
-            </Link>
-          </div>
-          {/* <div className="project-col">
-            <Link to='/projects/bodega'>
-              <img className="image" src={BodegaImg} alt="project"/>
-            </Link>
-          </div> */}
-          <div className="container">
+            <div className="img-container">
+              <Link to='/projects/pokeapp'>
+                  <img className="image" src={PokeAppImg} alt="project"/>
+                  <div class="overlay">
+                    <div class="overlay-text">POKEAPP</div>
+                  </div>
+              </Link>
+            </div>
+          </div>          
           <div className="project-col">
-            <Link to='/projects/bodega'>
-                <img className="image" src={BodegaImg} alt="project"/>
-                <div class="overlay">
-                  <div class="text">Hello World</div>
-                </div>
-            </Link>
+            <div className="img-container">
+              <Link to='/projects/bodega'>
+                  <img className="image" src={BodegaImg} alt="project"/>
+                  <div class="overlay">
+                    <div class="overlay-text">BODEGA</div>
+                  </div>
+              </Link>
             </div>
-            </div>
-
+          </div>
         </div>
       </Switch>
     </div>
