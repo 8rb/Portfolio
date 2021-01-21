@@ -1,12 +1,31 @@
-.project-div {
-    height: 60vh;
+.pro-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
-.links-div {
-    height: 10vh;
+
+.pro-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.contact-div {
-    height: 10vh;
+
+.pro-col {
+    width: 40%;
+    margin: 4vw;
 }
+
+.links-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-col {
+    width: 40%;
+    margin: 4vw;
+}
+
 .imageP {
     border-radius: 10px;
     width: 80%;
@@ -24,7 +43,9 @@
 }
 
 .tag {
-    font-size:calc(20px + 0.9vw);
+    font-size:calc(14px + 0.9vw);
+    font-weight: 700;
+    color: #2D3331;
     text-align: start;
 }
 
