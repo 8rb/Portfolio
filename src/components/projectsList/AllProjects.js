@@ -44,14 +44,17 @@ const AllProjects = () => {
               <img className="image" src={BodegaImg} alt="project"/>
             </Link>
           </div> */}
+          <div className="container">
           <div className="project-col">
-            <Link to='/projects/bodega' class="c-preview">
-              <div class="c-preview__img">
+            <Link to='/projects/bodega'>
                 <img className="image" src={BodegaImg} alt="project"/>
-              </div>
-              <h2 class="c-preview__title">Bodega</h2>
+                <div class="overlay">
+                  <div class="text">Hello World</div>
+                </div>
             </Link>
-          </div>
+            </div>
+            </div>
+
         </div>
       </Switch>
     </div>
