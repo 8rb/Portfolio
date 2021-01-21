@@ -1,4 +1,7 @@
 @import '../../assets/colors.scss';
+
+$max-size: 800px;
+
 .title-div {
     height: 40%;
 }
@@ -14,13 +17,38 @@
     height: 100%;
 }
 
+.projects-container {
+    display: flex;
+    margin: 0em 3em;
+    align-items: center;
+}
+
+.projects-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: $max-size) {
+    .projects-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.project-col {
+    width: 30%;
+}
+
+@media screen and (max-width: $max-size) {
+    .project-col {
+        width: 80%;
+        margin: 2em 0;
+    }
+}
+
 .image {
-    margin: 0 2rem;
-    height: 20vw;
-    min-width: 210px;
-    min-height: 120px;
-    max-width: 400px;
-    max-height: 250px;
+    max-width: 100%;
     &:hover {
         transition: all 0.2s ease-in-out;
         filter: brightness(80%);
