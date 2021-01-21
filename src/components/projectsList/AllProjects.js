@@ -39,14 +39,17 @@ const AllProjects = () => {
               <img className="image" src={PokeAppImg} alt="project"/>
             </Link>
           </div>
-          <div className="project-col">
+          {/* <div className="project-col">
             <Link to='/projects/bodega'>
               <img className="image" src={BodegaImg} alt="project"/>
             </Link>
-          </div>
+          </div> */}
           <div className="project-col">
-            <Link to='/projects/interlab'>
-              <img className="image" src={InterLabImg} alt="project"/>
+            <Link to='/projects/bodega' class="c-preview">
+              <div class="c-preview__img">
+                <img className="image" src={BodegaImg} alt="project"/>
+              </div>
+              <h2 class="c-preview__title">Bodega</h2>
             </Link>
           </div>
         </div>
