@@ -2,25 +2,10 @@
 
 $max-size: 800px;
 
-.title-div {
-    height: 40%;
-}
-
-.projects {
-    height: 80%;
-}
-.contact-div {
-    height: 10vh;
-}
-
-.full-height {
-    height: 100%;
-}
-
 .projects-container {
     height: 100%;
     display: flex;
-    margin: 0em 3em;
+    margin: 0em 1em;
     align-items: center;
 }
 
@@ -38,11 +23,14 @@ $max-size: 800px;
 }
 
 .project-col {
-    width: 40%;
+    width: 35%;
     margin: 4vw;
 }
 
 @media screen and (max-width: $max-size) {
+    .projects-container {
+        margin: 0em;
+    }
     .project-col {
         width: 80%;
         margin: 2em 0;
@@ -54,7 +42,7 @@ $max-size: 800px;
     width: 100%;
     transition: all .3s ease-in-out;
     &:hover {
-        transform: scale(1.25);
+        transform: scale(1.1);
         .image {
             opacity: 1;
         }
@@ -87,6 +75,7 @@ $max-size: 800px;
     color: #fff;
     font-size: 3rem;
     position: absolute;
+    font-weight: 700;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
