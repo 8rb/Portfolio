@@ -1,8 +1,6 @@
 import React from 'react';
-import Contact from '../contact/Contact';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {useSpring, animated} from 'react-spring';
 import './Styles.scss';
 import { Link } from 'react-router-dom';
 import Toggle from '../toggle/Toggle';
