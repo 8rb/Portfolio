@@ -1,7 +1,7 @@
 @import '../../assets/colors.scss';
 
 .navBar {
-    height: 15vh;
+    height: 13vh;
     min-width: 250px;
     background: #F2FFFB;
     display: flex;
@@ -13,12 +13,16 @@
 }
 
 .nav-link {
-    color: $dark;
-    font-size:calc(16px + 0.8vw);
-    font-weight: 300;
+    color:  $primary;
+    font-size:calc(13px + 0.8vw);
+    font-weight: 200;
+    transition: all .2s ease-in-out;
     &:hover {
-        transition: all 0.2s ease-in-out;
-        color: $accent1;
+        transform: scale(1.3);
+        font-weight: 700;
+        opacity: 0.73;
+        color:  $primary;
+        //color: $accent2;
     }
 }
 
