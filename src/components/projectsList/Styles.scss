@@ -3,7 +3,6 @@
 $max-size: 800px;
 
 .projects-container {
-    height: 100%;
     display: flex;
     margin: 0em 1em;
     align-items: center;
@@ -72,8 +71,8 @@ $max-size: 800px;
 }
   
 .overlay-text {
+    font-size:calc(16px + 1.8vw);
     color: #fff;
-    font-size: 3rem;
     position: absolute;
     font-weight: 700;
     top: 50%;

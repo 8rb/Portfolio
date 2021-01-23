@@ -1,13 +1,46 @@
 @import '../../assets/colors.scss';
 
 .home {
-    @if $light-theme {
-        background: $white;
-      } @else {
-        background: $dark;
-      }
+    // @media (prefers-color-scheme: dark) {
+    //     background: $dark;
+    // }
+    // @media (prefers-color-scheme: light) {
+    //     background: $white;
+    // }
+    display: block;
+    align-items: center;
     color: $primary;
     height: 100%;
+}
+
+.home-container {
+    height: 85%;
+    display: flex;
+    margin: 0em 1em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    height: 15%;
+    display: flex;
+    margin: 0em 1em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-height {
@@ -23,10 +56,12 @@
 .name {
     font-weight: 700;
     font-size:calc(35px + 1.5vw);
+    text-align: center;
 }
 
 .job {
     opacity: 0.73;
     font-weight: 700;
     font-size:calc(25px + 1vw);
+    text-align: center;
 }

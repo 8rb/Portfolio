@@ -1,7 +1,5 @@
 import React from 'react';
 import Contact from '../contact/Contact';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import {useSpring, animated} from 'react-spring';
 import './Styles.scss';
 
@@ -14,30 +12,22 @@ const Home = () => {
 
     return(
         <div className="home">
-            <div className="container-fluid">
-                <Row className="align-items-center home-height">
-                    <Col xs={12}>
-                        <Row className="justify-content-center">
-                            <Col xs={12}>
-                                <animated.div style={props}>
-                                    <h1 className="centered-text name">Rodrigo Ramirez</h1>
-                                </animated.div>
-                            </Col>
-                        </Row>
-                        <Row className="justify-content-center">
-                            <Col xs={12}>
-                                <animated.div style={props}>
-                                    <h2 className="centered-text job">Front-End Developer</h2>
-                                </animated.div>
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-                <Row className="align-items-center footer-height">
-                    <Col>
-                        <Contact/>
-                    </Col>
-                </Row>
+            <div className="home-container">
+                <div className="home-row">
+                    <animated.div style={props}>
+                        <h1 className="name">Rodrigo Ramirez</h1>
+                    </animated.div>
+                </div>
+                <div className="home-row">
+                    <animated.div style={props}>
+                        <h2 className="job">Front-End Developer</h2>
+                    </animated.div>
+                </div>
+            </div>
+            <div className="footer-container">
+                <div className="footer-row">
+                    <Contact/>
+                </div>
             </div>
         </div>
     ); 

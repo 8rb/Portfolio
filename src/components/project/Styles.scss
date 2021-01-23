@@ -74,6 +74,7 @@ $size2: 490px;
 .text {
     font-size:calc(12px + 0.6vw);
     text-align: justify;
+    font-weight: 300;
 }
 
 .btn {
@@ -95,6 +96,7 @@ $size2: 490px;
         background-color: #275BC2;
     }
     &:hover {
+        transform: scale(1.1);
         transition: all 0.2s ease-in-out;
         filter: brightness(80%); 
     }
