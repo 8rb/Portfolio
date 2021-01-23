@@ -5,124 +5,112 @@ import Col from 'react-bootstrap/Col';
 import {Spring} from 'react-spring/renderprops';
 import './Styles.scss';
 
-class Contact extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          showResume: false,
-          showGithub: false,
-          showLinkedin: false,
-          showEmail: false
-        };
-        this.toggleResume = this.toggleResume.bind(this);
-        this.toggleGithub = this.toggleGithub.bind(this);
-        this.toggleLinkedIn = this.toggleLinkedIn.bind(this);
-        this.toggleEmail = this.toggleEmail.bind(this);
-    }
+const Contact = () => {
+    const [resume, setResume] = React.useState(false);
+    const [github, setGithub] = React.useState(false);
+    const [linkedin, setLinkedin] = React.useState(false);
+    const [email, setEmail] = React.useState(false);
 
-    toggleResume() {
-        this.setState({showResume: !this.state.showResume});
+    const toggleResume = () => {
+        setResume(!resume);
     }
-    toggleGithub() {
-        this.setState({showGithub: !this.state.showGithub});
+    const toggleGithub = () => {
+        setGithub(!github);
     }
-    toggleLinkedIn() {
-        this.setState({showLinkedin: !this.state.showLinkedin});
+    const toggleLinkedin = () => {
+        setLinkedin(!linkedin);
     }
-    toggleEmail() {
-        this.setState({showEmail: !this.state.showEmail});
+    const toggleEmail = () => {
+        setEmail(!email);
     }
-
     
-    render() {
-        return (
-            <Row className="justify-content-center align-items-center">
-                <Col xs="auto">
-                    <Row>
-                        <Spring
-                            from={{opacity: 0 }}
-                            to={{opacity: 1 }}
-                            config={{delay: 500, duration: 500}}
-                            >
-                            { props => (
-                            <a style={props} onMouseEnter={this.toggleResume} onMouseLeave={this.toggleResume} className="col-3" href={Pdf} target ="_blank" rel="noopener noreferrer">
-                                <i className="homeIcon fas fa-file-pdf fa-2x"></i>
-                            </a>
-                            )}
-                        </Spring>
-                        <Spring
-                            from={{opacity: 0 }}
-                            to={{opacity: 1 }}
-                            config={{delay: 700, duration: 500}}
-                            >
-                            { props => (
-                            <a style={props} onMouseEnter={this.toggleGithub} onMouseLeave={this.toggleGithub} className="col-3" href="https://github.com/8rb" target="_blank" rel="noopener noreferrer">
-                                <i className="homeIcon fab fa-github fa-2x"></i>
-                            </a>
-                            )}
-                        </Spring>
-                        <Spring
-                            from={{opacity: 0 }}
-                            to={{opacity: 1 }}
-                            config={{delay: 900, duration: 500}}
-                            >
-                            { props => (
-                            <a style={props} onMouseEnter={this.toggleLinkedIn} onMouseLeave={this.toggleLinkedIn} className="col-3" href="https://www.linkedin.com/in/rodrigo-ramirez8/" target="_blank" rel="noopener noreferrer">
-                                <i className="homeIcon fab fa-linkedin-in fa-2x"></i>
-                            </a>
-                            )}
-                        </Spring>
-                        <Spring
-                            from={{opacity: 0 }}
-                            to={{opacity: 1 }}
-                            config={{delay: 1100, duration: 500}}
-                            >
-                            { props => (
-                            <a style={props} onMouseEnter={this.toggleEmail} onMouseLeave={this.toggleEmail} className="col-3" href="mailto:rodrigo8rb@hotmail.com">
-                                <i className="homeIcon fas fa-envelope fa-2x"></i>
-                            </a>
-                            )}
-                        </Spring>
-                    </Row>
+    return (
+        <Row className="justify-content-center align-items-center">
+            <Col xs="auto">
+                <Row>
                     <Spring
                         from={{opacity: 0 }}
                         to={{opacity: 1 }}
-                        config={{delay: 1300, duration: 500}}
+                        config={{delay: 500, duration: 500}}
                         >
                         { props => (
-                        <Row style={props} className="justify-content-center">
-                            { this.state.showResume && 
-                                <Col xs="auto">
-                                    <p className="contact-text">Resume</p>
-                                </Col>
-                            }
-                            { this.state.showGithub && 
-                                <Col xs="auto">
-                                    <p className="contact-text">GitHub</p>
-                                </Col>
-                            }
-                            { this.state.showLinkedin && 
-                                <Col xs="auto">
-                                    <p className="contact-text">LinkedIn</p>
-                                </Col>
-                            }
-                            { this.state.showEmail && 
-                                <Col xs="auto">
-                                    <p className="contact-text">Email Me</p>
-                                </Col>
-                            }
-                            { !this.state.showResume && !this.state.showGithub && !this.state.showLinkedin && !this.state.showEmail &&
-                                <Col xs="auto">
-                                    <p className="contact-text">{'Contact'}</p>
-                                </Col>
-                            }
-                        </Row>
-                    )}
+                        <a style={props} onMouseEnter={toggleResume} onMouseLeave={toggleResume} className="col-3" href={Pdf} target ="_blank" rel="noopener noreferrer">
+                            <i className="homeIcon fas fa-file-pdf fa-2x"></i>
+                        </a>
+                        )}
                     </Spring>
-                </Col>
-            </Row>
-        );
-    }
+                    <Spring
+                        from={{opacity: 0 }}
+                        to={{opacity: 1 }}
+                        config={{delay: 700, duration: 500}}
+                        >
+                        { props => (
+                        <a style={props} onMouseEnter={toggleGithub} onMouseLeave={toggleGithub} className="col-3" href="https://github.com/8rb" target="_blank" rel="noopener noreferrer">
+                            <i className="homeIcon fab fa-github fa-2x"></i>
+                        </a>
+                        )}
+                    </Spring>
+                    <Spring
+                        from={{opacity: 0 }}
+                        to={{opacity: 1 }}
+                        config={{delay: 900, duration: 500}}
+                        >
+                        { props => (
+                        <a style={props} onMouseEnter={toggleLinkedin} onMouseLeave={toggleLinkedin} className="col-3" href="https://www.linkedin.com/in/rodrigo-ramirez8/" target="_blank" rel="noopener noreferrer">
+                            <i className="homeIcon fab fa-linkedin-in fa-2x"></i>
+                        </a>
+                        )}
+                    </Spring>
+                    <Spring
+                        from={{opacity: 0 }}
+                        to={{opacity: 1 }}
+                        config={{delay: 1100, duration: 500}}
+                        >
+                        { props => (
+                        <a style={props} onMouseEnter={toggleEmail} onMouseLeave={toggleEmail} className="col-3" href="mailto:rodrigo8rb@hotmail.com">
+                            <i className="homeIcon fas fa-envelope fa-2x"></i>
+                        </a>
+                        )}
+                    </Spring>
+                </Row>
+                <Spring
+                    from={{opacity: 0 }}
+                    to={{opacity: 1 }}
+                    config={{delay: 1300, duration: 500}}
+                    >
+                    { props => (
+                    <Row style={props} className="justify-content-center">
+                        { resume && 
+                            <Col xs="auto">
+                                <p className="contact-text">Resume</p>
+                            </Col>
+                        }
+                        { github && 
+                            <Col xs="auto">
+                                <p className="contact-text">GitHub</p>
+                            </Col>
+                        }
+                        { linkedin && 
+                            <Col xs="auto">
+                                <p className="contact-text">LinkedIn</p>
+                            </Col>
+                        }
+                        { email && 
+                            <Col xs="auto">
+                                <p className="contact-text">Email Me</p>
+                            </Col>
+                        }
+                        { !resume && !github && !linkedin && !email &&
+                            <Col xs="auto">
+                                <p className="contact-text">{'Contact'}</p>
+                            </Col>
+                        }
+                    </Row>
+                )}
+                </Spring>
+            </Col>
+        </Row>
+    );
 }
 
 export default Contact;
