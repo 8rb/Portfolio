@@ -2,16 +2,16 @@
 
 html {
     body {
-        transition: all .5s ease-in-out;
+        transition: background .5s ease-in-out;
         background: $white;
-        color: $dark;
+        color: $dark-green;
     }
   }
-  html[data-theme='dark'] {
+  html[data-color-mode='dark'] {
     body {
-        transition: all .5s ease-in-out;
+        transition: background .5s ease-in-out;
         background: $dark;
-        color: $white;
+        color: $white2;
     }
 }
 
