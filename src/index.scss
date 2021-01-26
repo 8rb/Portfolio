@@ -1,5 +1,28 @@
 @import './assets/colors.scss';
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 10px;
+  width: 5px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
 html {
     body {
         transition: background .5s ease-in-out;
@@ -24,14 +47,3 @@ html {
     height: 87vh;
     min-width: 250px;
 }
-
-// @media (prefers-color-scheme: dark) {
-//     .theme {
-//         background: $dark;
-//         color: $white;
-//     }
-// }
-
-// @media (prefers-color-scheme: light) {
-//
-// }
