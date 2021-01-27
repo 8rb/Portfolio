@@ -51,11 +51,15 @@ $size2: 490px;
     border-radius: 0px;
     width: 100%;
     box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+    transition: all .2s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+        filter: brightness(80%);
+    }
 }
 
 .titleP {
     font-weight: 700;
-    color: #2D3331;
     font-size:calc(35px + 1.5vw);
 }
 
@@ -67,7 +71,6 @@ $size2: 490px;
 .tag {
     font-size:calc(14px + 0.9vw);
     font-weight: 700;
-    color: #2D3331;
     text-align: justify;
 }
 
@@ -75,6 +78,10 @@ $size2: 490px;
     font-size:calc(12px + 0.6vw);
     text-align: justify;
     font-weight: 300;
+}
+
+.bold {
+    font-weight: 600;
 }
 
 .btn {

@@ -5,9 +5,10 @@ import {
   useRouteMatch,
   Link
 } from "react-router-dom";
-import PokeAppImg from '../../assets/PokeApp.jpg';
 import Project from '../project/Project';
-import BodegaImg from '../../assets/Bodega.jpg';
+import PokeAppImg from '../../assets/images/PokeApp.jpg';
+import BodegaImg from '../../assets/images/Bodega.jpg';
+import InterlabImg from '../../assets/images/InterLab.jpg'
 import './Styles.scss';
 
 const AllProjects = () => {
@@ -26,11 +27,11 @@ const AllProjects = () => {
             <Project index={2} />
           </Route>
           <Route exact path={`${match.path}/`}>
-            {/* <div className="title-row">
-              <div className="title-col">
+            <div className="projects-row">
+              <div className="projects-col">
                 <h1 className="title">Projects</h1>
               </div>
-            </div> */}
+            </div>
             <div className="projects-row">
               <div className="project-col">
                 <div className="img-container">
@@ -48,6 +49,18 @@ const AllProjects = () => {
                     <img className="image" src={BodegaImg} alt="project" />
                     <div className="overlay">
                       <div className="overlay-text">E-Shop</div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="projects-row">
+              <div className="project-col">
+                <div className="img-container">
+                  <Link to='/projects/interlab'>
+                    <img className="image" src={InterlabImg} alt="project" />
+                    <div className="overlay">
+                      <div className="overlay-text">Internship Finder</div>
                     </div>
                   </Link>
                 </div>

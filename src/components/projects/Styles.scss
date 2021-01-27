@@ -3,15 +3,18 @@
 $max-size: 800px;
 
 .projects-container {
+    height: 100%;
     display: flex;
+    flex-direction: column;
     margin: 0em 1em;
-    align-items: center;
 }
 
 .projects-row {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 
 @media screen and (max-width: $max-size) {
@@ -22,6 +25,7 @@ $max-size: 800px;
 }
 
 .project-col {
+    flex-direction: column;
     width: 35%;
     margin: 4vw;
 }
@@ -72,7 +76,7 @@ $max-size: 800px;
   
 .overlay-text {
     font-size:calc(16px + 1.8vw);
-    color: #fff;
+    color: $white;
     position: absolute;
     font-weight: 700;
     top: 50%;
@@ -86,5 +90,6 @@ $max-size: 800px;
 .title {
     color: $primary;
     font-weight: 700;
+    margin: 2rem 0 1rem 0;
     font-size:calc(35px + 1.5vw);
 }
