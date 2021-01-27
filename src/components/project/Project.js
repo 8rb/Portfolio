@@ -1,5 +1,5 @@
 import React from 'react';
-import projectsInfo from '../../json/projects';
+import projectsInfo from '../../assets/json/projects.jsx';
 import './Styles.scss';
 
 const Project = ({index}) => {
@@ -7,7 +7,9 @@ const Project = ({index}) => {
     <div className="pro-container">
       <div className="pro-row">
         <div className="pro-col image-col">
-          <img className="imageP" src={projectsInfo[index].img} alt="project"/>
+          <a className="" href={projectsInfo[index].deployed_link} target="_blank" rel="noopener noreferrer">
+            <img className="imageP" src={projectsInfo[index].img} alt="project"/>
+          </a>
         </div>
         <div className="pro-col">
           <div className="title-row">
