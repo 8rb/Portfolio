@@ -1,37 +1,23 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import './Styles.scss';
 import { Link } from 'react-router-dom';
 import Toggle from '../toggle/Toggle';
 
 const NavBar = () => {
     return(
-        <div className="navBar">
-            {/* <nav>
-                <Row className="justify-content-start align-items-center">
-                    <Col>
-                        <Toggle/>
-                    </Col>
-                </Row>
-            </nav> */}
-            <nav>
-                <div className="container-fluid">
-                    <Row className="justify-content-center align-items-center">
-                        <Col xs={6}>
-                            <Link className="nav-link" to="/">Home</Link>
-                        </Col>
-                        <Col xs={6}>
-                            <Link className="nav-link" to="/projects">Projects</Link>
-                        </Col>
-                        {/* <Col xs={4}>
-                            <Link to="/contact">Contact</Link>
-                        </Col> */}
-                    </Row> 
+        <div className="navbar-container">
+            <div className="navbar-row">
+                <Toggle/>
+            </div>
+            <div className="navbar-row link-row">
+                <div className="navbar-col">
+                    <Link className="nav-link" to="/">Home</Link>
                 </div>
-            </nav>
+                <div className="navbar-col">
+                    <Link className="nav-link" to="/projects">Projects</Link>
+                </div>
+            </div>
         </div>
-    ); 
-
+    );
 }
 export default NavBar;
