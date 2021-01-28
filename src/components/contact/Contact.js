@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Pdf from '../../assets/documents/Rodrigo_Ramirez_Resume_2021.pdf';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
