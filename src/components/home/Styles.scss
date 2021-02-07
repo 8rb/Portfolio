@@ -1,15 +1,6 @@
-@import '../../assets/colors.scss';
-
 .home {
-    // @media (prefers-color-scheme: dark) {
-    //     background: $dark;
-    // }
-    // @media (prefers-color-scheme: light) {
-    //     background: $white;
-    // }
     display: block;
     align-items: center;
-    color: $primary;
     height: 100%;
 }
 
@@ -60,8 +51,7 @@
 }
 
 .job {
-    opacity: 0.73;
-    font-weight: 700;
+    font-weight: 300;
     font-size:calc(25px + 1vw);
     text-align: center;
 }

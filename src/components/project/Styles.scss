@@ -96,12 +96,6 @@ $size2: 490px;
     font-weight: 700;
     border-radius: 50px;
     
-    &.github {
-        background-color: #C2275B;
-    }
-    &.live {
-        background-color: #275BC2;
-    }
     &:hover {
         transform: scale(1.1);
         transition: all 0.2s ease-in-out;

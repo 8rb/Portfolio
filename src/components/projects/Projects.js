@@ -15,7 +15,7 @@ const AllProjects = () => {
   let match = useRouteMatch();
   return (
     <>
-      <div className="projects-container">
+      <div className="projects-container projects">
         <Switch>
           <Route path={`${match.path}/pokeapp`}>
             <Project index={0} />

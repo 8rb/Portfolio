@@ -6,12 +6,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $primary;
-  border-radius: 10px;
+  border-radius: 4px;
   width: 5px;
 }
 
@@ -23,27 +22,151 @@ body {
   height: 100%;
 }
 
+// Light Theme
 html {
-    body {
-        transition: background .5s ease-in-out;
-        background: $white;
-        color: $dark2;
+
+  ::-webkit-scrollbar-thumb {
+    background: $gray_300;
+  }
+
+  ::selection { 
+    background: $complementary_100; 
+  }
+
+  body {
+    transition: background .5s, color .5s;
+    background: $bg_light;
+    color: $text_light;
+  }
+
+  .home {
+    .name {
+      color: $primary_100;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #00deae;
+    }
+    .job {
+      color: $gray_100;
     }
   }
-  html[data-color-mode='dark'] {
-    body {
-        transition: background .5s ease-in-out;
-        background: $dark;
-        color: $white2;
+
+  .contact {
+    .contactText {
+      color: $gray_100;
     }
+    .homeIcon {
+      color: $gray_100;
+      &:hover {
+        color: $primary_100;
+      }
+    }
+  }
+
+  .navBar .navLink {
+    color:  $gray_100;
+    &:hover {
+      opacity: 0.73;
+    }
+  }
+
+  .projects  {
+    .overlay {
+      background: $gray_300;
+    }
+    .overlay-text {
+      color: $white;
+    }
+    .title {
+      color: $gray_100;
+    }
+  }
+
+  .project .btn {
+    color: $gray_100;
+    &.github {
+      background-color: $primary_300;
+    }
+    &.live {
+      background-color: $primary_300;
+    }
+  }
+}
+
+// Dark Theme
+html[data-color-mode='dark'] {
+
+  ::-webkit-scrollbar-thumb {
+    background: $primary_100;
+  }
+
+  ::selection { 
+    background: $complementary_200; 
+  }
+
+  body {
+    transition: background .5s, color .5s;
+    background: $bg_dark;
+    color: $text_dark;
+  }
+
+  .home {
+    .name {
+      color: $primary_100;
+      -webkit-text-stroke-width: 0px;
+    }
+    .job {
+      color: $primary_100; opacity: 0.6;
+    }
+  }
+
+  .contact {
+    .contactText {
+      color: $primary_100; opacity: 0.7;
+    }
+    .homeIcon {
+      color: $primary_100; opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .navBar .navLink {
+    color:  $white;
+    &:hover {
+      color:  $primary_100;
+    }
+  }
+
+  .projects  {
+    .overlay {
+      background: $primary_100;
+    }
+    .overlay-text {
+      color: $gray_300;
+    }
+    .title {
+      color: $primary_100;
+    }
+  }
+
+  .project .btn {
+    color: $gray_100;
+    &.github {
+      background-color: $accent_100;
+    }
+    &.live {
+      background-color: $accent_200;
+    }
+  }
 }
 
 .navbar-content {
-    height: 13vh;
-    min-width: 250px;
+  height: 13vh;
+  min-width: 250px;
 }
 
 .main-content {
-    height: 87vh;
-    min-width: 250px;
+  height: 87vh;
+  min-width: 250px;
 }

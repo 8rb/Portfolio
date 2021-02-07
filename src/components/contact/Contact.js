@@ -25,7 +25,7 @@ const Contact = () => {
     }
     
     return (
-        <Row className="justify-content-center align-items-center">
+        <Row className="justify-content-center align-items-center contact">
             <Col xs="auto">
                 <Row>
                     <Spring
@@ -82,27 +82,27 @@ const Contact = () => {
                     <Row style={props} className="justify-content-center">
                         { resume && 
                             <Col xs="auto">
-                                <p className="contact-text">Resume</p>
+                                <p className="contactText">Resume</p>
                             </Col>
                         }
                         { github && 
                             <Col xs="auto">
-                                <p className="contact-text">GitHub</p>
+                                <p className="contactText">GitHub</p>
                             </Col>
                         }
                         { linkedin && 
                             <Col xs="auto">
-                                <p className="contact-text">LinkedIn</p>
+                                <p className="contactText">LinkedIn</p>
                             </Col>
                         }
                         { email && 
                             <Col xs="auto">
-                                <p className="contact-text">Email Me</p>
+                                <p className="contactText">Email Me</p>
                             </Col>
                         }
                         { !resume && !github && !linkedin && !email &&
                             <Col xs="auto">
-                                <p className="contact-text">{'Contact'}</p>
+                                <p className="contactText">{'Contact'}</p>
                             </Col>
                         }
                     </Row>
