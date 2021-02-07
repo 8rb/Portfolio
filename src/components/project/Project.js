@@ -4,7 +4,7 @@ import './Styles.scss';
 
 const Project = ({index}) => {
   return (
-    <div className="pro-container">
+    <div className="pro-container project">
       <div className="pro-row">
         <div className="pro-col image-col">
           <a className="" href={projectsInfo[index].deployed_link} target="_blank" rel="noopener noreferrer">

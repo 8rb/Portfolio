@@ -3,19 +3,21 @@
 $initial_pos: -0.14rem; //Position of toggle dark mode button
 
 //CIRCLE
-$button-off: $secondary2;
-$button-on:  $primary;
+$button-off: $gray_100;
+$button-on:  $primary_100;
 
 //BACKGROUND
-$off-state: 	$primary2;
-$on-state: 		$tertiary;
+$off-state: 	$gray_200;
+$on-state: 		$primary_200;
 
 .switch{
+	display: flex;
+	align-items: center;
     margin-top: 0; //me
     margin-left: 1.5rem; //me
 	position: relative;
 	width: 1.3rem;
-	height: 1.5rem;
+	height: 1.45rem;
 	transition: background-color .5s ease-out;
 	z-index: 1;
 	&:before, &:after {
@@ -25,7 +27,7 @@ $on-state: 		$tertiary;
 		background-color: inherit;
 		border-radius: 50%;
 		width: 1.5rem;
-		height: 1.5rem;
+		height: 1.45rem;
         z-index: 2;
     }
 	&:before{
@@ -45,7 +47,7 @@ $on-state: 		$tertiary;
 	transition: transform .3s ease-in-out;
 	z-index: 3;
 	border: 0.05rem solid $button-off;
-	top: -0.05rem;
+	top: -0.08rem;
 }
 
 .toggle-button-on {
@@ -58,7 +60,7 @@ $on-state: 		$tertiary;
 	transition: transform .3s ease-in-out;
 	z-index: 3;
     border: 0.05rem solid $button-on;
-	top: -0.05rem;
+	top: -0.08rem;
 }
 
 .switch_is-off{

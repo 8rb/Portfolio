@@ -1,5 +1,3 @@
-@import '../../assets/colors.scss';
-
 $size1: 1150px;
 $size2: 500px;
 
@@ -52,16 +50,14 @@ $size2: 500px;
     }
 }
 
-.nav-link {
+.navLink {
     padding: 0;
-    color:  $primary;
     font-size:calc(14px + 0.6vw);
     font-weight: 200;
     transition: all .2s ease-in-out;
     &:hover {
+        text-decoration: none;
         transform: scale(1.2);
-        font-weight: 700;
-        opacity: 0.73;
-        color:  $primary;
+        font-weight: 500;
     }
 }
