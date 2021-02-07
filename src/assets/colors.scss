@@ -1,20 +1,24 @@
-$light-theme: true;
-
-
 //Light Theme
-$white:         #F2FFFB; //Background color
-$dark2:         #2D3331; //Text color
+$bg_light:         #F5FFFD; //Background color
+$text_light:       #2D3331; //Text color
 
 //Dark Theme
-$dark:          #0f0f0f; //Background color
-$white2:        #bdcac6; //Text color
+$bg_dark:          #0f0f0f; //Background color
+$text_dark:        #e7e7e7; //Text color
 
-//palette colors
-$primary:       #27c28e; //Primary color of palette
-$primary2:      #b8f5e2; //Variation 1
-$secondary:     #43a892; //Secondary color of palette
-$secondary2:    #268163; //Variation 2
-$tertiary:      #135446; //Tertiary color of palette
+//Palette colors
 
-$accent1:       #C2275B; //Github Repo Color Button 
-$accent2:       #275BC2; //Live Site Color Button
+$white:       #F7FFFF;
+$gray_100:    #2D2D2D;
+$gray_200:    #a8a8a8;
+$gray_300:    #161616;
+
+$primary_100: #00fff8;
+$primary_200: #005956;
+$primary_300: #7dfffb;
+
+$complementary_100: #FFD5DE;
+$complementary_200: #91354a;
+
+$accent_100: #f14c91; //Github Repo Color Button
+$accent_200: #fab34c; //Live Site Color Button
