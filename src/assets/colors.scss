@@ -13,9 +13,10 @@ $gray_100:    #2D2D2D;
 $gray_200:    #a8a8a8;
 $gray_300:    #161616;
 
-$primary_100: #00fff8;
-$primary_200: #005956;
-$primary_300: #7dfffb;
+$primary_100: #00FFC8;
+$primary_200: darken($primary_100, 40%);
+$primary_300: lighten($primary_100, 20%);
+$primary_400: darken($primary_100, 5%);
 
 $complementary_100: #FFD5DE;
 $complementary_200: #91354a;
