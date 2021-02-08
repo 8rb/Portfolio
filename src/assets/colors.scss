@@ -12,14 +12,14 @@ $white:       #F7FFFF;
 $gray_100:    #2D2D2D;
 $gray_200:    #a8a8a8;
 $gray_300:    #161616;
+$gray_400:    #161616;
 
-$primary_100: #00FFC8;
+$primary_100: #00ffcc;
 $primary_200: darken($primary_100, 40%);
 $primary_300: lighten($primary_100, 20%);
-$primary_400: darken($primary_100, 5%);
 
-$complementary_100: #FFD5DE;
-$complementary_200: #91354a;
+$complementary_100: #d5fffd;
+$complementary_200: #707070;
 
 $accent_100: #f14c91; //Github Repo Color Button
 $accent_200: #fab34c; //Live Site Color Button
