@@ -1,7 +1,5 @@
 import React from 'react';
 import Pdf from '../../assets/documents/Rodrigo_Ramirez_Resume_2021.pdf';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import {Spring} from 'react-spring/renderprops';
 import './Styles.scss';
 
@@ -25,91 +23,83 @@ const Contact = () => {
     }
     
     return (
-        <Row className="justify-content-center align-items-center contact">
-            <Col xs="auto">
-                <Row>
+        <div className="contactContainer contact">
+            <div className="contactRow">
+                <div className="contactCol iconCol">
                     <Spring
                         from={{opacity: 0 }}
                         to={{opacity: 1 }}
                         config={{delay: 500, duration: 500}}
                         >
                         { props => (
-                        <a style={props} onMouseEnter={toggleResume} onMouseLeave={toggleResume} className="col-3" href={Pdf} target ="_blank" rel="noopener noreferrer">
+                        <a className="contactLink" style={props} onMouseEnter={toggleResume} onMouseLeave={toggleResume} href={Pdf} target ="_blank" rel="noopener noreferrer">
                             <i className="homeIcon fas fa-file-pdf fa-2x"></i>
                         </a>
                         )}
                     </Spring>
+                </div>
+                <div className="contactCol iconCol">
                     <Spring
                         from={{opacity: 0 }}
                         to={{opacity: 1 }}
                         config={{delay: 700, duration: 500}}
                         >
                         { props => (
-                        <a style={props} onMouseEnter={toggleGithub} onMouseLeave={toggleGithub} className="col-3" href="https://github.com/8rb" target="_blank" rel="noopener noreferrer">
+                        <a className="contactLink" style={props} onMouseEnter={toggleGithub} onMouseLeave={toggleGithub} href="https://github.com/8rb" target="_blank" rel="noopener noreferrer">
                             <i className="homeIcon fab fa-github fa-2x"></i>
                         </a>
                         )}
                     </Spring>
+                </div>
+                <div className="contactCol iconCol">
                     <Spring
                         from={{opacity: 0 }}
                         to={{opacity: 1 }}
                         config={{delay: 900, duration: 500}}
                         >
                         { props => (
-                        <a style={props} onMouseEnter={toggleLinkedin} onMouseLeave={toggleLinkedin} className="col-3" href="https://www.linkedin.com/in/rodrigo-ramirez8/" target="_blank" rel="noopener noreferrer">
+                        <a className="contactLink" style={props} onMouseEnter={toggleLinkedin} onMouseLeave={toggleLinkedin} href="https://www.linkedin.com/in/rodrigo-ramirez8/" target="_blank" rel="noopener noreferrer">
                             <i className="homeIcon fab fa-linkedin-in fa-2x"></i>
                         </a>
                         )}
                     </Spring>
+                </div>
+                <div className="contactCol iconCol">
                     <Spring
                         from={{opacity: 0 }}
                         to={{opacity: 1 }}
                         config={{delay: 1100, duration: 500}}
                         >
                         { props => (
-                        <a style={props} onMouseEnter={toggleEmail} onMouseLeave={toggleEmail} className="col-3" href="mailto:rodrigo8rb@hotmail.com">
+                        <a className="contactLink" style={props} onMouseEnter={toggleEmail} onMouseLeave={toggleEmail} href="mailto:rodrigo8rb@hotmail.com">
                             <i className="homeIcon fas fa-envelope fa-2x"></i>
                         </a>
                         )}
                     </Spring>
-                </Row>
-                <Spring
-                    from={{opacity: 0 }}
-                    to={{opacity: 1 }}
-                    config={{delay: 1300, duration: 500}}
-                    >
-                    { props => (
-                    <Row style={props} className="justify-content-center">
-                        { resume && 
-                            <Col xs="auto">
-                                <p className="contactText">Resume</p>
-                            </Col>
-                        }
-                        { github && 
-                            <Col xs="auto">
-                                <p className="contactText">GitHub</p>
-                            </Col>
-                        }
-                        { linkedin && 
-                            <Col xs="auto">
-                                <p className="contactText">LinkedIn</p>
-                            </Col>
-                        }
-                        { email && 
-                            <Col xs="auto">
-                                <p className="contactText">Email Me</p>
-                            </Col>
-                        }
-                        { !resume && !github && !linkedin && !email &&
-                            <Col xs="auto">
+                </div>
+            </div>
+            <div className="contactRow">
+                <div className="contactCol">
+                    <Spring
+                        from={{opacity: 0 }}
+                        to={{opacity: 1 }}
+                        config={{delay: 1300, duration: 500}}
+                        >
+                        { props => (
+                        <div className="contactCol" style={props}>
+                            { resume && <p className="contactText">Resume</p>}
+                            { github && <p className="contactText">GitHub</p>}
+                            { linkedin && <p className="contactText">LinkedIn</p>}
+                            { email && <p className="contactText">Email Me</p>}
+                            { !resume && !github && !linkedin && !email &&
                                 <p className="contactText">{'Contact'}</p>
-                            </Col>
-                        }
-                    </Row>
-                )}
-                </Spring>
-            </Col>
-        </Row>
+                            }
+                        </div>
+                    )}
+                    </Spring>
+                </div>
+            </div>
+        </div>
     );
 }
 
