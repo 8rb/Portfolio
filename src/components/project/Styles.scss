@@ -20,6 +20,14 @@ $size2: 490px;
 .pro-col {
     width: 40%;
     margin: 4vw;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-col, .tags-row, .desc-row {
+    margin: 1rem 0;
 }
 
 @media screen and (max-width: $max-size) {
@@ -31,6 +39,7 @@ $size2: 490px;
     .pro-col {
         width: 80%;
         margin: 0;
+        align-items: center;
     }
 }
 
@@ -78,6 +87,7 @@ $size2: 490px;
     font-size:calc(12px + 0.6vw);
     text-align: justify;
     font-weight: 300;
+    line-height: 1.4;
 }
 
 .bold {
@@ -137,6 +147,9 @@ $size2: 490px;
         min-width: 97px;
         min-height: 40px;
         font-size:calc(8px + 0.6vw);
+    }
+    .text {
+        line-height: 1.8;
     }
 }
 
