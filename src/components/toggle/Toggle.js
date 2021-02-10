@@ -24,12 +24,9 @@ const Toggle = () => {
 		}
 		setIsOn(!isOn);
 	}
-	
-	let classNames = ["", (isOn) ? "component-wrapper_is-light" : "component-wrapper_is-dark"].join(" ");
+
 	return (
-		<div className={classNames}>
-			<Switch isOn={isOn} handleToggle={handleToggle}/>
-		</div>	
+		<Switch isOn={isOn} handleToggle={handleToggle}/>
 	);
 }
 
