@@ -62,9 +62,6 @@ html {
 
   .navBar .navLink {
     color:  $gray_100;
-    &:hover {
-      opacity: 0.73;
-    }
   }
 
   .projects  {
@@ -163,9 +160,19 @@ html[data-color-mode='dark'] {
 .navbar-content {
   height: 13vh;
   min-width: 250px;
+  min-height: 70px;
 }
 
 .main-content {
   height: 87vh;
+  max-height: 87vh;
   min-width: 250px;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
 }

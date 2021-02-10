@@ -56,10 +56,12 @@ $max-size: 800px;
 .image {
     display: block;
     width: 100%;
+    border-radius: 4px;
     box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
 }
   
 .overlay {
+    border-radius: 4px;
     position: absolute;
     top: 0;
     bottom: 0;
