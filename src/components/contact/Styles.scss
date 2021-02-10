@@ -1,12 +1,54 @@
+.contactContainer {
+    display: flex;
+    width: 20%;
+    min-width: 280px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .contactContainer {
+        width: 60%;
+    }
+}
+
+.contactRow {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contactCol {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconCol {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+.contactLink {
+    margin: 0 auto;
+}
+
 .contactText {
     box-sizing: border-box;
     margin-top: 0.5em;
-    font-size:calc(12px + 0.5vw);
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
 .homeIcon {
-    font-size:calc(25px + 0.8vw);
+    width: 100%;
+    font-size: calc(2.2rem, 30px);
     transition: all .2s ease-in-out;
     &:hover{
         transform: scale(1.3);
