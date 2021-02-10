@@ -13,7 +13,7 @@ $on-state: 		$primary_200;
 .switch{
 	display: flex;
 	align-items: center;
-    margin-top: 0; //me
+    // margin-top: calc(.3rem, 20px); //me
     margin-left: 1.5rem; //me
 	position: relative;
 	width: 1.3rem;
@@ -36,6 +36,14 @@ $on-state: 		$primary_200;
 	&:after{
 		right: -0.69rem;
     }
+	// &:focus {
+	// 	// outline: 1px solid $primary_100;
+	// 	// background-color: lighten($button-off, 80%);
+	// }
+	// :focus:not(:focus-visible) {
+	// 	outline: 0 !important;
+	// 	box-shadow: none !important;
+	// }
 }
 .toggle-button {
     transform: translateX($initial_pos);
@@ -47,7 +55,7 @@ $on-state: 		$primary_200;
 	transition: transform .3s ease-in-out;
 	z-index: 3;
 	border: 0.05rem solid $button-off;
-	top: -0.08rem;
+	top: -0.125rem;
 }
 
 .toggle-button-on {
