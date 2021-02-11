@@ -3,6 +3,7 @@ import NavBar from './components/navBar/NavBar';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
+import Footer from './components/footer/Footer';
 
 const App = () => {
 
@@ -24,6 +25,9 @@ const App = () => {
                 <Redirect to="/"/>
             </Route>
           </Switch>
+        </div>
+        <div className="footer-content">
+          <Footer/>
         </div>
       </Router>
     </div>
