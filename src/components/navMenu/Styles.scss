@@ -1,0 +1,46 @@
+.navMenuRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    // border-top: .1rem solid;
+    z-index: 9999;
+    flex: 1;
+    margin-top: auto;
+}
+
+.navMenu {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navMenu {
+        display: flex;
+    }
+}
+.navMenu {
+    .navMenuCol {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navMenuLink {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        font-size:calc(16px + 0.6vw);
+        font-weight: 100;
+    }
+
+    .activeLink {
+        font-weight: 500;
+    }
+
+    .navMenuText {
+        font-size:calc(12px + 0.4vw);
+        margin-top: .3rem;
+    }
+}

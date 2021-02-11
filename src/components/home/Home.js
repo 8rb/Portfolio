@@ -1,5 +1,4 @@
 import React from 'react';
-import Contact from '../contact/Contact';
 import {useSpring, animated} from 'react-spring';
 import './Styles.scss';
 
@@ -24,13 +23,7 @@ const Home = () => {
                     </animated.div>
                 </div>
             </div>
-            <div className="footer-container">
-                <div className="footer-row">
-                    <Contact/>
-                </div>
-            </div>
         </div>
-    ); 
-
+    );
 }
 export default Home;
