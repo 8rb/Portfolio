@@ -3,7 +3,7 @@ import Pdf from '../../assets/documents/Rodrigo_Ramirez_Resume_2021.pdf';
 import {Spring} from 'react-spring/renderprops';
 import './Styles.scss';
 
-const Contact = () => {
+const ContactNav = () => {
     const [resume, setResume] = React.useState(false);
     const [github, setGithub] = React.useState(false);
     const [linkedin, setLinkedin] = React.useState(false);
@@ -105,4 +105,4 @@ const Contact = () => {
     );
 }
 
-export default Contact;
+export default ContactNav;

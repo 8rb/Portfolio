@@ -1,12 +1,12 @@
 import React from 'react'
-import Contact from '../contact/Contact';
+import ContactNav from '../contactNav/ContactNav';
 import NavMenu from '../navMenu/NavMenu';
 import './Styles.scss';
 const Footer = () => {
     return (
         <div className="footer-container">
             <div className="footer-row">
-                <Contact/>
+                <ContactNav/>
                 <NavMenu/>
             </div>
         </div>
