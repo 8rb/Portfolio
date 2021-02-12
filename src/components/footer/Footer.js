@@ -5,10 +5,8 @@ import './Styles.scss';
 const Footer = () => {
     return (
         <div className="footer-container">
-            <div className="footer-row">
                 <ContactNav/>
                 <NavMenu/>
-            </div>
         </div>
     )
 }

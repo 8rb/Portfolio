@@ -46,17 +46,35 @@
 
 .contactLink {
     margin: 0 auto;
+    max-height: 100%;
 }
 
 .contactText {
     box-sizing: border-box;
-    margin-top: 0.5em;
+    // padding-top: 0.1em;
+    width: 100%;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
+@media screen and (max-height: 500px) {
+    .contactContainer {
+        flex-direction: row-reverse;
+        display: flex;
+        width: 50%;
+    }
+    .contactTextRow {
+        display: none;
+    }
+}
+
+.display {
+    display: flex;
+}
+
 .homeIcon {
     width: 100%;
+    max-height: 100%;
     font-size: calc(1.5rem + 10px);
     transition: all .2s ease-in-out;
     &:hover{
