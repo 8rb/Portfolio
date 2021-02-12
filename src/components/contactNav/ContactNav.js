@@ -34,7 +34,7 @@ const ContactNav = () => {
                             >
                             { props => (
                             <a className="contactLink" style={props} onMouseEnter={toggleResume} onMouseLeave={toggleResume} href={Pdf} target ="_blank" rel="noopener noreferrer">
-                                <i className="homeIcon fas fa-file-pdf fa-2x"></i>
+                                <i className="homeIcon fas fa-file-pdf"></i>
                             </a>
                             )}
                         </Spring>
@@ -47,7 +47,7 @@ const ContactNav = () => {
                             >
                             { props => (
                             <a className="contactLink" style={props} onMouseEnter={toggleGithub} onMouseLeave={toggleGithub} href="https://github.com/8rb" target="_blank" rel="noopener noreferrer">
-                                <i className="homeIcon fab fa-github fa-2x"></i>
+                                <i className="homeIcon fab fa-github"></i>
                             </a>
                             )}
                         </Spring>
@@ -60,7 +60,7 @@ const ContactNav = () => {
                             >
                             { props => (
                             <a className="contactLink" style={props} onMouseEnter={toggleLinkedin} onMouseLeave={toggleLinkedin} href="https://www.linkedin.com/in/rodrigo-ramirez8/" target="_blank" rel="noopener noreferrer">
-                                <i className="homeIcon fab fa-linkedin-in fa-2x"></i>
+                                <i className="homeIcon fab fa-linkedin-in"></i>
                             </a>
                             )}
                         </Spring>
@@ -73,25 +73,25 @@ const ContactNav = () => {
                             >
                             { props => (
                             <a className="contactLink" style={props} onMouseEnter={toggleEmail} onMouseLeave={toggleEmail} href="mailto:rodrigo8rb@hotmail.com">
-                                <i className="homeIcon fas fa-envelope fa-2x"></i>
+                                <i className="homeIcon fas fa-envelope"></i>
                             </a>
                             )}
                         </Spring>
                     </div>
                 </div>
-                <div className="contactRow">
-                    <div className="contactCol">
+                <div className="contactRow contactTextRow">
+                    <div className="contactTextCol">
                         <Spring
                             from={{opacity: 0 }}
                             to={{opacity: 1 }}
                             config={{delay: 1300, duration: 500}}
                             >
                             { props => (
-                            <div className="contactCol" style={props}>
-                                { resume && <p className="contactText">Resume</p>}
-                                { github && <p className="contactText">GitHub</p>}
-                                { linkedin && <p className="contactText">LinkedIn</p>}
-                                { email && <p className="contactText">Email Me</p>}
+                            <div style={props}>
+                                { resume && <p className="contactText display">Resume</p>}
+                                { github && <p className="contactText display">GitHub</p>}
+                                { linkedin && <p className="contactText display">LinkedIn</p>}
+                                { email && <p className="contactText display">Email Me</p>}
                                 { !resume && !github && !linkedin && !email &&
                                     <p className="contactText">{'Contact'}</p>
                                 }
