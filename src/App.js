@@ -4,6 +4,7 @@ import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
 import Footer from './components/footer/Footer';
+import Contact from './components/contactPage/Contact';
 
 const App = () => {
 
@@ -20,6 +21,9 @@ const App = () => {
             </Route>
             <Route path="/projects">
                 <Projects/>
+            </Route>
+            <Route path="/contact">
+                <Contact/>
             </Route>
             <Route path="*">
                 <Redirect to="/"/>
