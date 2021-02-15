@@ -25,13 +25,13 @@ export const projects = [
     },
     {
         "id": 3,
-        "title": "InterLab",
-        "description": <>Interlab is an <b className="bold">internship applications platform</b>, developed in Vue.js in the Front-End and .Net Core in the backend. I was in charge of the Majority of the Front-End programming and the database design. This application accesses the backend using Axios for HTTP requests.</>,
+        "title": "Interlab",
+        "description": <>Interlab is an <b className="bold">internship applications platform</b>, developed in Angular + TypeScript in the Front-End and Spring in the backend. I was in charge of the Majority of the Front-End programming and the database design. This application accesses the backend using Axios for HTTP requests.</>,
         "github_link": "https://github.com/8rb/interlab-webapps",
-        "deployed_link": "https://interlab.onrender.com/",
+        "deployed_link": "https://interlab-2fmj.onrender.com",
         "img": require("../images/InterLab.jpg"),
         "tags": [
-            "Vue", "·", "API"
+            "Angular", "·", "TypeScript"
         ]
     },
         
