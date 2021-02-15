@@ -5,17 +5,19 @@ import './Styles.scss';
 const Project = ({index}) => {
   return (
     <div className="pro-container project">
-      <div className="pro-row">
+      <div className="pro-row title-row">
+        <div className="pro-col title-col">
+          <h1 className="titleP">{projectsInfo[index].title}</h1>
+        </div>
+      </div>
+      <div className="pro-row info-row">
         <div className="pro-col image-col">
-          <a className="" href={projectsInfo[index].deployed_link} target="_blank" rel="noopener noreferrer">
+          <a className="image-link" href={projectsInfo[index].deployed_link} target="_blank" rel="noopener noreferrer">
             <img className="imageP" src={projectsInfo[index].img} alt="project"/>
           </a>
         </div>
-        <div className="pro-col">
-          <div className="title-row">
-            <h1 className="titleP">{projectsInfo[index].title}</h1>
-          </div>
-          <div className="tags-row">
+        <div className="pro-col info-col">
+          <div className="tags-row text-col">
             {projectsInfo[index].tags.map((tag, i) =>
               <div className="tag-div" key={i}><p className="tag">{tag}</p></div>
             )}

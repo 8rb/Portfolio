@@ -25,7 +25,8 @@ $max-size: 800px;
 .project-col {
     flex-direction: column;
     width: 35%;
-    margin: 4vw;
+    box-sizing: border-box;
+    margin: 2rem;
 }
 
 @media screen and (max-width: $max-size) {
@@ -54,8 +55,12 @@ $max-size: 800px;
 }
 
 .image {
-    display: block;
+    display: flex;
     width: 100%;
+    // min-width: 350px;
+    // max-height: 400px;
+    object-fit: cover;
+    object-fit: cover;
     border-radius: 4px;
     box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
 }
@@ -69,6 +74,7 @@ $max-size: 800px;
     right: 0;
     height: 100%;
     width: 100%;
+    min-width: 350px;
     opacity: 0;
     transition: 0.3s ease-in-out;
 }
