@@ -8,7 +8,6 @@ const Home = () => {
         from: {opacity: 0},
         config: {duration: 1500}
     })
-
     return(
         <div className="home">
             <div className="home-container">
@@ -26,4 +25,5 @@ const Home = () => {
         </div>
     );
 }
+
 export default Home;
