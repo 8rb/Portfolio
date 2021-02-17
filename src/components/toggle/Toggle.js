@@ -1,25 +1,30 @@
 import React, {useEffect} from 'react';
 import './Styles.scss';
+import store from '../../redux/store';
 
 const Toggle = () => {
-	const [isOn, setIsOn] = React.useState(false);
+	const [isOn, setIsOn] = React.useState(true);
 
 	useEffect(() => {
-		let dataColorMode = document.getElementById('theme').getAttribute('data-color-mode');
-		if(dataColorMode === "light") {
+		const theme = store.getState().theme;
+		console.log(theme);
+		if(theme === "light") {
 			setIsOn(false);
+			document.getElementById('theme').setAttribute('data-color-mode', 'light');
 		}
-		if(dataColorMode === "dark") {
+		if(theme === "dark") {
 			setIsOn(true);
+			document.getElementById('theme').setAttribute('data-color-mode', 'dark');
 		}
 	}, []);
 	
 	const handleToggle = (e) => {
-		let dataColorMode = document.getElementById('theme').getAttribute('data-color-mode');
-		if(dataColorMode === "light") {
+		store.dispatch({ type: 'toggleTheme' });
+		const theme = store.getState().theme;
+		if(theme === "dark") {
 			document.getElementById('theme').setAttribute('data-color-mode', 'dark');
 		}
-		if(dataColorMode === "dark") {
+		if(theme === "light") {
 			document.getElementById('theme').setAttribute('data-color-mode', 'light');
 		}
 		setIsOn(!isOn);

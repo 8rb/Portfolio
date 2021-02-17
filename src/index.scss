@@ -23,9 +23,13 @@ body {
   transition: background .5s, color .5s;
 }
 
+
 // Light Theme
 html {
-
+  background: $bg_light;
+  color: $text_light;
+  transition: background .5s, color .5s;
+  
   ::-webkit-scrollbar-thumb {
     background: $gray_300;
   }
@@ -33,12 +37,8 @@ html {
   ::selection { 
     background: $complementary_100; 
   }
-
-  body {
-    background: $bg_light;
-    color: $text_light;
-  }
-
+}
+.light {
   .home {
     .name {
       color: $gray_400;
@@ -110,6 +110,9 @@ html {
 
 // Dark Theme
 html[data-color-mode='dark'] {
+  background: $bg_dark;
+  color: $text_dark;
+  transition: background .5s, color .5s;
 
   ::-webkit-scrollbar-thumb {
     background: $primary_100;
@@ -118,12 +121,8 @@ html[data-color-mode='dark'] {
   ::selection { 
     background: $complementary_200; 
   }
-
-  body {
-    background: $bg_dark;
-    color: $text_dark;
-  }
-
+}
+.dark {
   .home {
     .name {
       color: $primary_100; opacity: 1;
