@@ -1,21 +1,22 @@
-import { createStore } from 'redux';
+import { createStore,applyMiddleware  } from 'redux'
+import { persistStore, persistReducer } from 'redux-persist' // imports from redux-persist
+import storage from 'redux-persist/lib/storage'
 
-const initialState = {
-    theme: 'dark'
+import rootReducer from './themeReducer'
+
+const persistConfig = { // configuration object for redux-persist
+    key: 'root',
+    storage, // define which storage to use
+    blacklist: ['loading'],
 }
 
-function themeReducer(state = initialState, action) {
-    switch (action.type) {
-      case 'toggleTheme':
-        if(state.theme === 'light')
-            return { ...state, theme: 'dark' }
-        else
-            return { ...state, theme: 'light' }
-      default:
-        return state;
-    }
-}
+const persistedReducer = persistReducer(persistConfig, rootReducer) 
 
-const store = createStore(themeReducer)
+const store = createStore(
+    persistedReducer, // pass the persisted reducer instead of rootReducer to createStore
+    applyMiddleware() // add any middlewares here
+)
 
-export default store;
+const persistor = persistStore(store); // used to create the persisted store, persistor will be used in the next step
+
+export {store, persistor}
