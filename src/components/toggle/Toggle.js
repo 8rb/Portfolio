@@ -1,13 +1,20 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import './Styles.scss';
-import store from '../../redux/store';
+import { store } from '../../redux/store';
 
 const Toggle = () => {
-	const [isOn, setIsOn] = React.useState(true);
+	const [isOn, setIsOn] = React.useState();
+	const isFirstRender = useRef(true)
 
 	useEffect(() => {
+		if (!isFirstRender.current) {
+			store.dispatch({ type: 'stopLoading' });
+		}
+	  }, [isOn])
+
+	useEffect(() => {
+		isFirstRender.current = false
 		const theme = store.getState().theme;
-		console.log(theme);
 		if(theme === "light") {
 			setIsOn(false);
 			document.getElementById('theme').setAttribute('data-color-mode', 'light');
@@ -20,6 +27,7 @@ const Toggle = () => {
 	
 	const handleToggle = (e) => {
 		store.dispatch({ type: 'toggleTheme' });
+		console.log(store.getState().theme)
 		const theme = store.getState().theme;
 		if(theme === "dark") {
 			document.getElementById('theme').setAttribute('data-color-mode', 'dark');

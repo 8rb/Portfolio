@@ -1,5 +1,52 @@
 @import './assets/colors.scss';
 
+// Loading Screen
+.loadingScreen {
+  position: absolute;
+  z-index: -999;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-out .5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 10px solid #00ffcc;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 65px;
+    left: 65px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 130px;
+    height: 130px;
+    opacity: 0;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 6px;
@@ -21,15 +68,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   transition: background .5s, color .5s;
+  transition-timing-function: ease-in-out;
 }
-
 
 // Light Theme
 html {
-  background: $bg_light;
+  background: $bg_light!important;
   color: $text_light;
   transition: background .5s, color .5s;
-  
+  transition-timing-function: ease-in-out;
   ::-webkit-scrollbar-thumb {
     background: $gray_300;
   }
@@ -39,6 +86,10 @@ html {
   }
 }
 .light {
+  .loadingScreen {
+    background: $bg_light;
+  }
+  
   .home {
     .name {
       color: $gray_400;
@@ -52,7 +103,7 @@ html {
   }
 
   .contact {
-    background: $bg_light;
+    //background: $bg_light;
     .contactText {
       color: $gray_100;
     }
@@ -75,7 +126,6 @@ html {
     }
   }
   
-
   .projects  {
     .overlay {
       background: $gray_300;
@@ -110,10 +160,9 @@ html {
 
 // Dark Theme
 html[data-color-mode='dark'] {
-  background: $bg_dark;
+  background: $bg_dark!important;
   color: $text_dark;
   transition: background .5s, color .5s;
-
   ::-webkit-scrollbar-thumb {
     background: $primary_100;
   }
@@ -123,6 +172,10 @@ html[data-color-mode='dark'] {
   }
 }
 .dark {
+  .loadingScreen {
+    background: $bg_dark;
+  }
+
   .home {
     .name {
       color: $primary_100; opacity: 1;
@@ -135,7 +188,7 @@ html[data-color-mode='dark'] {
   }
 
   .contact {
-    background: $bg_dark;
+    //background: $bg_dark;
     .contactText {
       color: $primary_100; opacity: .9;
     }
@@ -212,6 +265,11 @@ body {
 
 .theme {
   height: 100%;
+  z-index: 999;
+  opacity: 0;
+  animation: fade-in 1.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 .navbar-content {
@@ -253,4 +311,22 @@ a {
 
 * {
   margin: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
