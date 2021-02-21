@@ -10,17 +10,16 @@ const Home = () => {
     })
     return(
         <div className="home">
-            <div className="home-container">
-                <div className="home-row">
-                    <animated.div style={props}>
-                        <h1 className="name">Rodrigo Ramirez</h1>
-                    </animated.div>
-                </div>
-                <div className="home-row">
-                    <animated.div style={props}>
-                        <h2 className="job">Front-End Developer</h2>
-                    </animated.div>
-                </div>
+            <div className="name-row">
+                <animated.div className="name-col" style={props}>
+                    <h1 className="name">RODRIGO</h1>
+                    <h1 className="name">RAMIREZ</h1>
+                </animated.div>
+            </div>
+            <div className="job-row">
+                <animated.div className="job-col" style={props}>
+                    <h1 className="job">Front End Developer</h1>
+                </animated.div>  
             </div>
         </div>
     );
