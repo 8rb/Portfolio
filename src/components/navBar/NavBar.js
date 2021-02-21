@@ -21,6 +21,11 @@ const NavBar = () => {
                             <p className="navText">Projects</p>
                         </NavLink>
                     </div>
+                    <div className="navbar-col">
+                        <NavLink activeClassName='activeLink' className="navLink" to="/contact">
+                            <p className="navText">Contact</p>
+                        </NavLink>
+                    </div>
                 </div>
             </div>
         </>

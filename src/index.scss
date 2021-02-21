@@ -166,7 +166,7 @@ html[data-color-mode='dark'] {
   color: $text_dark;
   transition: background .5s, color .5s;
   ::-webkit-scrollbar-thumb {
-    background: $primary_100;
+    background: $gray_100;
   }
 
   ::selection { 
