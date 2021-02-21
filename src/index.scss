@@ -48,16 +48,16 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 3px;
+  border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 3px;
+  border-radius: 2px;
   width: 5px;
 }
 
@@ -73,6 +73,7 @@ body {
 
 // Light Theme
 html {
+  font-size: 1rem;
   background: $bg_light!important;
   color: $text_light;
   transition: background .5s, color .5s;
@@ -160,6 +161,7 @@ html {
 
 // Dark Theme
 html[data-color-mode='dark'] {
+  font-size: 18px;
   background: $bg_dark!important;
   color: $text_dark;
   transition: background .5s, color .5s;
@@ -178,12 +180,13 @@ html[data-color-mode='dark'] {
 
   .home {
     .name {
-      color: $primary_100; opacity: 1;
-      -webkit-text-stroke-width: .05rem;
-      -webkit-text-stroke-color: $primary_100;
+      color: $white;
+    }
+    .job-col {
+      background: $primary_100;
     }
     .job {
-      color: $primary_100; opacity: .6;
+      color: $black_100;
     }
   }
 
@@ -203,18 +206,15 @@ html[data-color-mode='dark'] {
   .navBar {
     .navLink {
       color:  $white;
+      border: 1px solid $bg_dark;
       &:hover {
-        color: $primary_100;
-      }
-      hr {
-        border-top: 0px;
+        background: $primary_100;
+        border: 1px solid $primary_100;
+        color: $black_100;
       }
     }
     .activeLink {
-      color:  $primary_100;
-      hr {
-        border-top: 1px solid $primary_100;
-      }
+      border: 1px solid $primary_100;
     }
   }
 
@@ -242,15 +242,16 @@ html[data-color-mode='dark'] {
 
   .footer-container {
     .navMenu {
-      background: $gray_400;
+      background: $bg_dark;
     }
     .navMenuLink {
-      color: $primary_100;
+      color: $white;
       opacity: 0.7;
     }
     .activeLink {
       font-weight: 500;
       opacity: 1;
+      color: $primary_100;
     }
   }
 }
@@ -282,17 +283,8 @@ body {
 .main-content {
   display: flex;
   justify-content: center;
-  min-height: 75%;
+  min-height: 87%;
   // height: 75%;
-  min-width: 250px;
-}
-
-.footer-content {
-  height: 12vh;
-  // min-height: 12vh;
-  display: flex;
-  justify-content: center;
-  // height: 200px;
   min-width: 250px;
 }
 
@@ -302,6 +294,12 @@ body {
   }
   .main-content {
     min-height: 83%;
+  }
+  .footer-content {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    min-width: 250px;
   }
 }
 
