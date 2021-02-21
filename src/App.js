@@ -4,9 +4,10 @@ import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
 import Footer from './components/footer/Footer';
-import Contact from './components/contactPage/Contact';
+import Contact from './components/contact/Contact';
 import { store } from './redux/store';
 import { connect } from 'react-redux'
+import About from './components/about/about';
 
 class App extends React.Component {
   state = {
@@ -41,6 +42,9 @@ class App extends React.Component {
               </Route>
               <Route path="/contact">
                   <Contact/>
+              </Route>
+              <Route path="/about">
+                  <About/>
               </Route>
               <Route path="*">
                   <Redirect to="/"/>
