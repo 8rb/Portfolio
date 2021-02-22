@@ -190,19 +190,6 @@ html[data-color-mode='dark'] {
     }
   }
 
-  .contact {
-    //background: $bg_dark;
-    .contactText {
-      color: $primary_100; opacity: .9;
-    }
-    .homeIcon {
-      color: $primary_100; opacity: .9;
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-
   .navBar {
     .navLink {
       color:  $white;

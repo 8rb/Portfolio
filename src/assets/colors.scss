@@ -3,12 +3,12 @@ $bg_light:         #FCFCFC; //Background color
 $text_light:       #2D3331; //Text color
 
 //Dark Theme
-$bg_dark:          #202020; //Background color
-$text_dark:        #e7e7e7; //Text color
+$bg_dark:          #181818; //Background color
+$text_dark:        #f0f0f0; //Text color
 
 //Palette colors
 
-$white:       #FFFFFF;
+$white:       #dfdfdf;
 $gray_100:    #2D2D2D;
 $gray_200:    #a8a8a8;
 $gray_300:    #161616;
@@ -16,9 +16,10 @@ $gray_400:    #161616;
 $black_100:   #252525;
 $black_200:   #202020;
 
-$primary_100: #67FFD1;
+$primary_100: #3ee0b0;
 $primary_200: darken($primary_100, 40%);
 $primary_300: lighten($primary_100, 20%);
+$primary_400: darken($primary_100, 20%);
 
 $complementary_100: #d5fffd;
 $complementary_200: #707070;
