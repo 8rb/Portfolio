@@ -37,8 +37,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px 0 0 5px;
-    transition: width 1s ease-in-out;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
 }
 
 @media screen and (max-width: 1000px) {
@@ -77,4 +77,23 @@
     font-size: calc(12px + 2.5vw);
     text-align: center;
     margin: 0;
+}
+
+// .job-col {
+//     transform: translateX(100vw);
+//     animation: leftToRight .5s;
+//     animation-delay: 1s;
+//     animation-fill-mode: forwards;
+//     border-radius: 5px;
+// }
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(100vw);
+        border-radius: 5px;
+    }
+    100% {
+        transform: translateX(0px);
+        border-radius: 5px 0 0 5px; 
+    }
 }
