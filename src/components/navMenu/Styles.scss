@@ -36,6 +36,10 @@
         width: auto;
         font-size:calc(16px + 0.6vw);
         font-weight: 100;
+        transition: all .3s ease-in-out;
+        &:hover {
+            opacity: 1;
+        }
     }
 
     .activeLink {
