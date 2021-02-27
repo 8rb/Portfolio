@@ -6,7 +6,6 @@ import NavBar from './components/navBar/NavBar';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
-import About from './components/about/About';
 import Contact from './components/contact/Contact';
 
 import { store } from './redux/store';
@@ -54,7 +53,7 @@ const App = () => {
             <Route exact path="/" component={Home}/>
             <Route path="/projects" component={Projects}/>
             <Route path="/contact" component={Contact}/>
-            <Route path="/about" component={About}/>
+            {/* <Route path="/about" component={About}/> */}
             <Route path="*"> <Redirect to="/"/> </Route>
           </Switch>
         </animated.div>
