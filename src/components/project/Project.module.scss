@@ -1,0 +1,108 @@
+@import '../../assets/colors.scss';
+
+$rowsWidth: 90%;
+
+.titleWrapper {
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+}
+
+.titleRow {
+    width: $rowsWidth;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $primary_100;
+}
+
+.title {
+    font-weight: 900;
+    font-size: calc(32px + 2.8vw);
+    color: $white;
+}
+
+.projectWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imageRow {
+    width: $rowsWidth;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.aboutRow {
+    min-height: 30vh;
+    width: $rowsWidth;
+}
+
+.underlineRow {
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $primary_100;
+}
+
+.subtitle {
+    font-weight: 900;
+    font-size: calc(26px + 2.4vw);
+    color: $white;
+}
+
+.aboutInfo {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+.aboutText {
+    font-weight: 200;
+    line-height: 200%;
+    font-size: calc(14px + .4vw);
+    color: $white;
+    opacity: .8;
+    text-align: justify;
+}
+
+.linksRow {
+    min-height: 40vh;
+    width: $rowsWidth;
+}
+
+.buttonsGrid {
+    width: 70%;
+    margin: 0 auto;
+    padding: 5rem 0;
+    // background: violet;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw 10vw;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.githubBtn, .siteBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+    border: 1px solid $primary_100;
+    color: $white;
+    &:hover {
+        background: $primary_100;
+        color: $black_100;
+    }
+}
