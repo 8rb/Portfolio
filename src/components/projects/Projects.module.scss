@@ -1,0 +1,202 @@
+@import '../../assets/colors.scss';
+
+$infoAndImageHeight: 90%;
+$rowsWidth: 90%;
+
+.projectsContainer {
+    min-height: 87vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleWrapper {
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+}
+
+.titleRow {
+    width: $rowsWidth;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $primary_100;
+}
+
+.title {
+    font-weight: 900;
+    font-size: calc(32px + 2.8vw);
+    color: $white;
+}
+
+.projectsWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projectRow {
+    height: 60vh;
+    min-height: 326px;
+    width: $rowsWidth;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5rem 0;
+    border-bottom: 1px solid $primary_100;
+    transition: all .3s ease-in-out;
+    border-radius: 2px;
+    color: $white;
+}
+
+.projectInfoCol {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectInfo {
+    height: $infoAndImageHeight;
+    width: 100%;
+}
+
+.projectTitleRow {
+    height: 40%;
+    display: flex;
+}
+
+.projectTitle {
+    font-weight: 600;
+    font-size: calc(25px + 2vw);
+}
+
+.projectTagsRow {
+    box-sizing: border-box;
+    padding: 1rem 0;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tagRow {
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.tagText {
+    font-weight: 200;
+    opacity: .8;
+    font-size: calc(10px + .65vw);
+}
+
+.projectImageCol {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+}
+
+.imageLink {
+    height: $infoAndImageHeight;
+}
+
+.projectImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+    &:hover {
+        opacity: 0.8;
+        transform: scale(1.025);
+        .image {
+            opacity: 1;
+        }
+        .overlay {
+            opacity: 1;
+        }
+    }
+}
+
+// For bodega image alignment to top
+.projectRow:nth-child(2) {
+    .projectImage {
+        object-position: top;
+    }
+}
+
+// For interlab image alignment to left
+.projectRow:nth-child(3) {
+    .projectImage {
+        object-position: left;
+    }
+}
+
+// last project without border bottom
+.projectRow:last-child {
+    border-bottom: none;
+}
+
+$size1: 950px;
+
+// Just for image sizing o:
+@media screen and (max-width: 1100px) {
+    .projectImageCol {
+        transition: all 0s ease-in-out;
+        width: 65%;
+    }
+}
+
+// Now the real one
+@media screen and (max-width: $size1) {
+    .projectRow {
+        height: auto;
+        flex-direction: column-reverse;
+        box-sizing: border-box;
+        padding: 2rem 0;
+        justify-content: space-between;
+    }
+
+    .projectInfoCol {
+        width: 100%;
+        height: auto;
+    }
+
+    .titleRow {
+        padding-bottom: .5rem;
+    }
+    
+    .projectImageCol {
+        width: 100%;
+        height: auto;
+        padding-bottom: 1rem;
+    }
+
+    .imageLink {
+        height: auto;
+    }
+
+    .projectImage {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
+    .projectTitleRow {
+        height: auto;
+        display: flex;
+    }
+
+    .projectTagsRow {
+        box-sizing: border-box;
+        padding: 1rem 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
