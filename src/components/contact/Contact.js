@@ -41,11 +41,11 @@ const Contact = () => {
             <div className={styles.buttonsWrapper}>
                 <div className={styles.buttonGrid}>
                     <AwesomeButtonSocial type="github" href="https://github.com/8rb"
-                        target="_blank"></AwesomeButtonSocial>
+                        target="_blank">GitHub</AwesomeButtonSocial>
                     <AwesomeButton type="secondary" href={Pdf}
                         target="_blank" rel="noopener noreferrer">Resume CV</AwesomeButton>
                     <AwesomeButtonSocial type="linkedin" href="https://www.linkedin.com/in/rodrigo-ramirez8/"
-                        target="_blank"></AwesomeButtonSocial>
+                        target="_blank">LinkedIn</AwesomeButtonSocial>
                     <AwesomeButton type="primary" onPress={() => {
                             copyToClipBoard();
                         }}>
