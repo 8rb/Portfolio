@@ -20,6 +20,7 @@
   width: 150px;
   height: 150px;
 }
+
 .lds-ripple div {
   position: absolute;
   border: 10px solid #00ffcc;
@@ -27,6 +28,7 @@
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
+
 .lds-ripple div:nth-child(2) {
   animation-delay: -0.5s;
 }
@@ -48,7 +50,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
   height: 6px;
 }
 
@@ -68,7 +70,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   transition: background .5s, color .5s;
+  overflow-y: overlay;
   transition-timing-function: ease-in-out;
+  user-select: none;
 }
 
 // Light Theme
@@ -190,21 +194,6 @@ html[data-color-mode='dark'] {
     }
   }
 
-  .navBar {
-    .navLink {
-      color:  $white;
-      border: 1px solid $bg_dark;
-      &:hover {
-        background: $primary_100;
-        border: 1px solid $primary_100;
-        color: $black_100;
-      }
-    }
-    .activeLink {
-      border: 1px solid $primary_100;
-    }
-  }
-
   .projects  {
     .overlay {
       background: $primary_100;
@@ -213,7 +202,7 @@ html[data-color-mode='dark'] {
       color: $gray_300;
     }
     .title {
-      color: $primary_100;
+      color: $white;
     }
   }
 
@@ -261,17 +250,14 @@ body {
 }
 
 .navbar-content {
-  // min-height: 13%;
   height: 13%;
   min-width: 250px;
-  // min-height: 70px;
 }
 
 .main-content {
   display: flex;
   justify-content: center;
   min-height: 87%;
-  // height: 75%;
   min-width: 250px;
 }
 
