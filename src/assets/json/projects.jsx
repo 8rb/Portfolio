@@ -30,7 +30,7 @@ export const projects = [
         "title": "Interlab",
         "generic_name": "INTERNSHIP FINDER",
         "description": <>Interlab is an <b className="bold">internship applications platform</b>, developed in Angular + TypeScript in the Front-End and Spring in the backend. I was in charge of the Majority of the Front-End programming and the database design. This application accesses the backend using Axios for HTTP requests.</>,
-        "github_link": "https://github.com/8rb/interlab-webapps",
+        "github_link": "https://github.com/Juanca0312/interlab",
         "deployed_link": "https://interlab-2fmj.onrender.com",
         "img": require("../images/Interlab.png"),
         "tags": [
