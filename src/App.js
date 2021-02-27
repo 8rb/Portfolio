@@ -1,73 +1,74 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
+import { useTransition, animated } from 'react-spring';
+
 import NavBar from './components/navBar/NavBar';
+import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
-import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom';
-import Footer from './components/footer/Footer';
+import About from './components/about/About';
 import Contact from './components/contact/Contact';
+
 import { store } from './redux/store';
-import { connect } from 'react-redux'
-import About from './components/about/about';
+import { connect } from 'react-redux';
 
-class App extends React.Component {
-  state = {
-    loading: true,
-  };
+const App = () => {
+  const [loading] = React.useState(true);
 
-  componentDidMount() {
-    // this simulates an async action, after which the component will render the content
-    demoAsyncCall().then(() => this.setState({ loading: false }));
-  }
+  const location = useLocation();
 
-  render() {
-    return(
-      <>
-      {this.state.loading &&
-      <div className={`loadingScreen`}>
-        <div className="lds-ripple"><div></div><div></div></div>
+  const transitions = useTransition(location, location => location.pathname, {
+    from: {
+      position: 'absolute',
+      width: '100%',
+      opacity: 0,
+      transform: 'translate(0,10%) translate3d(0, 0, 0)'
+    },
+    enter: {
+      maxHeight: '100%',
+      opacity: 1,
+      transform: 'translate(0%,0) translate3d(0, 0, 0)' },
+    leave: {
+      opacity: 0, 
+      transform: 'translate(-50%,0) translate3d(0, 0, 0)' }
+  });
+
+  useEffect(() => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, [location])
+
+  return(
+    <>
+    {loading &&
+    <div className={`loadingScreen`}>
+      <div className="lds-ripple"><div></div><div></div></div>
+    </div>}
+    <div className={`theme ${store.getState().theme}`}>
+      <div className="navbar-content">
+        <NavBar/>
       </div>
-      }
-      <div className={`theme ${store.getState().theme}`}>
-        <Router>
-          <div className="navbar-content">
-            <NavBar/>
-          </div>
-          <div className="main-content">
-            <Switch>
-              <Route exact path="/">
-                  <Home/>
-              </Route>
-              <Route path="/projects">
-                  <Projects/>
-              </Route>
-              <Route path="/contact">
-                  <Contact/>
-              </Route>
-              <Route path="/about">
-                  <About/>
-              </Route>
-              <Route path="*">
-                  <Redirect to="/"/>
-              </Route>
-            </Switch>
-          </div>
-          <div className="footer-content">
-            <Footer/>
-          </div>
-        </Router>
+      {transitions.map(({ item: location, props, key }) => (
+        <animated.div key={key} style={props} className="main-content">
+          <Switch location={location}>
+            <Route exact path="/" component={Home}/>
+            <Route path="/projects" component={Projects}/>
+            <Route path="/contact" component={Contact}/>
+            <Route path="/about" component={About}/>
+            <Route path="*"> <Redirect to="/"/> </Route>
+          </Switch>
+        </animated.div>
+      ))}
+      <div className="footer-content">
+        <Footer/>
       </div>
-      </>
-    );
-  }
-}
-
-function demoAsyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2000));
+    </div>
+    </>
+  );
 }
 
 const mapStateToProps = (state) => {
   return { theme: state.theme };
 };
 
-// export default App;
 export default connect(mapStateToProps)(App);
