@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import { useTransition, animated } from 'react-spring';
-
+import ParticlesBG from './components/particles/ParticlesBG';
 import NavBar from './components/navBar/NavBar';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
@@ -61,6 +61,7 @@ const App = () => {
       <div className="footer-content">
         <Footer/>
       </div>
+      <ParticlesBG/>
     </div>
     </>
   );
