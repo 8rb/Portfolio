@@ -1,3 +1,5 @@
+@import '../../assets/colors.scss';
+
 .home {
     display: flex;
     align-items: center;
@@ -36,9 +38,31 @@
     height: 55%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     border-radius: 5px;
     transition: all .5s ease-in-out;
+}
+
+.name {
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    font-size: calc(40px + 3.5vw);
+    text-align: left;
+    margin: 0;
+}
+
+.job {
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    font-size: calc(12px + 2vw);
+    text-align: center;
+    margin: 0;
+    padding: calc(10px + 1.5vw) calc(12px + 3vw);
+    padding-right: calc(12px + 3.5vw);
+    border-radius: 5px 0 0 5px;
+    color: $black_100;
+    background-color: $primary_alt;
+    transition: all .2s ease-in-out;
 }
 
 @media screen and (max-width: 1000px) {
@@ -49,8 +73,12 @@
         height: 25%;
     }
     .job-col {
-        width: 60%;
+        width: auto;
         height: 50%;
+    }
+    .job {
+        padding: 1.5rem 1.5rem;
+        padding-right: 2.5rem;
     }
 }
 
@@ -58,42 +86,12 @@
     .name-col {
         margin-left: 1rem;
     }
-    
     .job-col {
-        width: 70%;
+        width: auto;
         height: 40%;
     }
-}
-
-.name {
-    font-weight: 900;
-    font-size: calc(40px + 3.5vw);
-    text-align: left;
-    margin: 0;
-}
-
-.job {
-    font-weight: 400;
-    font-size: calc(12px + 2.5vw);
-    text-align: center;
-    margin: 0;
-}
-
-// .job-col {
-//     transform: translateX(100vw);
-//     animation: leftToRight .5s;
-//     animation-delay: 1s;
-//     animation-fill-mode: forwards;
-//     border-radius: 5px;
-// }
-
-@keyframes leftToRight {
-    0% {
-        transform: translateX(100vw);
-        border-radius: 5px;
-    }
-    100% {
-        transform: translateX(0px);
-        border-radius: 5px 0 0 5px; 
+    .job {
+        padding: 1.2rem 1rem;
+        padding-right: 1.5rem;
     }
 }

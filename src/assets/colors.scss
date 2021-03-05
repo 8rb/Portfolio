@@ -3,7 +3,7 @@ $bg_light:         #FCFCFC; //Background color
 $text_light:       #2D3331; //Text color
 
 //Dark Theme
-$bg_dark:          #202020; //Background color
+$bg_dark:          #181818; //Background color
 $text_dark:        #f0f0f0; //Text color
 
 //Palette colors
@@ -16,7 +16,8 @@ $gray_400:    #161616;
 $black_100:   #252525;
 $black_200:   #202020;
 
-$primary_100: #3ee0b0;
+$primary_100: hsl(170, 72%, 56%);
+$primary_alt: hsl(170, 72%, 56%);
 $primary_200: darken($primary_100, 40%);
 $primary_300: lighten($primary_100, 20%);
 $primary_400: darken($primary_100, 20%);
