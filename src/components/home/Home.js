@@ -18,7 +18,7 @@ const Home = () => {
             </div>
             <div className="job-row">
                 <div className="job-col">
-                    <h1 className="job">Front End Developer</h1>
+                    <h1 className="job">FRONT  END  DEVELOPER</h1>
                 </div>
             </div>
         </div>
