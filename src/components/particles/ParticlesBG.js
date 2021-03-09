@@ -24,7 +24,7 @@ const ParticlesBG = () => {
                         }
                     },
                     size: {
-                        value: 1,
+                        value: 1.2,
                         random: true,
                         anim: {
                             enable: true,
