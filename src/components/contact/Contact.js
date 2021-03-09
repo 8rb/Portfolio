@@ -1,8 +1,10 @@
 import React from 'react'
-import styles from './Contact.module.scss';
 import { useSpring, animated } from 'react-spring';
-import Pdf from '../../assets/documents/Rodrigo_Ramirez_Resume_2021.pdf';
 import { AwesomeButton, AwesomeButtonSocial } from 'react-awesome-button';
+
+import Pdf from '../../assets/documents/Rodrigo_Ramirez_Resume_2021.pdf';
+
+import styles from './Contact.module.scss';
 import "react-awesome-button/dist/styles.css";
 import './button.scss';
 
@@ -42,18 +44,15 @@ const Contact = () => {
                 <div className={styles.buttonGrid}>
                     <AwesomeButtonSocial type="github" href="https://github.com/8rb"
                         target="_blank">GitHub</AwesomeButtonSocial>
-                    <AwesomeButton type="secondary" href={Pdf}
+                    <AwesomeButton type="primary" href={Pdf}
                         target="_blank" rel="noopener noreferrer">Resume CV</AwesomeButton>
                     <AwesomeButtonSocial type="linkedin" href="https://www.linkedin.com/in/rodrigo-ramirez8/"
                         target="_blank">LinkedIn</AwesomeButtonSocial>
-                    <AwesomeButton type="primary" onPress={() => {
+                    <AwesomeButton type="secondary" onPress={() => {
                             copyToClipBoard();
                         }}>
                         Copy Email
                     </AwesomeButton>
-                    {/* <div className={styles.contactMailButton} onClick={copyToClipBoard}>
-                        <p className={styles.contactMail}>{mail}</p>
-                    </div> */}
                 </div>
             </div>
         </animated.div>

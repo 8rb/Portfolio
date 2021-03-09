@@ -6,25 +6,28 @@
     --button-raise-level: 5px;
     --button-hover-pressure: 2;
     --transform-speed: 0.2s;
-    --button-primary-color: hsl(148, 100%, 71%);
-    --button-primary-color-dark: hsl(148, 100%, 36%);
-    --button-primary-color-light: hsl(148, 100%, 21%);
-    --button-primary-color-hover: hsl(148, 100%, 62%);
+    --button-primary-color: #3ee0c5;
+    --button-primary-color-dark: #00806b;
+    --button-primary-color-light: #397067;
+    --button-primary-color-hover: #47ffe0;
+    --button-primary-color-active: #47ffe0;
     --button-primary-border: none;
-    --button-secondary-color: hsl(59, 100%, 71%);
-    --button-secondary-color-dark: hsl(59, 100%, 36%);
-    --button-secondary-color-light: hsl(59, 100%, 21%);
-    --button-secondary-color-hover: hsl(59, 100%, 62%);
+    --button-secondary-color: #ff00aa;
+    --button-secondary-color-dark: #9e0069;
+    --button-secondary-color-light: #ffe6f7;
+    --button-secondary-color-hover: #ff00aa;
+    --button-secondary-color-active: #ff00aa;
     --button-secondary-border: none;
-    --button-anchor-color: #f3c8ad;
-    --button-anchor-color-dark: #734922;
-    --button-anchor-color-light: #4c3016;
-    --button-anchor-color-hover: #f1bfa0;
-    --button-anchor-border: 1px solid #8c633c;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
     .aws-btn {
         --button-default-height: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .aws-btn {
+        --button-default-height: 80%;
     }
 }
