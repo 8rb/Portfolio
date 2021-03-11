@@ -260,7 +260,8 @@ body {
     height: 5%;
   }
   .main-content {
-    min-height: 83%;
+    box-sizing: border-box;
+    padding-bottom: 10vh;
   }
   .footer-content {
     height: 10vh;

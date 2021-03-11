@@ -5,7 +5,7 @@ import { AwesomeButton, AwesomeButtonSocial } from 'react-awesome-button';
 import Pdf from '../../assets/documents/Rodrigo_Ramirez_Resume_2021.pdf';
 
 import styles from './Contact.module.scss';
-import "react-awesome-button/dist/styles.css";
+import 'react-awesome-button/dist/styles.css';
 import './button.scss';
 
 const Contact = () => {
