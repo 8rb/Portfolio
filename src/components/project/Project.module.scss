@@ -76,20 +76,33 @@ $rowsWidth: 90%;
 }
 
 .linksRow {
-    min-height: 40vh;
+    min-height: 30vh;
     width: $rowsWidth;
-}
-
-.buttonsGrid {
-    width: 70%;
-    margin: 0 auto;
-    padding: 5rem 0;
-    // background: violet;
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5vw 10vw;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+
+.buttonsWrapper {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonGrid {
+    min-width: 285px;
+    height: 80%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    grid-auto-rows: auto;
+    gap: 5rem;
+    width: 80%;
+    box-sizing: border-box;
 }
 
 .githubBtn, .siteBtn {
@@ -104,5 +117,13 @@ $rowsWidth: 90%;
     &:hover {
         background: $primary_100;
         color: $black_100;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .buttonGrid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem 5rem;
+        width: 80%;
     }
 }

@@ -24,7 +24,6 @@ const App = () => {
       transform: 'translate(0,10%) translate3d(0, 0, 0)'
     },
     enter: {
-      maxHeight: '100%',
       opacity: 1,
       transform: 'translate(0%,0) translate3d(0, 0, 0)' },
     leave: {
