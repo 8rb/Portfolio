@@ -1,12 +1,15 @@
 import React, {useEffect} from 'react';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import { useTransition, animated } from 'react-spring';
-import ParticlesBG from './components/particles/ParticlesBG';
-import NavBar from './components/navBar/NavBar';
-import Footer from './components/footer/Footer';
+
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
+import About from './components/about/About';
+
+import ParticlesBG from './components/particles/ParticlesBG';
+import NavBar from './components/navBar/NavBar';
+import Footer from './components/footer/Footer';
 
 import { store } from './redux/store';
 import { connect } from 'react-redux';
@@ -52,7 +55,7 @@ const App = () => {
             <Route exact path="/" component={Home}/>
             <Route path="/projects" component={Projects}/>
             <Route path="/contact" component={Contact}/>
-            {/* <Route path="/about" component={About}/> */}
+            <Route path="/about" component={About}/>
             <Route path="*"> <Redirect to="/"/> </Route>
           </Switch>
         </animated.div>
