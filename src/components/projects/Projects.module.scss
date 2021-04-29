@@ -37,13 +37,13 @@ $rowsWidth: 90%;
 }
 
 .projectRow {
-    height: 60vh;
+    box-sizing: border-box;
     min-height: 326px;
     width: $rowsWidth;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: .5rem 0;
+    padding: 2rem 0;
     border-bottom: 1px solid $primary_100;
     transition: all .3s ease-in-out;
     border-radius: 2px;
@@ -93,33 +93,41 @@ $rowsWidth: 90%;
 }
 
 .projectImageCol {
+    height: 100%;
     width: 55%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .3s ease-in-out;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform .3s ease-in-out;
 }
 
 .imageLink {
-    height: $infoAndImageHeight;
+    height: 100%;
+}
+
+.projectRow:nth-child(even) {
+    .projectImageCol:hover .projectImage {
+        transform: scale(2) rotate(-25deg);
+        cursor: pointer;
+    }
+}
+
+.projectRow:nth-child(odd) {
+    .projectImageCol:hover .projectImage {
+        transform: scale(2) rotate(25deg);
+        cursor: pointer;
+    }
 }
 
 .projectImage {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 3px;
+    border-radius: 5px;
     transition: all .3s ease-in-out;
-    &:hover {
-        opacity: 0.8;
-        transform: scale(1.025);
-        .image {
-            opacity: 1;
-        }
-        .overlay {
-            opacity: 1;
-        }
-    }
 }
 
 // For bodega image alignment to top
@@ -142,7 +150,6 @@ $rowsWidth: 90%;
 }
 
 $size1: 950px;
-
 // Just for image sizing o:
 @media screen and (max-width: 1100px) {
     .projectImageCol {
@@ -154,44 +161,32 @@ $size1: 950px;
 // Now the real one
 @media screen and (max-width: $size1) {
     .projectRow {
-        height: auto;
         flex-direction: column-reverse;
-        box-sizing: border-box;
-        padding: 2rem 0;
         justify-content: space-between;
+        align-items: flex-end;
     }
-
     .projectInfoCol {
         width: 100%;
         height: auto;
+        margin-top: 1rem;
     }
-
     .titleRow {
         padding-bottom: .5rem;
     }
-    
     .projectImageCol {
         width: 100%;
         height: auto;
-        padding-bottom: 1rem;
     }
-
-    .imageLink {
-        height: auto;
-    }
-
     .projectImage {
-        height: auto;
+        height: 100%;
         width: 100%;
         object-fit: cover;
         border-radius: 3px;
     }
-
     .projectTitleRow {
         height: auto;
         display: flex;
     }
-
     .projectTagsRow {
         box-sizing: border-box;
         padding: 1rem 0;
