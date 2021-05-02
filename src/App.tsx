@@ -69,7 +69,7 @@ const App = () => {
   );
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: { theme: any; }) => {
   return { theme: state.theme };
 };
 
