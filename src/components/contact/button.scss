@@ -1,5 +1,5 @@
 .aws-btn {
-    --button-default-height: 45%;
+    --button-default-height: 6rem;
     --button-default-font-size: 21px;
     --button-default-border-radius: 5px;
     --button-horizontal-padding: 48px;
@@ -22,12 +22,12 @@
 
 @media screen and (max-width: 1050px) {
     .aws-btn {
-        --button-default-height: 90%!important;
+        --button-default-height: 5rem;
     }
 }
 
 @media screen and (max-width: 600px) {
     .aws-btn {
-        --button-default-height: 80%!important;
+        --button-default-height: 3.5rem;
     }
 }
