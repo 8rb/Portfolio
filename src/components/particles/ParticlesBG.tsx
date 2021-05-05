@@ -1,10 +1,10 @@
 import React from 'react'
 import Particles from 'react-particles-js';
-import styles from './particles.module.scss';
+import './particles.scss';
 
 const ParticlesBG = () => {
     return (
-        <Particles id={styles.particlesJs}
+        <Particles className="particlesJs"
             params={{
                 particles: {
                     number: {
@@ -62,8 +62,7 @@ const ParticlesBG = () => {
                         distance: 10,
                         size: 40,
                         duration: 2,
-                        opacity: 8,
-                        speed: 1
+                        opacity: 8
                       },
                       repulse: {
                         distance: 80,

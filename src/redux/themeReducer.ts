@@ -3,7 +3,7 @@ const initialState = {
     loading: true
 }
 
-export default function themeReducer(state = initialState, action) {
+export default function themeReducer(state = initialState, action: { type: any; }) {
     switch (action.type) {
         case 'toggleTheme':
             if(state.theme === 'light'){
