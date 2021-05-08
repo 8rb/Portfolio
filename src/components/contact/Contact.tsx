@@ -1,12 +1,11 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring';
-import { AwesomeButton, AwesomeButtonSocial } from 'react-awesome-button';
-
+import Button from '../button/Button';
+import SocialButton from '../button/Social';
 import Pdf from '../../assets/documents/Rodrigo_Ramirez_Resume_2021.pdf';
 
 import styles from './Contact.module.scss';
-import 'react-awesome-button/dist/styles.css';
-import './button.scss';
+import '../button/button.scss';
 
 const Contact = () => {
 
@@ -42,17 +41,10 @@ const Contact = () => {
             </div>
             <div className={styles.buttonsWrapper}>
                 <div className={styles.buttonGrid}>
-                    <AwesomeButtonSocial type="github" href="https://github.com/8rb"
-                        target="_blank">GitHub</AwesomeButtonSocial>
-                    <AwesomeButton type="primary" href={Pdf}
-                        target="_blank" rel="noopener noreferrer">Resume CV</AwesomeButton>
-                    <AwesomeButtonSocial type="linkedin" href="https://www.linkedin.com/in/rodrigo-ramirez8/"
-                        target="_blank">LinkedIn</AwesomeButtonSocial>
-                    <AwesomeButton type="secondary" onPress={() => {
-                            copyToClipBoard();
-                        }}>
-                        Copy Email
-                    </AwesomeButton>
+                    <SocialButton type="github" text="GitHub" href="https://github.com/8rb" target="_blank"/>    
+                    <Button type="primary" text="Resume CV" href={Pdf} target="_blank"/>
+                    <SocialButton type="linkedin" text="LinkedIn" href="https://www.linkedin.com/in/rodrigo-ramirez8/" target="_blank"/>
+                    <Button type="secondary" text="Copy Email" onPress={() => {copyToClipBoard(); }}/>
                 </div>
             </div>
         </animated.div>
