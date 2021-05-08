@@ -1,14 +1,14 @@
 import React from 'react';
-import { AwesomeButton, AwesomeButtonSocial } from 'react-awesome-button';
-
+import Button from '../button/Button';
+import SocialButton from '../button/Social';
 import projectsInfo from '../../assets/json/projects.jsx';
-
 import styles from './Project.module.scss';
-import 'react-awesome-button/dist/styles.css';
-import './linksBtn.scss';
 
-const Project = ({index}) => {
-  
+type Props = {
+  index: number,
+}
+
+const Project: React.FC<Props> = ({index}) => {
   return (
     <>
     <div className={styles.titleWrapper}>
@@ -19,10 +19,8 @@ const Project = ({index}) => {
     <div className={styles.projectWrapper}>
       <div className={styles.linksRow}>
         <div className={styles.buttonGrid}>
-          <AwesomeButton type="primary" href={projectsInfo[index].deployed_link}
-              target="_blank" rel="noopener noreferrer">Live Site</AwesomeButton>
-          <AwesomeButtonSocial type="github" href={projectsInfo[index].github_link}
-              target="_blank">GitHub Repo</AwesomeButtonSocial>
+          <Button type="primary" href={projectsInfo[index].deployed_link} target="_blank" text="Live Site"/>
+          <SocialButton type="github" href={projectsInfo[index].github_link} target="_blank" text="GitHub Repo"/>
         </div>
       </div>
       <div className={styles.aboutRow}>
