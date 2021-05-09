@@ -1,10 +1,10 @@
 import React from 'react'
 import Particles from 'react-particles-js';
-import './particles.scss';
+import styles from './Particles.module.scss';
 
 const ParticlesBG = () => {
     return (
-        <Particles className="particlesJs"
+        <Particles className={styles.particlesJs}
             params={{
                 particles: {
                     number: {
@@ -24,7 +24,7 @@ const ParticlesBG = () => {
                         }
                     },
                     size: {
-                        value: 1.2,
+                        value: 1.4,
                         random: true,
                         anim: {
                             enable: true,

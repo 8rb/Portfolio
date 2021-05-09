@@ -1,32 +1,32 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import './Styles.scss';
+import styles from './NavMenu.module.scss';
 
 const NavMenu = () => {
     return (
-        <div className="navMenuRow navMenu">
-            <div className="navMenuCol">
-                <NavLink exact={true} activeClassName='activeLink' className="navMenuLink" to="/">
+        <div className={styles.navMenuRow}>
+            <div className={styles.navMenuCol}>
+                <NavLink exact={true} activeClassName={styles.activeLink} className={styles.navMenuLink} to="/">
                     <i className="fas fa-home"></i>
-                    <p className="navMenuText">Home</p>
+                    <p className={styles.navMenuText}>Home</p>
                 </NavLink>
             </div>
-            <div className="navMenuCol">
-                <NavLink activeClassName='activeLink' className="navMenuLink" to="/projects">
+            <div className={styles.navMenuCol}>
+                <NavLink activeClassName={styles.activeLink} className={styles.navMenuLink} to="/projects">
                     <i className="fas fa-briefcase"></i>
-                    <p className="navMenuText">Projects</p>
+                    <p className={styles.navMenuText}>Projects</p>
                 </NavLink>
             </div>
-            <div className="navMenuCol">
-                <NavLink activeClassName='activeLink' className="navMenuLink" to="/about">
+            <div className={styles.navMenuCol}>
+                <NavLink activeClassName={styles.activeLink} className={styles.navMenuLink} to="/about">
                     <i className="fas fa-user"></i>
-                    <p className="navMenuText">About Me</p>
+                    <p className={styles.navMenuText}>About Me</p>
                 </NavLink>
             </div>
-            <div className="navMenuCol">
-                <NavLink activeClassName='activeLink' className="navMenuLink" to="/contact">
+            <div className={styles.navMenuCol}>
+                <NavLink activeClassName={styles.activeLink} className={styles.navMenuLink} to="/contact">
                     <i className="fas fa-envelope"></i>
-                    <p className="navMenuText">Contact</p>
+                    <p className={styles.navMenuText}>Contact</p>
                 </NavLink>
             </div>
         </div>

@@ -1,33 +1,31 @@
 import React from 'react';
-import './NavBar.scss';
+import styles from './NavBar.module.scss';
 import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return(
-        <>
-            <div className="navbar-container navBar">
-                <div className="navbar-row link-row">
-                    <div className="navbar-col">
-                        <NavLink exact={true} activeClassName='navBarActiveLink' className="navLink" to="/">
-                            <p className="navText">HOME</p>
-                            <hr/>
-                        </NavLink>
-                    </div>
-                    <div className="navbar-col">
-                        <NavLink activeClassName='navBarActiveLink' className="navLink" to="/projects">
-                            <p className="navText">PROJECTS</p>
-                            <hr/>
-                        </NavLink>
-                    </div>
-                    <div className="navbar-col">
-                        <NavLink activeClassName='navBarActiveLink' className="navLink" to="/contact">
-                            <p className="navText">CONTACT</p>
-                            <hr/>
-                        </NavLink>
-                    </div>
+        <div className={styles.navbarContainer}>
+            <div className={styles.navbarRow}>
+                <div className={styles.navbarCol}>
+                    <NavLink exact={true} activeClassName={styles.navBarActiveLink} className={styles.navLink} to="/">
+                        <p className={styles.navText}>HOME</p>
+                        <hr/>
+                    </NavLink>
+                </div>
+                <div className={styles.navbarCol}>
+                    <NavLink activeClassName={styles.navBarActiveLink} className={styles.navLink} to="/projects">
+                        <p className={styles.navText}>PROJECTS</p>
+                        <hr/>
+                    </NavLink>
+                </div>
+                <div className={styles.navbarCol}>
+                    <NavLink activeClassName={styles.navBarActiveLink} className={styles.navLink} to="/contact">
+                        <p className={styles.navText}>CONTACT</p>
+                        <hr/>
+                    </NavLink>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 export default NavBar;
