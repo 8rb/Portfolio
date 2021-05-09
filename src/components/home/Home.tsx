@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSpring, animated} from 'react-spring';
-import './Home.scss';
+import styles from './Home.module.scss';
 
 const Home = () => {
     const Nameprops = useSpring({
@@ -9,16 +9,16 @@ const Home = () => {
         config: {duration: 500}
     })
     return(
-        <div className="home">
-            <div className="name-row">
-                <animated.div className="name-col" style={Nameprops}>
-                    <h1 className="name">RODRIGO</h1>
-                    <h1 className="name">RAMIREZ</h1>
+        <div className={styles.home}>
+            <div className={styles.nameRow}>
+                <animated.div className={styles.nameCol} style={Nameprops}>
+                    <h1 className={styles.name}>RODRIGO</h1>
+                    <h1 className={styles.name}>RAMIREZ</h1>
                 </animated.div>
             </div>
-            <div className="job-row">
-                <div className="job-col">
-                    <h1 className="job">FRONT  END  DEVELOPER</h1>
+            <div className={styles.jobRow}>
+                <div className={styles.jobCol}>
+                    <h1 className={styles.job}>FRONT  END  DEVELOPER</h1>
                 </div>
             </div>
         </div>

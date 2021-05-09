@@ -1,10 +1,10 @@
 import React from 'react'
 import NavMenu from '../navMenu/NavMenu';
-import './Styles.scss';
+import styles from './Footer.module.scss';
 
 const Footer = () => {
     return (
-        <div className="footer-container">
+        <div className={styles.footerContainer}>
             <NavMenu/>
         </div>
     )

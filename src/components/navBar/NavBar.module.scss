@@ -4,7 +4,7 @@ $size1: 1150px;
 $size2: 600px;
 $lineWidth: 85%;
 
-.navbar-container {
+.navbarContainer {
     height: 100%;
     display: flex;
     top: 0;
@@ -14,30 +14,18 @@ $lineWidth: 85%;
     align-items: center;
 }
 
-.navbar-row {
+.navbarRow {
     display: flex;
     align-items: center;
     // min-height: 46px;
     width: 100%;
-    flex-direction: row;
-}
-
-.toggle {
-    position: absolute;
-    top: .8rem;
-}
-
-.link-row {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+    flex-direction: row;
 }
 
-.navbar-col-toggle{
-    width: 100%;
-}
-
-.navbar-col{
+.navbarCol {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -46,15 +34,12 @@ $lineWidth: 85%;
 }
 
 @media screen and (max-width: $size1) {
-    .link-row {
-        width: 100%;
-    }
-    .navbar-col {
+    .navbarCol {
         width: 50%;
     }
 }
 @media screen and (max-width: $size2) {
-    .navBar {
+    .navbarContainer {
         display: none;
     }
 }

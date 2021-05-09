@@ -1,5 +1,5 @@
-@media screen and (max-width: 600px) {
-    .footer-container {
+.footerContainer {
+    @media screen and (max-width: 600px) {
         height: 8%;
         min-height: 70px;
         width: 100%;

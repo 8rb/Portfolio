@@ -9,7 +9,7 @@
     flex-direction: column;
 }
 
-.name-row {
+.nameRow {
     width: 100%;
     height: 60%;
     display: flex;
@@ -18,13 +18,13 @@
     flex-direction: column;
 }
 
-.name-col {
+.nameCol {
     width: 50%;
     margin-left: 5rem;
     transition: width 1s ease-in-out;
 }
 
-.job-row {
+.jobRow {
     width: 100%;
     height: 40%;
     display: flex;
@@ -33,7 +33,7 @@
     flex-direction: column;
 }
 
-.job-col {
+.jobCol {
     width: 55%;
     height: 55%;
     display: flex;
@@ -66,13 +66,13 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .name-col {
+    .nameCol {
         margin-left: 3rem;
     }
-    .job-row {
+    .jobRow {
         height: 25%;
     }
-    .job-col {
+    .jobCol {
         width: auto;
         height: 50%;
     }
@@ -83,10 +83,10 @@
 }
 
 @media screen and (max-width: 600px) {
-    .name-col {
+    .nameCol {
         margin-left: 1rem;
     }
-    .job-col {
+    .jobCol {
         width: auto;
         height: 40%;
     }
