@@ -9,8 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fade-out .5s;
-  animation-delay: 1s;
+  animation: fade-out .8s;
+  animation-delay: 0;
   animation-fill-mode: forwards;
 }
 
@@ -24,14 +24,14 @@
 .lds-ripple div {
   position: absolute;
   border: 10px solid $primary_100;
-  opacity: 1;
   border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  animation: lds-ripple .8s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
 .lds-ripple div:nth-child(2) {
-  animation-delay: -0.5s;
+  animation-delay: -.4s;
 }
+
 @keyframes lds-ripple {
   0% {
     top: 65px;
@@ -49,18 +49,32 @@
   }
 }
 
+@keyframes hide-scrollbar {
+  0% {
+    overflow-y: hidden;
+  }
+  100% {
+    overflow-y: overlay;
+  }
+}
+
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 3px;
   height: 6px;
+  :hover {
+    width: 30px;
+  }
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 0px;
+  background: none;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
   width: 5px;
+  background: $gray_100;
 }
 
 body {
@@ -69,110 +83,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  transition: background .5s, color .5s;
+  transition: background .5s;
   overflow-y: overlay;
   transition-timing-function: ease-in-out;
-  user-select: none;
-}
-
-// Light Theme
-html {
-  font-size: 1rem;
-  background: $bg_light!important;
-  color: $text_light;
-  transition: background .5s, color .5s;
-  transition-timing-function: ease-in-out;
-  ::-webkit-scrollbar-thumb {
-    background: $gray_300;
-  }
-
-  ::selection { 
-    background: $complementary_100; 
-  }
-}
-.light {
-  .loadingScreen {
-    background: $bg_light;
-  }
-  
-  .home {
-    .name {
-      color: $gray_400;
-      -webkit-text-stroke-width: .05rem;
-      -webkit-text-stroke-color: $gray_400;
-      transition: all .1s ease-in-out;
-    }
-    .job {
-      color: $gray_100;
-    }
-  }
-
-  .contact {
-    //background: $bg_light;
-    .contactText {
-      color: $gray_100;
-    }
-    .homeIcon {
-      color: $gray_100;
-    }
-  }
-
-  .navBar {
-    .navLink {
-      color:  $gray_100;
-      hr {
-        border-top: 0px;
-      }
-    }
-    .activeLink {
-      hr {
-        border-top: 1px solid $gray_400;
-      }
-    }
-  }
-  
-  .projects  {
-    .overlay {
-      background: $gray_300;
-    }
-    .overlay-text {
-      color: $white;
-    }
-    .title {
-      color: $gray_100;
-    }
-  }
-
-  .project .btn {
-    color: $gray_100;
-    &.github {
-      background-color: $primary_300;
-    }
-    &.live {
-      background-color: $primary_300;
-    }
-  }
-
-  .footer-container {
-    .navMenu {
-      background: $gray_400;
-    }
-    .navMenu .navMenuLink {
-      color: $white;
-    }
-  }
+  animation: hide-scrollbar 1.7s ease-in-out forwards;
 }
 
 // Dark Theme
 html[data-color-mode='dark'] {
   font-size: 18px;
-  background: $bg_dark!important;
+  background: $bg_dark !important;
   color: $text_dark;
   transition: background .5s, color .5s;
-  ::-webkit-scrollbar-thumb {
-    background: $gray_100;
-  }
-
+  scrollbar-color: dark;
+  scrollbar-width: thin;
   ::selection { 
     background: $complementary_200; 
   }
@@ -209,22 +133,8 @@ html[data-color-mode='dark'] {
       background-color: $accent_200;
     }
   }
-
-  .footer-container {
-    .navMenu {
-      background: $bg_dark;
-    }
-    .navMenuLink {
-      color: $white;
-      opacity: 0.7;
-    }
-    .activeLink {
-      font-weight: 500;
-      opacity: 1;
-      color: $primary_100;
-    }
-  }
 }
+
 body {
   min-height: 100%;
   height: 100vh;
@@ -238,8 +148,8 @@ body {
   height: 100%;
   z-index: 999;
   opacity: 0;
-  animation: fade-in 1.5s;
-  animation-delay: 1s;
+  animation: fade-in .5s;
+  animation-delay: .5s;
   animation-fill-mode: forwards;
 }
 
