@@ -1,14 +1,14 @@
 .footerContainer {
-    @media screen and (max-width: 600px) {
-        height: 8%;
-        min-height: 70px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-    }
+	@media screen and (max-width: 600px) {
+		height: 8%;
+		min-height: 70px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+	}
 }

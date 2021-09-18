@@ -3,127 +3,127 @@
 $rowsWidth: 90%;
 
 .titleWrapper {
-    min-height: 35vh;
-    display: flex;
-    justify-content: center;
+	min-height: 35vh;
+	display: flex;
+	justify-content: center;
 }
 
 .titleRow {
-    width: $rowsWidth;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid $primary_100;
+	width: $rowsWidth;
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid $primary_100;
 }
 
 .title {
-    font-weight: 900;
-    font-size: calc(32px + 2.8vw);
-    color: $white;
+	font-weight: 900;
+	font-size: calc(32px + 2.8vw);
+	color: $white;
 }
 
 .projectWrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .imageRow {
-    width: $rowsWidth;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	width: $rowsWidth;
+	height: 60vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .image {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: cover;
-    border-radius: 2px;
+	max-width: 90%;
+	max-height: 90%;
+	object-fit: cover;
+	border-radius: 2px;
 }
 
 .aboutRow {
-    min-height: 30vh;
-    width: $rowsWidth;
+	min-height: 30vh;
+	width: $rowsWidth;
 }
 
 .underlineRow {
-    width: 100%;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $primary_100;
+	width: 100%;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid $primary_100;
 }
 
 .subtitle {
-    font-weight: 900;
-    font-size: calc(26px + 2.4vw);
-    color: $white;
+	font-weight: 900;
+	font-size: calc(26px + 2.4vw);
+	color: $white;
 }
 
 .aboutInfo {
-    width: 90%;
-    margin: 0 auto;
-    padding: 1.5rem 0;
+	width: 90%;
+	margin: 0 auto;
+	padding: 1.5rem 0;
 }
 
 .aboutText {
-    font-weight: 200;
-    line-height: 200%;
-    font-size: calc(14px + .4vw);
-    color: $white;
-    opacity: .8;
-    text-align: justify;
+	font-weight: 200;
+	line-height: 200%;
+	font-size: calc(14px + 0.4vw);
+	color: $white;
+	opacity: 0.8;
+	text-align: justify;
 }
 
 .linksRow {
-    min-height: 30vh;
-    width: $rowsWidth;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	min-height: 30vh;
+	width: $rowsWidth;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-
 .buttonsWrapper {
-    height: 100%;
-    width: 85%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	height: 100%;
+	width: 85%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .buttonGrid {
-    min-width: 285px;
-    height: 80%;
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    grid-auto-rows: auto;
-    gap: 5rem;
-    width: 80%;
-    box-sizing: border-box;
+	min-width: 285px;
+	height: 80%;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	grid-auto-rows: auto;
+	gap: 5rem;
+	width: 80%;
+	box-sizing: border-box;
 }
 
-.githubBtn, .siteBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    border-radius: 5px;
-    transition: all .2s ease-in-out;
-    border: 1px solid $primary_100;
-    color: $white;
-    &:hover {
-        background: $primary_100;
-        color: $black_100;
-    }
+.githubBtn,
+.siteBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	border-radius: 5px;
+	transition: all 0.2s ease-in-out;
+	border: 1px solid $primary_100;
+	color: $white;
+	&:hover {
+		background: $primary_100;
+		color: $black_100;
+	}
 }
 
 @media screen and (max-width: 1050px) {
-    .buttonGrid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem 5rem;
-        width: 80%;
-    }
+	.buttonGrid {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 1rem 5rem;
+		width: 80%;
+	}
 }
