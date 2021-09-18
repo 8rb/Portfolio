@@ -1,33 +1,33 @@
 .aws-btn {
-    --button-default-height: 6rem;
-    --button-default-font-size: 21px;
-    --button-default-border-radius: 5px;
-    --button-horizontal-padding: 48px;
-    --button-raise-level: 5px;
-    --button-hover-pressure: 2;
-    --transform-speed: 0.2s;
-    --button-primary-color: #3ee0c5;
-    --button-primary-color-dark: #00806b;
-    --button-primary-color-light: #003a30;
-    --button-primary-color-hover: #47ffe0;
-    --button-primary-color-active: #47ffe0;
-    --button-primary-border: none;
-    --button-secondary-color: #ff00aa;
-    --button-secondary-color-dark: #9e0069;
-    --button-secondary-color-light: #14000e;
-    --button-secondary-color-hover: #ff00aa;
-    --button-secondary-color-active: #ff00aa;
-    --button-secondary-border: none;
+	--button-default-height: 6rem;
+	--button-default-font-size: 21px;
+	--button-default-border-radius: 5px;
+	--button-horizontal-padding: 48px;
+	--button-raise-level: 5px;
+	--button-hover-pressure: 2;
+	--transform-speed: 0.2s;
+	--button-primary-color: #3ee0c5;
+	--button-primary-color-dark: #00806b;
+	--button-primary-color-light: #003a30;
+	--button-primary-color-hover: #47ffe0;
+	--button-primary-color-active: #47ffe0;
+	--button-primary-border: none;
+	--button-secondary-color: #ff00aa;
+	--button-secondary-color-dark: #9e0069;
+	--button-secondary-color-light: #14000e;
+	--button-secondary-color-hover: #ff00aa;
+	--button-secondary-color-active: #ff00aa;
+	--button-secondary-border: none;
 }
 
 @media screen and (max-width: 1050px) {
-    .aws-btn {
-        --button-default-height: 5rem;
-    }
+	.aws-btn {
+		--button-default-height: 5rem;
+	}
 }
 
 @media screen and (max-width: 600px) {
-    .aws-btn {
-        --button-default-height: 3.5rem;
-    }
+	.aws-btn {
+		--button-default-height: 3.5rem;
+	}
 }

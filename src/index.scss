@@ -2,207 +2,207 @@
 
 // Loading Screen
 .loadingScreen {
-  position: absolute;
-  z-index: -999;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fade-out .8s;
-  animation-delay: 0;
-  animation-fill-mode: forwards;
+	position: absolute;
+	z-index: -999;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: fade-out 0.8s;
+	animation-delay: 0;
+	animation-fill-mode: forwards;
 }
 
 .lds-ripple {
-  display: inline-block;
-  position: relative;
-  width: 150px;
-  height: 150px;
+	display: inline-block;
+	position: relative;
+	width: 150px;
+	height: 150px;
 }
 
 .lds-ripple div {
-  position: absolute;
-  border: 10px solid $primary_100;
-  border-radius: 50%;
-  animation: lds-ripple .8s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+	position: absolute;
+	border: 10px solid $primary_100;
+	border-radius: 50%;
+	animation: lds-ripple 0.8s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
 .lds-ripple div:nth-child(2) {
-  animation-delay: -.4s;
+	animation-delay: -0.4s;
 }
 
 @keyframes lds-ripple {
-  0% {
-    top: 65px;
-    left: 65px;
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    top: 0px;
-    left: 0px;
-    width: 130px;
-    height: 130px;
-    opacity: 0;
-  }
+	0% {
+		top: 65px;
+		left: 65px;
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+	100% {
+		top: 0px;
+		left: 0px;
+		width: 130px;
+		height: 130px;
+		opacity: 0;
+	}
 }
 
 @keyframes hide-scrollbar {
-  0% {
-    overflow-y: hidden;
-  }
-  100% {
-    overflow-y: overlay;
-  }
+	0% {
+		overflow-y: hidden;
+	}
+	100% {
+		overflow-y: overlay;
+	}
 }
 
 ::-webkit-scrollbar {
-  width: 3px;
-  height: 6px;
-  :hover {
-    width: 30px;
-  }
+	width: 3px;
+	height: 6px;
+	:hover {
+		width: 30px;
+	}
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 0px;
-  background: none;
+	border-radius: 0px;
+	background: none;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 2px;
-  width: 5px;
-  background: $gray_100;
+	border-radius: 2px;
+	width: 5px;
+	background: $gray_100;
 }
 
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  transition: background .5s;
-  overflow-y: overlay;
-  transition-timing-function: ease-in-out;
-  animation: hide-scrollbar 1.7s ease-in-out forwards;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: 100%;
+	transition: background 0.5s;
+	overflow-y: overlay;
+	transition-timing-function: ease-in-out;
+	animation: hide-scrollbar 1.7s ease-in-out forwards;
 }
 
 // Dark Theme
 html[data-color-mode='dark'] {
-  font-size: 18px;
-  background: $bg_dark !important;
-  color: $text_dark;
-  transition: background .5s, color .5s;
-  scrollbar-color: dark;
-  scrollbar-width: thin;
-  ::selection { 
-    background: $complementary_200; 
-  }
+	font-size: 18px;
+	background: $bg_dark !important;
+	color: $text_dark;
+	transition: background 0.5s, color 0.5s;
+	scrollbar-color: dark;
+	scrollbar-width: thin;
+	::selection {
+		background: $complementary_200;
+	}
 }
 .dark {
-  .loadingScreen {
-    background: $bg_dark;
-  }
+	.loadingScreen {
+		background: $bg_dark;
+	}
 
-  .home {
-    .name {
-      color: $white;
-    }
-  }
+	.home {
+		.name {
+			color: $white;
+		}
+	}
 
-  .projects  {
-    .overlay {
-      background: $primary_100;
-    }
-    .overlay-text {
-      color: $gray_300;
-    }
-    .title {
-      color: $white;
-    }
-  }
+	.projects {
+		.overlay {
+			background: $primary_100;
+		}
+		.overlay-text {
+			color: $gray_300;
+		}
+		.title {
+			color: $white;
+		}
+	}
 
-  .project .btn {
-    color: $gray_100;
-    &.github {
-      background-color: $accent_100;
-    }
-    &.live {
-      background-color: $accent_200;
-    }
-  }
+	.project .btn {
+		color: $gray_100;
+		&.github {
+			background-color: $accent_100;
+		}
+		&.live {
+			background-color: $accent_200;
+		}
+	}
 }
 
 body {
-  min-height: 100%;
-  height: 100vh;
+	min-height: 100%;
+	height: 100vh;
 }
 
 #root {
-  height: 100%;
+	height: 100%;
 }
 
 .theme {
-  height: 100%;
-  z-index: 999;
-  opacity: 0;
-  animation: fade-in .5s;
-  animation-delay: .5s;
-  animation-fill-mode: forwards;
+	height: 100%;
+	z-index: 999;
+	opacity: 0;
+	animation: fade-in 0.5s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
 }
 
 .navbar-content {
-  height: 13%;
-  min-width: 250px;
+	height: 13%;
+	min-width: 250px;
 }
 
 .main-content {
-  display: flex;
-  justify-content: center;
-  min-height: 87%;
-  min-width: 250px;
+	display: flex;
+	justify-content: center;
+	min-height: 87%;
+	min-width: 250px;
 }
 
 @media screen and (max-width: 600px) {
-  .navbar-content {
-    height: 5%;
-  }
-  .main-content {
-    box-sizing: border-box;
-    padding-bottom: 10vh;
-  }
-  .footer-content {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    min-width: 250px;
-  }
+	.navbar-content {
+		height: 5%;
+	}
+	.main-content {
+		box-sizing: border-box;
+		padding-bottom: 10vh;
+	}
+	.footer-content {
+		height: 10vh;
+		display: flex;
+		justify-content: center;
+		min-width: 250px;
+	}
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 * {
-  margin: 0;
+	margin: 0;
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
