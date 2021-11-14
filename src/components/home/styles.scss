@@ -1,0 +1,72 @@
+@use "../../styles/variables.scss" as *;
+
+.home {
+  @include flex(flex-start, center);
+  @include full-parent-size;
+  padding-top: $navbar-height;
+  padding-bottom: $floating-height;
+  height: 100vh;
+
+  & > .home-col {
+    z-index: 2;
+    & > * {
+      margin: 2vh 10vw;
+    }
+
+    & > .name {
+      font-size: calc(60px + 6 * ((100vw - 320px) / 680));
+      font-weight: 900;
+      transition: all 0.2s ease-in-out;
+    }
+
+    & > .job {
+      font-size: calc(34px + 6 * ((100vw - 320px) / 680));
+      font-weight: 500;
+      color: $primary;
+      z-index: 2;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  .logo-container {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    height: 75vh;
+    width: 105vh;
+    max-height: 100%;
+    margin-top: $navbar-height;
+    text-indent: 35%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  @media only screen and (max-width: $nav-breakpoint) {
+    @include flex(center, center);
+    flex-direction: column;
+    & > * {
+      margin: 0;
+    }
+    & > .home-col {
+      & > .name {
+        font-size: calc(50px + 6 * ((100vw - 320px) / 680));
+        margin: 0;
+        margin-left: 1rem;
+      }
+
+      & > .job {
+        font-size: calc(24px + 6 * ((100vw - 320px) / 680));
+        margin: 0;
+        margin-top: 1rem;
+        margin-left: 1rem;
+      }
+    }
+    .logo-container {
+      height: 45vh;
+      width: 60vh;
+      opacity: 0.3;
+      margin-top: $navbar-height;
+      text-indent: 35%;
+      margin-top: 0;
+    }
+  }
+}
