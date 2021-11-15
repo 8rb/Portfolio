@@ -1,0 +1,89 @@
+@use "../../styles/variables.scss" as *;
+
+.contact {
+  @include flex(center, flex-start);
+  flex-direction: column;
+  height: 100vh;
+  padding: 3rem;
+  padding-top: $navbar-height;
+
+  & > .title {
+    font-size: 3rem;
+    font-weight: 300;
+    color: $primary;
+    position: absolute;
+    margin-left: 5vw;
+    margin-bottom: 40vh;
+  }
+
+  & > .contact-grid {
+    margin-top: 10rem;
+    @include flex(center, center);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(6vw, 50px));
+    gap: 1vw 3vw;
+    & > .logo {
+      height: 100%;
+      width: 100%;
+      fill: $text;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+        fill: $primary;
+      }
+    }
+  }
+
+  & > .name-container {
+    @include flex(center, center);
+    width: 100%;
+    height: 10vh;
+
+    & > p {
+      font-size: 1.5rem;
+      transition: all 0.2s ease-in-out;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+  }
+
+  @media only screen and (max-width: $nav-breakpoint) {
+    @include flex(center, center);
+
+    & > .title {
+      font-weight: 300;
+      color: $primary;
+      position: relative;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+
+    & > .contact-grid {
+      @include flex(center, center);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, max(10vw, 80px));
+      margin-top: 2rem;
+      gap: 1rem;
+      & > .logo {
+        height: 100%;
+        width: 100%;
+        fill: $text;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
