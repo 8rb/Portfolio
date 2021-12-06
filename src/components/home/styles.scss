@@ -25,6 +25,7 @@
       color: $primary;
       z-index: 2;
       transition: all 0.2s ease-in-out;
+      animation: glowing 3s ease-in-out infinite alternate;
     }
   }
 
@@ -32,12 +33,13 @@
     position: absolute;
     overflow: hidden;
     right: 0;
-    height: 75vh;
+    top: 0;
+    height: 105vh;
     width: 105vh;
     max-height: 100%;
-    margin-top: $navbar-height;
-    text-indent: 35%;
     transition: all 0.2s ease-in-out;
+    z-index: 0;
+    transform: translateX(10rem);
   }
 
   @media only screen and (max-width: $nav-breakpoint) {
@@ -68,5 +70,11 @@
       text-indent: 35%;
       margin-top: 0;
     }
+  }
+}
+
+@keyframes glowing {
+  100% {
+    text-shadow: 0 0 10px $primary, 0 0 20px $primary;
   }
 }
