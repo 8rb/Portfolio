@@ -8,6 +8,7 @@ body {
   ::selection {
     background: $background-100;
   }
+  overflow-x: hidden;
 }
 
 body {
@@ -33,7 +34,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -43,4 +44,9 @@ a {
 ::-webkit-scrollbar-thumb {
   background: $background2;
   border-radius: 50px;
+}
+
+#not-found {
+  height: 100vh;
+  width: 100vw;
 }
