@@ -15,6 +15,7 @@ function About() {
           src="../../../static/rodrigo.jpg"
           alt="rodrigo ramirez"
           className="image"
+          placeholder="blurred"
         />
         <div className="text-container">
           <div className="bg-text-container">
