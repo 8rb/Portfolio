@@ -11,7 +11,7 @@ const Home = () => {
         <h1 className="name">Rodrigo Ramirez</h1>
         <h1 className="job">Frontend Developer</h1>
       </div>
-      <div className="logo-container">
+      <div className="planets-container">
         <PlanetsPage />
       </div>
       <FloatingLinks />

@@ -9,9 +9,9 @@
 
   & > .home-col {
     z-index: 2;
-    & > * {
-      margin: 2vh 10vw;
-    }
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    margin-left: 10vw;
 
     & > .name {
       font-size: calc(60px + 6 * ((100vw - 320px) / 680));
@@ -22,6 +22,7 @@
     & > .job {
       font-size: calc(34px + 6 * ((100vw - 320px) / 680));
       font-weight: 500;
+      margin-top: 1rem;
       color: $primary;
       z-index: 2;
       transition: all 0.2s ease-in-out;
@@ -29,52 +30,56 @@
     }
   }
 
-  .logo-container {
+  .planets-container {
     position: absolute;
     overflow: hidden;
     right: 0;
     top: 0;
     height: 105vh;
-    width: 105vh;
+    width: 110vh;
     max-height: 100%;
     transition: all 0.2s ease-in-out;
     z-index: 0;
-    transform: translateX(10rem);
+    transform: translateX(30vh);
   }
 
-  @media only screen and (max-width: $nav-breakpoint) {
-    @include flex(center, center);
-    flex-direction: column;
-    & > * {
-      margin: 0;
+  @media only screen and (max-width: calc($home-breakpoint + 250px)) {
+    .home-col {
+      margin-left: 7vw;
     }
+    .planets-container {
+      height: 75vh;
+      width: 90vh;
+      opacity: 0.8;
+      transform: translateX(25vh) translateY(calc((100vh - 75vh) / 2));
+    }
+  }
+
+  @media only screen and (max-width: $home-breakpoint) {
+    @include flex(center, flex-start);
+    flex-direction: column;
     & > .home-col {
+      margin-left: 4vw;
       & > .name {
         font-size: calc(50px + 6 * ((100vw - 320px) / 680));
-        margin: 0;
-        margin-left: 1rem;
       }
 
       & > .job {
         font-size: calc(24px + 6 * ((100vw - 320px) / 680));
-        margin: 0;
-        margin-top: 1rem;
-        margin-left: 1rem;
+        margin-top: 0.5rem;
       }
     }
-    .logo-container {
-      height: 45vh;
-      width: 60vh;
-      opacity: 0.3;
-      margin-top: $navbar-height;
-      text-indent: 35%;
-      margin-top: 0;
+    .planets-container {
+      height: 55vh;
+      width: 70vh;
+      opacity: 0.7;
+      transform: translateX(22vh) translateY(calc((100vh - 55vh) / 2 - 5%));
     }
   }
 }
 
 @keyframes glowing {
   100% {
-    text-shadow: 0 0 10px $primary, 0 0 20px $primary;
+    text-shadow: 0 0 10px $primary, 0 0 15px $primary;
   }
 }
