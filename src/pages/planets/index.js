@@ -11,7 +11,7 @@ const Planet = ({ size, position, color, speed, name, scale }) => {
   const [expand, setExpand] = useState(false)
 
   const props = useSpring({
-    scale: expand ? scale : [1, 1, 1],
+    scale: !expand ? scale : [1, 1, 1],
   })
 
   return (
@@ -94,25 +94,25 @@ export default function PlanetsPage() {
               position={[-4.5, -0.5, -3]}
               color="#8980F5"
               size={1.1}
-              speed={0.03}
+              speed={0.04}
               name="purple"
-              scale={[1.2, 1.2, 1.3]}
+              scale={[1.1, 1, 1]}
             />
             <Planet
               position={[0, 0, 1]}
               color="#02ccaa"
               size={1.5}
-              speed={0.03}
+              speed={0.04}
               name="teal"
-              scale={[1.1, 1.1, 1.2]}
+              scale={[1.05, 1, 1]}
             />
             <Planet
               position={[0.2, -0.35, 4]}
               color="#FF7979"
               size={0.13}
-              speed={0.05}
+              speed={0.04}
               name="red"
-              scale={[1.5, 1.5, 1.8]}
+              scale={[1.1, 1, 1]}
             />
             <ambientLight intensity={0.5} />
             <RingGroup />
