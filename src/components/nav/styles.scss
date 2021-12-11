@@ -6,10 +6,23 @@
   width: 100%;
   position: fixed;
   background: $background;
-  padding: 0 3rem;
+  padding-right: 3rem;
+  padding-left: 2rem;
   // box-shadow: rgba(0, 0, 0, 0.15) 95px 1.95px 2.6px;
   z-index: 3;
-  opacity: 0.95;
+  opacity: 1;
+
+  .img-link {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  }
 
   .nav-logo {
     width: 4rem;

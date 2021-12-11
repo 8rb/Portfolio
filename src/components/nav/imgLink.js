@@ -9,6 +9,7 @@ function ImageLink({ href, img }) {
       spy={true}
       smooth={true}
       duration={1000}
+      className="img-link"
     >
       {img}
     </LinkScroll>
