@@ -10,9 +10,9 @@ module.exports = {
     title: "Rodrigo Ramirez",
     titleTemplate: "%s · Web Developer Portfolio",
     description:
-      "Web Development Portfolio of Rodrigo Ramirez. Front End Developer specialized in Single Page Application technologies such as: React and Vue.",
+      "Web Development Portfolio of Rodrigo Ramirez. Front End Developer specialized in JavaScript Frameworks like React and Vue.",
     url: "https://rodrigoramirez.dev", // No trailing slash allowed!
-    image: "/static_logo.png", // Path to the image placed in the 'static' folder, in the project's root directory.
+    image: "/sphere.png", // Path to the image placed in the 'static' folder, in the project's root directory.
   },
   plugins: [
     `gatsby-plugin-sass`,

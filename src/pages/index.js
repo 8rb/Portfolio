@@ -16,7 +16,7 @@ export default function HomePage() {
         <link rel="canonical" href="https://rodrigoramirez.dev" />
         <meta property="og:title" content="Web Development Portfolio" />
         <meta property="og:url" content="https://rodrigoramirez.dev" />
-        <meta property="og:image" content="/static_logo.png" />
+        <meta property="og:image" content="/sphere.png" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
@@ -24,8 +24,9 @@ export default function HomePage() {
         />
         <meta
           name="description"
-          content="Web Development Portfolio of Rodrigo Ramirez. Front End Developer specialized in Single Page Application technologies such as: React and Vue."
+          content="Web Development Portfolio of Rodrigo Ramirez. Front End Developer specialized in JavaScript Frameworks like React and Vue."
         />
+        <meta name="image" content="/sphere.png" />
       </Helmet>
       <Nav />
       <Home />
