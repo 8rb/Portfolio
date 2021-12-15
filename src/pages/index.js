@@ -3,7 +3,7 @@ import About from "../components/about"
 import Contact from "../components/contact"
 import Home from "../components/home"
 import Nav from "../components/nav"
-import Projects from "../components/projects"
+import MainProjects from "../components/mainProjects"
 import { Helmet } from "react-helmet"
 
 export default function HomePage() {
@@ -30,7 +30,7 @@ export default function HomePage() {
       </Helmet>
       <Nav />
       <Home />
-      <Projects />
+      <MainProjects />
       <About />
       <Contact />
     </>

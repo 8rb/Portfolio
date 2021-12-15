@@ -3,8 +3,8 @@
 .floating-links {
   @include flex(space-evenly, center);
   height: 8rem;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  top: 86vh;
   left: 0;
   padding: 0 3rem;
   z-index: 3;

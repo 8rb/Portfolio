@@ -1,7 +1,6 @@
 import React from "react"
 import "./styles.scss"
 import FloatingLinks from "../floatingLinks"
-import { StaticImage } from "gatsby-plugin-image"
 import PlanetsPage from "../../pages/planets"
 
 const Home = () => {
