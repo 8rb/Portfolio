@@ -2,9 +2,10 @@ import React from "react"
 import "./styles.scss"
 import GithubLogo from "../../../static/social/github.svg"
 import ExternalLinkLogo from "../../../static/social/externalLink.svg"
+import { navigate } from "gatsby"
 
 const ProjectTile = ({
-  project: { title, summary, description, tags, imgUrl, repoUrl, webUrl },
+  project: { title, name, summary, description, tags, imgUrl, repoUrl, webUrl },
   orientation,
 }) => {
   const openLink = link => {
@@ -12,11 +13,21 @@ const ProjectTile = ({
   }
   return (
     <div className={`project-tile project-tile-${orientation}`}>
-      <img
-        className="image"
-        src={`/projects/${imgUrl}`}
-        alt={`${title} · ${summary}`}
-      />
+      <div
+        className="image-container"
+        onClick={() => {
+          navigate(`/${name}/`)
+        }}
+      >
+        <span className="text">
+          <h1>view more</h1>
+        </span>
+        <img
+          className="image"
+          src={`/projects/${imgUrl}`}
+          alt={`${title} · ${summary}`}
+        />
+      </div>
       <div className="details-container">
         <h2 className="summary">{summary}</h2>
         <p className="description">{description}</p>
