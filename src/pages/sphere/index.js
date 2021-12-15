@@ -1,7 +1,7 @@
-import React, { useRef, useState, Suspense, useEffect } from "react"
+import React, { useRef, useState, Suspense } from "react"
 import "./styles.scss"
 import { Canvas, useFrame } from "@react-three/fiber"
-import { MeshWobbleMaterial, OrbitControls } from "@react-three/drei"
+import { MeshWobbleMaterial } from "@react-three/drei"
 import { useSpring, a } from "@react-spring/three"
 
 const Planet = ({ size, position, color, speed, name, scale }) => {
