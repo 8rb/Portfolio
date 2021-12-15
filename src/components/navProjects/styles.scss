@@ -1,0 +1,71 @@
+@use "../../styles/variables.scss" as *;
+
+.nav-projects {
+  @include flex(space-between, center);
+  height: $navbar-height;
+  width: 100%;
+  position: fixed;
+  background: $background;
+  padding-right: 3rem;
+  padding-left: 2rem;
+  z-index: 3;
+  opacity: 1;
+
+  .img-link {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  }
+
+  .nav-logo {
+    width: 4rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  & > .links {
+    & > a {
+      margin-left: 4rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $nav-breakpoint) {
+    padding: 0 1rem;
+
+    & > .links {
+      & > a {
+        margin: 0 1rem;
+        font-size: 1.05rem;
+        font-weight: 400;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .active {
+    color: $primary;
+  }
+}
