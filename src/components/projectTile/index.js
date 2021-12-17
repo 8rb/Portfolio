@@ -1,11 +1,11 @@
 import React from "react"
-import "./styles.scss"
+import { navigate } from "gatsby"
 import GithubLogo from "../../../static/social/github.svg"
 import ExternalLinkLogo from "../../../static/social/externalLink.svg"
-import { navigate } from "gatsby"
+import "./styles.scss"
 
 const ProjectTile = ({
-  project: { title, name, summary, description, tags, imgUrl, repoUrl, webUrl },
+  project: { title, name, summary, keywords, tags, imgUrl, repoUrl, webUrl },
   orientation,
 }) => {
   const openLink = link => {
@@ -20,7 +20,7 @@ const ProjectTile = ({
         }}
       >
         <span className="text">
-          <h1>view more</h1>
+          <h1>View More</h1>
         </span>
         <img
           className="image"
@@ -29,8 +29,8 @@ const ProjectTile = ({
         />
       </div>
       <div className="details-container">
-        <h2 className="summary">{summary}</h2>
-        <p className="description">{description}</p>
+        <h2 className="keywords">{keywords}</h2>
+        <p className="summary">{summary}</p>
         <p className="tags">{tags}</p>
         <div className="links">
           <GithubLogo className="logo" onClick={() => openLink(repoUrl)} />

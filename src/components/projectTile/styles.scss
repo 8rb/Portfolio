@@ -3,7 +3,7 @@
 .project-tile {
   @include flex(center, center);
   width: 100%;
-  min-height: 16rem;
+  min-height: 15rem;
   margin-bottom: 10vh;
 
   @media only screen and (max-width: 900px) {
@@ -11,34 +11,33 @@
   }
 
   .image-container {
-    height: 16rem;
-    width: 29rem;
+    height: 15rem;
+    width: 28rem;
     max-width: 100%;
     position: relative;
     transition: all 0.3s ease-in-out;
   }
 
   .text {
-    position: absolute;
     width: 100%;
-    margin: 0 auto;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    margin: 0 auto;
+    z-index: 3;
     opacity: 0;
     transition: all 0.3s ease-in-out;
   }
 
   .text h1 {
+    color: $text;
+    font-family: "Sora", sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 400;
     width: 100%;
     margin: 0;
-    margin-top: 0.8rem;
-    text-align: center;
-    color: white;
-    font-size: 2.3rem;
-    font-weight: 400;
-    text-transform: uppercase;
   }
 
   .image-container:hover .text {
@@ -73,28 +72,30 @@
     }
   }
 
-  .summary {
+  .keywords {
     font-size: 2.5rem;
-    font-weight: 400;
     text-align: right;
+    font-weight: 400;
   }
 
-  .description {
+  .summary {
+    color: $text2;
     font-size: 1.1rem;
-    font-weight: 200;
     text-align: end;
-    opacity: 0.9;
+    font-weight: 200;
   }
 
   .tags {
+    color: $text2;
     font-size: 1rem;
     font-weight: 200;
   }
 
   .logo {
-    opacity: 1;
     width: 2rem;
     height: auto;
+    fill: $text2;
+    opacity: 1;
     margin-left: 1rem;
     transition: all 0.2s ease-in-out;
 
@@ -117,11 +118,11 @@
       margin-right: 0;
     }
 
-    .summary {
+    .keywords {
       text-align: left;
     }
 
-    .description {
+    .summary {
       text-align: start;
     }
 
@@ -141,11 +142,11 @@
     margin-right: 5vh;
   }
 
-  .summary {
+  .keywords {
     text-align: left;
   }
 
-  .description {
+  .summary {
     text-align: start;
   }
 

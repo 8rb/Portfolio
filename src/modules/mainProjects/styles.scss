@@ -1,20 +1,14 @@
 @use "../../styles/variables.scss" as *;
 
 .main-projects {
-  @include flex(flex-start, flex-start);
+  @include flex(flex-start, center);
   flex-direction: column;
   min-height: 100vh;
   padding-top: $navbar-height;
   margin: 0 10vw;
+
   @media only screen and (max-width: 1600px) {
     margin: 0 5vw;
-  }
-
-  & > .title {
-    font-size: 3rem;
-    font-weight: 300;
-    color: $primary;
-    margin-bottom: 2rem;
   }
 
   & > .projects-list {
@@ -24,20 +18,22 @@
   }
 
   & > .button {
-    padding: 0.9em 2em 0.7em 2em;
-    background: none;
-    border: 1px solid $text;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: $text;
-    font-family: "Spartan", sans-serif;
+    padding: 1em 2em 1em 2em;
     margin: 1em auto;
-    transition: all 0.2s ease-in-out;
+    border: 2px solid $text2;
+    border-radius: 8px;
+    background: none;
+    color: $text;
+    font-family: "Sora", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
     vertical-align: baseline;
+    transition: all 0.2s ease-in-out;
+
     &:hover {
-      cursor: pointer;
       background: $text;
       color: $background;
+      cursor: pointer;
     }
   }
 }
