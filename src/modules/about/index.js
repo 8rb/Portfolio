@@ -1,15 +1,15 @@
 import React from "react"
-import "./styles.scss"
 import { StaticImage } from "gatsby-plugin-image"
 import MyReactLogo from "../../../static/tech/react_logo.svg"
 import TypeScriptLogo from "../../../static/tech/typescript_logo.svg"
 import SassLogo from "../../../static/tech/sass_logo.svg"
 import NextLogo from "../../../static/tech/next_logo.svg"
+import "./styles.scss"
 
-function About() {
+const AboutModule = () => {
   return (
     <div className="about" id="about">
-      <h1 className="title">about_</h1>
+      <h1 className="section-title glowing-text">About Me</h1>
       <div className="content-row">
         <StaticImage
           src="../../../static/rodrigo.jpg"
@@ -23,7 +23,8 @@ function About() {
             <p className="bg-text">Software</p>
           </div>
           <p className="text">
-            Hello! my name is <b className="accent-text">Rodrigo</b>, and I'm a
+            Hello! my name is{" "}
+            <b className="accent-text glowing-text">Rodrigo</b>, and I'm a
             passionate software developer from Peru. I started programming at 16
             years old, creating very simple websites and games.
           </p>
@@ -47,4 +48,4 @@ function About() {
   )
 }
 
-export default About
+export default AboutModule
