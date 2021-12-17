@@ -1,7 +1,7 @@
 import React from "react"
 import { Link as LinkScroll } from "react-scroll"
 
-function Link({ href, name }) {
+const IconLink = ({ href, icon }) => {
   return (
     <LinkScroll
       activeClass="active"
@@ -9,10 +9,11 @@ function Link({ href, name }) {
       spy={true}
       smooth={true}
       duration={1000}
+      className="img-link"
     >
-      {name}
+      {icon}
     </LinkScroll>
   )
 }
 
-export default Link
+export default IconLink

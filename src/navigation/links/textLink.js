@@ -1,19 +1,19 @@
 import React from "react"
 import { Link as LinkScroll } from "react-scroll"
 
-function ImageLink({ href, img }) {
+const TextLink = ({ href, name }) => {
   return (
     <LinkScroll
       activeClass="active"
+      className="navigation-link"
       to={href}
       spy={true}
       smooth={true}
       duration={1000}
-      className="img-link"
     >
-      {img}
+      {name}
     </LinkScroll>
   )
 }
 
-export default ImageLink
+export default TextLink

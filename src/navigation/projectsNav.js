@@ -1,19 +1,21 @@
 import React from "react"
-import "./styles.scss"
 import { Link } from "gatsby"
-import Sphere from "../../pages/sphere"
+import Sphere from "../components/sphere"
+import "./styles.scss"
 
-function NavProjects() {
+const ProjectsNav = () => {
   return (
-    <div className="nav-projects">
+    <nav className="nav">
       <Link activeclass="active" to="/" className="img-link">
         <Sphere className="brand-sphere" />
       </Link>
       <div className="links">
-        <Link to="/">back to home</Link>
+        <Link className="navigation-link" to="/">
+          Home
+        </Link>
       </div>
-    </div>
+    </nav>
   )
 }
 
-export default NavProjects
+export default ProjectsNav
