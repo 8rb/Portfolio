@@ -3,44 +3,44 @@
 .home {
   @include flex(flex-start, center);
   @include full-parent-size;
+  height: 100vh;
   padding-top: $navbar-height;
   padding-bottom: $floating-height;
-  height: 100vh;
 
-  & > .home-col {
-    z-index: 2;
+  .home-col {
     @include flex(flex-start, flex-start);
     flex-direction: column;
     margin-left: 10vw;
+    z-index: 2;
 
-    & > .name {
-      font-size: calc(60px + 6 * ((100vw - 320px) / 680));
+    .name {
+      font-family: "Raleway", sans-serif;
+      font-size: calc(75px + 6 * ((100vw - 320px) / 680));
       font-weight: 900;
       transition: all 0.2s ease-in-out;
     }
 
-    & > .job {
-      font-size: calc(34px + 6 * ((100vw - 320px) / 680));
-      font-weight: 500;
-      margin-top: 1rem;
+    .job {
       color: $primary;
+      font-family: "Sora", sans-serif;
+      font-size: calc(38px + 6 * ((100vw - 320px) / 680));
+      font-weight: 500;
       z-index: 2;
       transition: all 0.2s ease-in-out;
-      animation: glowing 3s ease-in-out infinite alternate;
     }
   }
 
   .planets-container {
-    position: absolute;
-    overflow: hidden;
-    right: 0;
-    top: 0;
-    height: 105vh;
     width: 110vh;
+    height: 105vh;
     max-height: 100%;
-    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
     z-index: 0;
     transform: translateX(30vh);
+    transition: all 0.2s ease-in-out;
   }
 
   @media only screen and (max-width: calc($home-breakpoint + 250px)) {
@@ -48,8 +48,8 @@
       margin-left: 7vw;
     }
     .planets-container {
-      height: 75vh;
       width: 90vh;
+      height: 75vh;
       opacity: 0.8;
       transform: translateX(25vh) translateY(calc((100vh - 75vh) / 2));
     }
@@ -58,28 +58,24 @@
   @media only screen and (max-width: $home-breakpoint) {
     @include flex(center, flex-start);
     flex-direction: column;
-    & > .home-col {
+    .home-col {
       margin-left: 4vw;
-      & > .name {
+
+      .name {
         font-size: calc(50px + 6 * ((100vw - 320px) / 680));
       }
 
-      & > .job {
+      .job {
         font-size: calc(24px + 6 * ((100vw - 320px) / 680));
         margin-top: 0.5rem;
       }
     }
+
     .planets-container {
-      height: 55vh;
       width: 70vh;
+      height: 55vh;
       opacity: 0.7;
       transform: translateX(22vh) translateY(calc((100vh - 55vh) / 2 - 5%));
     }
-  }
-}
-
-@keyframes glowing {
-  100% {
-    text-shadow: 0 0 10px $primary, 0 0 15px $primary;
   }
 }
