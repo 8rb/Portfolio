@@ -1,8 +1,8 @@
 import React, { useRef, useState, Suspense, useEffect } from "react"
-import "./styles.scss"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { MeshWobbleMaterial } from "@react-three/drei"
 import { useSpring, a } from "@react-spring/three"
+import "./styles.scss"
 
 const Planet = ({ size, position, color, speed, name, scale }) => {
   const ref = useRef(null)
@@ -78,7 +78,7 @@ const RingGroup = () => {
   )
 }
 
-export default function PlanetsPage() {
+const PlanetsComponent = () => {
   return (
     <>
       <div className="planets" id="planets">
@@ -123,3 +123,5 @@ export default function PlanetsPage() {
     </>
   )
 }
+
+export default PlanetsComponent
