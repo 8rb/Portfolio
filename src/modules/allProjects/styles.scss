@@ -3,20 +3,12 @@
 .projects {
   @include flex(center, center);
   flex-direction: column;
-  padding-top: $navbar-height;
   min-height: 100vh;
+  padding-top: $navbar-height;
+  padding-bottom: 10vh;
   margin: 0 10vw;
 
   @media only screen and (max-width: 1600px) {
     margin: 0 5vw;
-  }
-
-  .title {
-    font-size: calc(30px + 6 * ((100vw - 320px) / 680));
-    font-weight: 300;
-    color: $primary;
-    // margin-left: 5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
   }
 }
