@@ -1,0 +1,14 @@
+@use "../styles/variables.scss" as *;
+
+.project-container {
+  @include flex(flex-start, center);
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: $navbar-height;
+  padding-bottom: 10vh;
+  margin: 0 10vw;
+
+  @media only screen and (max-width: 1600px) {
+    margin: 0 5vw;
+  }
+}
