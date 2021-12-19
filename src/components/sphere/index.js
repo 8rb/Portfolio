@@ -1,8 +1,8 @@
 import React, { useRef, useState, Suspense } from "react"
-import "./styles.scss"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { MeshWobbleMaterial } from "@react-three/drei"
 import { useSpring, a } from "@react-spring/three"
+import "./styles.scss"
 
 const Planet = ({ size, position, color, speed, name, scale }) => {
   const ref = useRef(null)
@@ -36,7 +36,7 @@ const Planet = ({ size, position, color, speed, name, scale }) => {
   )
 }
 
-export default function SpherePage() {
+const SphereComponent = () => {
   return (
     <>
       <div className="sphere" id="sphere">
@@ -63,3 +63,5 @@ export default function SpherePage() {
     </>
   )
 }
+
+export default SphereComponent
