@@ -1,0 +1,95 @@
+@use "../../styles/variables.scss" as *;
+
+.project-row {
+  @include flex(center, center);
+  width: 100%;
+  min-height: 16rem;
+  margin-top: 4rem;
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
+
+  .image-container {
+    width: 27rem;
+    height: 16rem;
+    max-width: 100%;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    opacity: 0;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .text h1 {
+    width: 100%;
+    margin: 0;
+    margin-top: 0.8rem;
+    text-align: center;
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .details-container {
+    @include flex(center, flex-start);
+    flex-direction: column;
+    width: 28rem;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 5vh;
+
+    & > * {
+      margin: 0.9rem 0;
+    }
+  }
+
+  .keywords {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .description {
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: justify;
+    line-height: 1.6;
+
+    opacity: 1;
+  }
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+    margin-top: 5vh;
+
+    .details-container {
+      @include flex(center, center);
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 5vh;
+    }
+
+    .keywords {
+      text-align: center;
+    }
+  }
+}
