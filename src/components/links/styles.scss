@@ -1,0 +1,35 @@
+@use "../../styles/variables.scss" as *;
+
+.links-row {
+  @include flex(center, center);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, max(40vh, 100px));
+  gap: 3rem 1rem;
+  width: 100%;
+  margin-top: 3rem;
+
+  .repo-link-col,
+  .web-link-col {
+    @include flex(center, center);
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 4rem;
+    height: auto;
+    fill: $text2;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .logo-label {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
