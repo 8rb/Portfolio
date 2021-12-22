@@ -1,10 +1,10 @@
 import React from "react"
 import "./styles.scss"
 
-function Footer() {
+const Footer = () => {
   return (
     <div className="footer" id="footer">
-      <p>
+      <p className="text">
         <span>Designed & Developed by</span>{" "}
         <span className="name">Rodrigo Ramirez</span>
       </p>
