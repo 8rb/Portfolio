@@ -2,17 +2,21 @@
 
 .floating-links {
   @include flex(space-evenly, center);
-  height: 8rem;
+  height: 10vh;
   position: absolute;
-  top: 86vh;
+  top: 88vh;
   left: 0;
   padding: 0 3rem;
-  z-index: 3;
+
+  .logo-item {
+    list-style: none;
+    padding: 0;
+  }
 
   .logo {
-    opacity: 0.6;
     width: 2.5rem;
     height: auto;
+    fill: $text2;
     margin-right: 1rem;
     transition: all 0.2s ease-in-out;
 
@@ -25,6 +29,5 @@
 
   @media only screen and (max-width: $nav-breakpoint) {
     padding: 0 1rem;
-    height: 7rem;
   }
 }
