@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useRef } from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { motion } from "framer-motion"
 import MyReactLogo from "../../../static/tech/react_logo.svg"
 import TypeScriptLogo from "../../../static/tech/typescript_logo.svg"
 import SassLogo from "../../../static/tech/sass_logo.svg"
@@ -7,9 +8,11 @@ import NextLogo from "../../../static/tech/next_logo.svg"
 import "./styles.scss"
 
 const AboutModule = () => {
+  const constraintsRef = useRef(null)
+
   return (
-    <div className="about" id="about">
-      <h1 className="section-title glowing-text">About Me</h1>
+    <section className="about" id="about" ref={constraintsRef}>
+      <h1 className="section-title glowing-text mb-5">About Me</h1>
       <div className="content-row">
         <StaticImage
           src="../../../static/rodrigo.jpg"
@@ -18,10 +21,6 @@ const AboutModule = () => {
           placeholder="blurred"
         />
         <div className="text-container">
-          <div className="bg-text-container">
-            <p className="bg-text">Innovative</p>
-            <p className="bg-text">Software</p>
-          </div>
           <p className="text">
             Hello! my name is{" "}
             <b className="accent-text glowing-text">Rodrigo</b>, and I'm a
@@ -37,14 +36,39 @@ const AboutModule = () => {
         <div className="tech-row">
           <p className="favs-title">my favs:</p>
           <div className="logos-row">
-            <MyReactLogo className="logo" />
-            <TypeScriptLogo className="logo" />
-            <SassLogo className="logo" />
-            <NextLogo className="logo" />
+            <motion.div
+              className="logo-item"
+              drag
+              dragConstraints={constraintsRef}
+            >
+              <MyReactLogo className="logo" />
+            </motion.div>
+            <motion.div
+              className="logo-item"
+              drag
+              dragConstraints={constraintsRef}
+            >
+              <TypeScriptLogo className="logo" />
+            </motion.div>
+            <motion.div
+              className="logo-item"
+              drag
+              dragConstraints={constraintsRef}
+            >
+              <SassLogo className="logo" />
+            </motion.div>
+            <motion.div
+              className="logo-item"
+              drag
+              dragConstraints={constraintsRef}
+            >
+              <NextLogo className="logo" />
+            </motion.div>
           </div>
+          <p className="instruction-text">(you can drag them)</p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

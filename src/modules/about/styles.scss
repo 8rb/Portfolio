@@ -3,12 +3,13 @@
 .about {
   @include flex(flex-start, center);
   flex-direction: column;
-  height: 100vh;
-  padding: 3rem 3rem 3rem $navbar-height;
+  min-height: 100vh;
+  padding: $navbar-height 3rem 3rem 3rem;
 
   .content-row {
-    @include flex(center, flex-start);
+    @include flex(center, center);
     width: 100%;
+    min-height: 10rem;
 
     .image {
       height: 230px;
@@ -17,7 +18,7 @@
     }
 
     .text-container {
-      width: 600px;
+      max-width: 550px;
       position: relative;
       margin-left: 4vw;
       z-index: 1;
@@ -27,34 +28,26 @@
         font-weight: 300;
         line-height: 1.8rem;
         letter-spacing: 0.05rem;
-        margin-top: 6vh;
-        margin-left: 1rem;
+        margin-left: 0.5rem;
+        text-align: justify;
 
         .accent-text {
           color: $primary;
           font-weight: 600;
           transition: all 0.2s ease-in-out;
         }
-      }
 
-      .bg-text-container {
-        @include flex(center, flex-start);
-        flex-direction: column;
-        width: fit-content;
-        height: fit-content;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-        user-select: none;
-        overflow: hidden;
-
-        .bg-text {
+        &:before {
+          @include flex(center, center);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          content: "INNOVATIVE SOFTWARE";
           color: $purple;
           opacity: 0.1;
-          font-size: 6rem;
+          font-size: 5.5rem;
           font-weight: 700;
           line-height: 6rem;
           text-transform: uppercase;
@@ -87,50 +80,93 @@
         transform: rotate(-10deg);
       }
 
+      .instruction-text {
+        font-size: 1rem;
+        margin: 0 auto;
+        margin-top: 4vh;
+        opacity: 0.8;
+      }
+
+      .logos-row {
+        @include flex(center, center);
+      }
+
+      .logo-item {
+        @include flex(center, center);
+        width: fit-content;
+        height: 3rem;
+        display: block;
+        margin: 0 1.5vw;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+
       .logo {
         height: 3rem;
         width: auto;
-        margin: 0 1.5vw;
       }
     }
   }
 
   @media only screen and (max-width: $about-breakpoint) {
     @include flex(flex-start, center);
-    padding: 1rem 1rem 1rem $navbar-height;
+    padding: $navbar-height 1rem 1rem 1rem;
 
     .content-row {
       @include flex(center, center);
       flex-direction: column;
+      margin-top: 5vh;
 
       .text-container {
         @include flex(center, center);
         width: auto;
-        margin: 0 0 0 5vh;
-
-        .bg-text-container {
-          margin: 0 auto;
-
-          .bg-text {
-            font-size: calc(50px + 10 * ((100vw - 320px) / 680));
-          }
-        }
+        max-width: 400px;
+        margin: 5vh 5vw;
 
         .text {
           font-size: 1rem;
           line-height: 1.6rem;
-          margin: 10vw 0;
-          text-align: justify;
+          margin: 5vh 0;
+
+          &:before {
+            @include flex(center, center);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: "INNOVATIVE SOFTWARE";
+            color: $purple;
+            opacity: 0.1;
+            font-size: calc(55px + 20 * ((100vw - 320px) / 680));
+            font-weight: 700;
+            line-height: 6rem;
+            text-transform: uppercase;
+          }
         }
       }
     }
 
     .secondary-row {
-      margin-top: 0;
+      margin-top: 3vh;
 
-      .logo {
-        margin-right: 3vw;
-        margin-left: 3vw;
+      .tech-row {
+        margin-top: 7vh;
+
+        .favs-title {
+          margin-bottom: 4vh;
+        }
+
+        .logo-item {
+          margin: 0;
+          margin: 0 2vh;
+        }
       }
     }
   }
