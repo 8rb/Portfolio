@@ -17,8 +17,16 @@
     @include flex(center, center);
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, max(6vw, 50px));
+    grid-template-columns: repeat(auto-fit, max(6vw, 100px));
     gap: 1vw 3vw;
+    padding: 0;
+
+    .logo-item {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      list-style: none;
+    }
 
     .logo {
       width: 100%;
@@ -48,20 +56,29 @@
     }
   }
 
-  @media only screen and (max-width: $nav-breakpoint) {
+  @media only screen and (max-width: 850px) {
     @include flex(center, center);
 
     .contact-grid {
       @include flex(center, center);
       display: grid;
-      grid-template-columns: repeat(auto-fit, max(10vw, 80px));
-      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 3rem 0;
       margin-top: 2rem;
+      width: 350px;
+      max-width: 350px;
+
+      .logo-item {
+        width: 4rem;
+        height: 4rem;
+      }
 
       .logo {
-        width: 100%;
-        height: 100%;
+        width: 4rem;
+        height: 4rem;
         fill: $text;
+        margin: 0 auto;
         transition: all 0.2s ease-in-out;
       }
     }
