@@ -6,8 +6,8 @@ import "./styles.scss"
 
 const MainProjectsModule = () => {
   return (
-    <div className="main-projects" id="main-projects">
-      <h1 className="section-title glowing-text">Selected Projects</h1>
+    <section className="main-projects" id="main-projects">
+      <h1 className="section-title glowing-text mb-5">Selected Projects</h1>
       <div className="projects-list">
         <ProjectTile project={bodega} orientation="right" />
         <ProjectTile project={pokeapp} orientation="left" />
@@ -20,7 +20,7 @@ const MainProjectsModule = () => {
       >
         More Projects
       </button>
-    </div>
+    </section>
   )
 }
 
