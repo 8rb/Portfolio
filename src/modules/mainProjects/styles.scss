@@ -11,14 +11,14 @@
     margin: 0 5vw;
   }
 
-  & > .projects-list {
+  .projects-list {
     @include flex(center, center);
     flex-direction: column;
     width: 100%;
   }
 
-  & > .button {
-    padding: 1em 2em 1em 2em;
+  .button {
+    padding: 0.8em 1.8em;
     margin: 1em auto;
     border: 2px solid $text2;
     border-radius: 8px;
