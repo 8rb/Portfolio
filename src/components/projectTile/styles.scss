@@ -6,10 +6,6 @@
   min-height: 15rem;
   margin-bottom: 10vh;
 
-  @media only screen and (max-width: 900px) {
-    flex-direction: column-reverse;
-  }
-
   .image-container {
     height: 15rem;
     width: 28rem;
@@ -110,14 +106,6 @@
   flex-direction: row;
 
   @media only screen and (max-width: 900px) {
-    flex-direction: column-reverse;
-
-    .details-container {
-      @include flex(center, flex-start);
-      margin-left: 0;
-      margin-right: 0;
-    }
-
     .keywords {
       text-align: left;
     }
@@ -154,18 +142,22 @@
     margin-left: 0;
     margin-right: 1rem;
   }
+}
 
-  @media only screen and (max-width: 900px) {
+.project-tile:last-child {
+  margin-bottom: 5vh;
+}
+
+@media only screen and (max-width: 900px) {
+  .project-tile {
     flex-direction: column-reverse;
+    margin-bottom: 8vh;
 
     .details-container {
       @include flex(center, flex-start);
       margin-left: 0;
       margin-right: 0;
+      margin-bottom: 2vh;
     }
   }
-}
-
-.project-tile:last-child {
-  margin-bottom: 5vh;
 }

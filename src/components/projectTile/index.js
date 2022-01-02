@@ -18,6 +18,11 @@ const ProjectTile = ({
         onClick={() => {
           navigate(`/${name}/`)
         }}
+        onKeyDown={() => {
+          navigate(`/${name}/`)
+        }}
+        role="link"
+        tabIndex={0}
       >
         <span className="text">
           <h1>View More</h1>
