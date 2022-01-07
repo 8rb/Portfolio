@@ -35,7 +35,7 @@ const pokeapp = {
   ],
   imgUrl: "pokeapp.png",
   repoUrl: "https://github.com/TheRoro/PokeApp",
-  webUrl: "https://pokeap.netlify.app/search",
+  webUrl: "https://pokeapp.onrender.com/search",
 }
 
 const upspell = {
