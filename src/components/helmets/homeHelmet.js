@@ -10,7 +10,16 @@ const HomeHelmet = () => {
       <link rel="canonical" href="https://rodrigoramirez.dev" />
       <meta property="og:title" content="Web Development Portfolio" />
       <meta property="og:url" content="https://rodrigoramirez.dev" />
-      <meta property="og:image" content="/sphere.png" />
+      <meta
+        property="og:image"
+        content="https://raw.githubusercontent.com/TheRoro/Portfolio/main/static/projects/portfolio.png"
+      />
+      <meta
+        property="og:image:secure_url"
+        content="https://raw.githubusercontent.com/TheRoro/Portfolio/main/static/projects/portfolio.png"
+      />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:alt" content="Portfolio Image" />
       <meta property="og:type" content="website" />
       <meta
         property="og:description"
