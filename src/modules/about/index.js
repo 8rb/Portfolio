@@ -65,7 +65,7 @@ const AboutModule = () => {
               <NextLogo className="logo" />
             </motion.div>
           </div>
-          <p className="instruction-text">(you can drag them)</p>
+          <p className="instruction-text">you can play with the icons!</p>
         </div>
       </div>
     </section>
