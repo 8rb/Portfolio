@@ -8,7 +8,7 @@ const HomeModule = () => {
     <section id="home" className="home">
       <div className="home-col">
         <h1 className="name">Rodrigo Ramirez</h1>
-        <h1 className="job glowing-text">Frontend Developer</h1>
+        <h1 className="job glowing-text">Software Engineer</h1>
       </div>
       <div className="planets-container">
         <Planets />

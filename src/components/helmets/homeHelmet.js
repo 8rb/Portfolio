@@ -23,11 +23,11 @@ const HomeHelmet = () => {
       <meta property="og:type" content="website" />
       <meta
         property="og:description"
-        content="Front End Development portfolio of Rodrigo Ramirez"
+        content="Software Engineer portfolio of Rodrigo Ramirez"
       />
       <meta
         name="description"
-        content="Web Development Portfolio of Rodrigo Ramirez. Front End Developer specialized in JavaScript Frameworks like React and Vue."
+        content="Web Development Portfolio of Rodrigo Ramirez. Software Engineer specialized in JavaScript Frameworks like React and Vue."
       />
       <meta name="image" content="/sphere.png" />
     </Helmet>

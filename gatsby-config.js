@@ -10,7 +10,7 @@ module.exports = {
     title: "Rodrigo Ramirez",
     titleTemplate: "%s · Web Developer Portfolio",
     description:
-      "Web Development Portfolio of Rodrigo Ramirez. Front End Developer specialized in JavaScript Frameworks like React and Vue.",
+      "Web Development Portfolio of Rodrigo Ramirez. Software Engineer specialized in JavaScript Frameworks like React and Vue.",
     url: "https://rodrigoramirez.dev", // No trailing slash allowed!
     image: "/sphere.png", // Path to the image placed in the 'static' folder, in the project's root directory.
   },
