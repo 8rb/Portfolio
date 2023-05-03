@@ -51,7 +51,7 @@ const FloatingLinks = () => {
         <EmailLogo
           className="logo"
           onClick={() => {
-            window.location.href = "mailto:rodrigo8rb@gmail.com"
+            window.location.href = "mailto:rodrigoramirezbr@outlook.com"
           }}
         />
       </motion.li>
@@ -62,7 +62,10 @@ const FloatingLinks = () => {
         />
       </motion.li>
       <motion.li className="logo-item" variants={itemAnimation} key={3}>
-        <ResumeLogo className="logo" onClick={() => openLink("/resume.pdf")} />
+        <ResumeLogo
+          className="logo"
+          onClick={() => openLink("/rodrigo-ramirez-resume.pdf")}
+        />
       </motion.li>
     </motion.ul>
   )

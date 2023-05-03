@@ -101,7 +101,7 @@ const ContactModule = () => {
             <EmailLogo
               className={`logo ${activeHover[2]}`}
               onClick={() => {
-                window.location.href = "mailto:rodrigo8rb@gmail.com"
+                window.location.href = "mailto:rodrigoramirezbr@outlook.com"
               }}
               onMouseEnter={() => mouseEnterFunction("Email Me", 2)}
               onMouseLeave={() => mouseLeaveFunction(2)}
@@ -111,7 +111,7 @@ const ContactModule = () => {
           <motion.li className="logo-item" variants={itemAnimation} key={3}>
             <ResumeLogo
               className={`logo ${activeHover[3]}`}
-              onClick={() => openLink("/resume.pdf")}
+              onClick={() => openLink("/rodrigo-ramirez-resume.pdf")}
               onMouseEnter={() => mouseEnterFunction("Resume CV", 3)}
               onMouseLeave={() => mouseLeaveFunction(3)}
               variants={itemAnimation}

@@ -16,7 +16,7 @@ I hope you enjoy it as much as I enjoyed creating it!
 
 **Email**
 
-rodrigo8rb@gmail.com
+rodrigoramirezbr@outlook.com
 
 **LinkedIn**
 
@@ -24,6 +24,6 @@ https://www.linkedin.com/in/rodrigoramirezb/
 
 **Resume/CV**
 
-https://rodrigoramirez.dev/contact
+https://rodrigoramirez.dev/rodrigo-ramirez-resume.pdf
 
 Made with 🦔 by **Rodrigo Ramirez**.
