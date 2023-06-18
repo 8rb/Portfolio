@@ -2,7 +2,7 @@
 
 # Hello! 👋
 
-My Name is **Rodrigo Ramirez**, and this is the code repository for my web development portfolio.
+My Name is **Rodrigo Ramirez**, and this is the code repository for my Software Engineer Portfolio.
 
 This portfolio was made using React.js and is a compilation of my most important Front-End projects, mostly Single-Page Application Frameworks/Libraries (React, Vue, Next, Nuxt).
 

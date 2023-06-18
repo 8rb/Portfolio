@@ -62,9 +62,9 @@ const portfolio = {
   title: "Front End Portfolio",
   name: "portfolio",
   keywords: "this.portfolio",
-  summary: "Front End Web development Porfolio.",
+  summary: "Software Engineer Portfolio.",
   description:
-    "Front End Web development Porfolio developed using React, Gatsby and a handful of animation libraries like React Three Fiber, React Spring and Framer Motion to add interaction to the website.",
+    "Software Engineer Portfolio developed using React, Gatsby and a handful of animation libraries like React Three Fiber, React Spring and Framer Motion to add interaction to the website.",
   tags: "Gatsby Framer Motion",
   palette: [
     { background: "#16ffd8", text: "#353535" },

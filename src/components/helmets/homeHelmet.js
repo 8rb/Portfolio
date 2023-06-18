@@ -5,10 +5,10 @@ const HomeHelmet = () => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Rodrigo Ramirez · Web Developer Portfolio</title>
+      <title>Rodrigo Ramirez · Software Engineer Portfolio</title>
       <meta name="theme-color" content="#16ffd8" />
       <link rel="canonical" href="https://rodrigoramirez.dev" />
-      <meta property="og:title" content="Web Development Portfolio" />
+      <meta property="og:title" content="Software Engineer Portfolio" />
       <meta property="og:url" content="https://rodrigoramirez.dev" />
       <meta
         property="og:image"
@@ -27,7 +27,7 @@ const HomeHelmet = () => {
       />
       <meta
         name="description"
-        content="Web Development Portfolio of Rodrigo Ramirez. Software Engineer specialized in JavaScript Frameworks like React and Vue."
+        content="Software Engineer Portfolio of Rodrigo Ramirez. Software Engineer specialized in JavaScript Frameworks like React and Vue."
       />
       <meta name="image" content="/sphere.png" />
     </Helmet>
