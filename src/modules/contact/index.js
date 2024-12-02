@@ -111,7 +111,7 @@ const ContactModule = () => {
           <motion.li className="logo-item" variants={itemAnimation} key={3}>
             <ResumeLogo
               className={`logo ${activeHover[3]}`}
-              onClick={() => openLink("/rodrigo-ramirez-resume.pdf")}
+              onClick={() => openLink("/rodrigo_ramirez_resume.pdf")}
               onMouseEnter={() => mouseEnterFunction("Resume CV", 3)}
               onMouseLeave={() => mouseLeaveFunction(3)}
               variants={itemAnimation}

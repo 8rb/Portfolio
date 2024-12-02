@@ -24,6 +24,6 @@ https://www.linkedin.com/in/rodrigoramirezb/
 
 **Resume/CV**
 
-https://rodrigoramirez.dev/rodrigo-ramirez-resume.pdf
+https://rodrigoramirez.dev/rodrigo_ramirez_resume.pdf
 
 Made with 🦔 by **Rodrigo Ramirez**.

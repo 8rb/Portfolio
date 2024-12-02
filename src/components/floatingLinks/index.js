@@ -64,7 +64,7 @@ const FloatingLinks = () => {
       <motion.li className="logo-item" variants={itemAnimation} key={3}>
         <ResumeLogo
           className="logo"
-          onClick={() => openLink("/rodrigo-ramirez-resume.pdf")}
+          onClick={() => openLink("/rodrigo_ramirez_resume.pdf")}
         />
       </motion.li>
     </motion.ul>
